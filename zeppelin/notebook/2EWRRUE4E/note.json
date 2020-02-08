@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:15.924",
+      "dateUpdated": "2020-02-08 21:58:12.668",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -26,8 +26,8 @@
       "jobName": "paragraph_1577983813473_-1033064249",
       "id": "20200102-165013_1885970695",
       "dateCreated": "2020-01-02 16:50:13.473",
-      "dateStarted": "2020-02-06 22:11:15.941",
-      "dateFinished": "2020-02-06 22:11:15.947",
+      "dateStarted": "2020-02-08 21:58:12.670",
+      "dateFinished": "2020-02-08 21:58:12.694",
       "status": "FINISHED",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500
@@ -113,9 +113,121 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream A* shortest path\n\nFind the shortest path between Haag and London",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:16.272",
+      "dateUpdated": "2020-02-08 21:57:43.729",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581199061287_-958845138",
+      "id": "20200208-215741_185218482",
+      "dateCreated": "2020-02-08 21:57:41.287",
+      "dateStarted": "2020-02-08 21:57:43.729",
+      "dateFinished": "2020-02-08 21:57:43.742",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:58:28.034",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "latitude": "string",
+                      "longitude": "string",
+                      "population": "string",
+                      "distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":20,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":21,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":22,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":23,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":24,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":25,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":26,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":27,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":28,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"}],\"edges\":[{\"source\":31,\"target\":21,\"id\":32,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":22,\"target\":31,\"id\":33,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":25,\"target\":30,\"id\":34,\"data\":{\"distance\":33},\"label\":\"EROAD\"},{\"source\":20,\"target\":21,\"id\":20,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":20,\"target\":22,\"id\":21,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":22,\"target\":30,\"id\":22,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":20,\"target\":23,\"id\":23,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":23,\"target\":24,\"id\":24,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":24,\"target\":29,\"id\":25,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":25,\"target\":22,\"id\":26,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":26,\"target\":25,\"id\":27,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":27,\"target\":26,\"id\":28,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":28,\"target\":27,\"id\":29,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":29,\"target\":28,\"id\":30,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":31,\"target\":30,\"id\":31,\"data\":{\"distance\":25},\"label\":\"EROAD\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581199100974_-859095963",
+      "id": "20200208-215820_851308385",
+      "dateCreated": "2020-02-08 21:58:20.974",
+      "dateStarted": "2020-02-08 21:58:22.362",
+      "dateFinished": "2020-02-08 21:58:22.393",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream A* shortest path\n\nFind the shortest path between Haag and London using the Astar shortest path.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:58:50.163",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -127,8 +239,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -139,7 +251,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream A* shortest path\u003c/h3\u003e\n\u003cp\u003eFind the shortest path between Haag and London\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream A* shortest path\u003c/h3\u003e\n\u003cp\u003eFind the shortest path between Haag and London using the Astar shortest path.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -147,23 +259,23 @@
       "jobName": "paragraph_1579455185170_418793210",
       "id": "20200119-173305_203623910",
       "dateCreated": "2020-01-19 17:33:05.170",
-      "dateStarted": "2020-02-06 22:11:16.299",
-      "dateFinished": "2020-02-06 22:11:16.305",
+      "dateStarted": "2020-02-08 21:58:50.163",
+      "dateFinished": "2020-02-08 21:58:50.172",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_algo\nMATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.astar.stream(source, destination, \"distance\", \"latitude\", \"longitude\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:16.392",
+      "dateUpdated": "2020-02-08 21:59:00.248",
       "config": {
         "editorSetting": {
-          "editOnDblClick": true,
+          "editOnDblClick": false,
           "language": "markdown",
           "completionSupport": false
         },
         "colWidth": 12.0,
-        "editorMode": "ace/mode/markdown",
+        "editorMode": "ace/mode/undefined",
         "fontSize": 9.0,
         "results": {
           "0": {
@@ -196,7 +308,7 @@
           }
         },
         "enabled": true,
-        "editorHide": true,
+        "editorHide": false,
         "tableHide": false
       },
       "settings": {
@@ -208,7 +320,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "place\tcost\n\"Den Haag\"\t0.0\n\"Hoek van Holland\"\t0.0\n\"Felixstowe\"\t0.0\n\"Ipswich\"\t0.0\n\"Colchester\"\t0.0\n\"London\"\t0.0\n"
+            "data": "place\tcost\n\"Den Haag\"\t0.0\n\"Hoek van Holland\"\t27.0\n\"Felixstowe\"\t234.0\n\"Ipswich\"\t256.0\n\"Colchester\"\t288.0\n\"London\"\t394.0\n"
           }
         ]
       },
@@ -216,8 +328,8 @@
       "jobName": "paragraph_1577905262717_1957168895",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:01:02.717",
-      "dateStarted": "2020-02-06 22:11:16.409",
-      "dateFinished": "2020-02-06 22:11:16.437",
+      "dateStarted": "2020-02-08 21:59:00.247",
+      "dateFinished": "2020-02-08 21:59:00.381",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -302,9 +414,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027astar_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Natural\u0027, properties: [\u0027distance\u0027,\u0027latitude\u0027,\u0027longitude\u0027]}});\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027astar_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Natural\u0027, properties: [\u0027distance\u0027,\u0027latitude\u0027,\u0027longitude\u0027]}});\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:16.750",
+      "dateUpdated": "2020-02-08 21:59:26.881",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -372,7 +484,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\trelationshipProjection.EROAD.properties.latitude.property\trelationshipProjection.EROAD.properties.latitude.defaultValue\trelationshipProjection.EROAD.properties.latitude.aggregation\trelationshipProjection.EROAD.properties.longitude.property\trelationshipProjection.EROAD.properties.longitude.defaultValue\trelationshipProjection.EROAD.properties.longitude.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"astar_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tlatitude\tNaN\tDEFAULT\tlongitude\tNaN\tDEFAULT\t12\t15\t6\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\trelationshipProjection.EROAD.properties.latitude.property\trelationshipProjection.EROAD.properties.latitude.defaultValue\trelationshipProjection.EROAD.properties.latitude.aggregation\trelationshipProjection.EROAD.properties.longitude.property\trelationshipProjection.EROAD.properties.longitude.defaultValue\trelationshipProjection.EROAD.properties.longitude.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"astar_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tlatitude\tNaN\tDEFAULT\tlongitude\tNaN\tDEFAULT\t12\t15\t10\n"
           }
         ]
       },
@@ -380,8 +492,8 @@
       "jobName": "paragraph_1581022755790_745938378",
       "id": "20200206-205915_1009496716",
       "dateCreated": "2020-02-06 20:59:15.790",
-      "dateStarted": "2020-02-06 22:11:16.769",
-      "dateFinished": "2020-02-06 22:11:16.784",
+      "dateStarted": "2020-02-08 21:59:26.901",
+      "dateFinished": "2020-02-08 21:59:26.949",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -426,9 +538,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nMATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.astar.stream(\u0027astar_example\u0027, {startNode: source, endNode: destination, relationshipWeightProperty:\u0027distance\u0027, propertyKeyLat: \u0027latitude\u0027, propertyKeyLon: \u0027longitude\u0027}) YIELD nodeId, cost\nRETURN nodeId, cost",
+      "text": "%neo4j_gds\nMATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.astar.stream(\u0027astar_example\u0027, {startNode: source, endNode: destination, relationshipWeightProperty:\u0027distance\u0027, propertyKeyLat: \u0027latitude\u0027, propertyKeyLon: \u0027longitude\u0027}) YIELD nodeId, cost\nRETURN nodeId, cost",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:16.986",
+      "dateUpdated": "2020-02-08 21:59:32.348",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -453,8 +565,8 @@
       "jobName": "paragraph_1581022540979_-2110705805",
       "id": "20200206-205540_1956158614",
       "dateCreated": "2020-02-06 20:55:40.979",
-      "dateStarted": "2020-02-06 22:11:17.001",
-      "dateFinished": "2020-02-06 22:11:17.025",
+      "dateStarted": "2020-02-08 21:59:32.368",
+      "dateFinished": "2020-02-08 21:59:32.489",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -624,11 +736,7 @@
   "id": "2EWRRUE4E",
   "noteParams": {},
   "noteForms": {},
-  "angularObjects": {
-    "neo4j_algo:shared_process": [],
-    "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
-  },
+  "angularObjects": {},
   "config": {
     "isZeppelinNotebookCronEnable": false
   },

@@ -41,9 +41,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# Random walk algorithm migration guide",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:35.583",
+      "dateUpdated": "2020-02-08 22:00:27.933",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -62,20 +62,28 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1579455224445_1523289076",
       "id": "20200119-173344_1167287312",
       "dateCreated": "2020-01-19 17:33:44.445",
-      "dateStarted": "2020-02-06 22:11:35.611",
-      "dateFinished": "2020-02-06 22:11:35.616",
+      "dateStarted": "2020-02-08 22:00:27.933",
+      "dateFinished": "2020-02-08 22:00:27.947",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:35.710",
+      "dateUpdated": "2020-02-08 22:01:01.462",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -155,7 +163,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":32,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":33,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":34,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":35,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":36,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":37,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":38,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":39,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"}],\"edges\":[{\"source\":29,\"target\":30,\"id\":36,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":29,\"target\":31,\"id\":37,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":31,\"target\":39,\"id\":38,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":29,\"target\":32,\"id\":39,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":32,\"target\":33,\"id\":40,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":33,\"target\":38,\"id\":41,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":34,\"target\":31,\"id\":42,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":35,\"target\":34,\"id\":43,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":36,\"target\":35,\"id\":44,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":37,\"target\":36,\"id\":45,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":38,\"target\":37,\"id\":46,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":40,\"target\":39,\"id\":47,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":40,\"target\":30,\"id\":48,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":31,\"target\":40,\"id\":49,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":34,\"target\":39,\"id\":50,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\",\"Place\":\"#039A40\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\",\"MINST\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":20,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":21,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":22,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":23,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":24,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":25,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":26,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":27,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":28,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"}],\"edges\":[{\"source\":31,\"target\":21,\"id\":32,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":22,\"target\":31,\"id\":33,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":25,\"target\":30,\"id\":34,\"data\":{\"distance\":33},\"label\":\"EROAD\"},{\"source\":20,\"target\":21,\"id\":20,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":20,\"target\":22,\"id\":21,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":22,\"target\":30,\"id\":22,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":20,\"target\":23,\"id\":23,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":23,\"target\":24,\"id\":24,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":24,\"target\":29,\"id\":25,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":25,\"target\":22,\"id\":26,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":26,\"target\":25,\"id\":27,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":27,\"target\":26,\"id\":28,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":28,\"target\":27,\"id\":29,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":29,\"target\":28,\"id\":30,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":31,\"target\":30,\"id\":31,\"data\":{\"distance\":25},\"label\":\"EROAD\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -163,8 +171,8 @@
       "jobName": "paragraph_1579455237069_115005629",
       "id": "20200119-173357_992176618",
       "dateCreated": "2020-01-19 17:33:57.069",
-      "dateStarted": "2020-02-06 22:11:35.738",
-      "dateFinished": "2020-02-06 22:11:35.784",
+      "dateStarted": "2020-02-08 22:01:01.482",
+      "dateFinished": "2020-02-08 22:01:01.518",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -249,9 +257,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH (source:Place {id: \"London\"})\nCALL algo.randomWalk.stream(id(source), 5, 1)\nYIELD nodeIds\nUNWIND algo.getNodesById(nodeIds) AS place\nRETURN place.id AS place\n\n\n",
+      "text": "%neo4j_algo\nMATCH (source:Place {id: \"London\"})\nCALL algo.randomWalk.stream(id(source), 5, 1)\nYIELD nodeIds\nUNWIND algo.getNodesById(nodeIds) AS place\nRETURN place.id AS place;\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:36.088",
+      "dateUpdated": "2020-02-08 22:02:18.517",
       "config": {
         "editorSetting": {
           "editOnDblClick": false,
@@ -301,7 +309,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "place\n\"London\"\n\"Doncaster\"\n\"Immingham\"\n\"Doncaster\"\n\"Immingham\"\n\"Doncaster\"\n"
+            "data": "place\n\"London\"\n\"Doncaster\"\n\"Immingham\"\n\"Amsterdam\"\n\"Utrecht\"\n\"Amsterdam\"\n"
           }
         ]
       },
@@ -309,8 +317,8 @@
       "jobName": "paragraph_1577905321437_483895676",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:02:01.437",
-      "dateStarted": "2020-02-06 22:11:36.108",
-      "dateFinished": "2020-02-06 22:11:36.139",
+      "dateStarted": "2020-02-08 22:02:18.534",
+      "dateFinished": "2020-02-08 22:02:18.559",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -395,9 +403,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\n",
+      "text": "%md\nThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:36.453",
+      "dateUpdated": "2020-02-08 22:04:02.887",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -409,35 +417,27 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1581023350820_-1186839777",
       "id": "20200206-210910_1704753353",
       "dateCreated": "2020-02-06 21:09:10.820",
-      "dateStarted": "2020-02-06 22:11:36.471",
-      "dateFinished": "2020-02-06 22:11:36.492",
+      "dateStarted": "2020-02-08 22:02:38.044",
+      "dateFinished": "2020-02-08 22:02:38.054",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027randomwalk_example\u0027, \u0027Place\u0027, \u0027EROAD\u0027);",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027randomwalk_example\u0027, \u0027Place\u0027, \u0027EROAD\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:36.570",
+      "dateUpdated": "2020-02-08 22:04:04.601",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -502,15 +502,15 @@
       "jobName": "paragraph_1581023359644_1505700256",
       "id": "20200206-210919_1153713382",
       "dateCreated": "2020-02-06 21:09:19.644",
-      "dateStarted": "2020-02-06 22:11:36.625",
-      "dateFinished": "2020-02-06 22:11:36.639",
+      "dateStarted": "2020-02-08 22:04:04.624",
+      "dateFinished": "2020-02-08 22:04:04.645",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nMATCH (source:Place {id: \"London\"})\nCALL gds.alpha.randomWalk.stream(\u0027randomwalk_example\u0027, {steps: 5})\nYIELD nodeIds\nUNWIND nodeIds AS nodeId\nRETURN gds.util.asNode(nodeId).id AS place",
+      "text": "%neo4j_gds\n//MATCH (source:Place {id: \"London\"})\nCALL gds.alpha.randomWalk.stream(\u0027randomwalk_example\u0027, {steps: 5})\nYIELD nodeIds\nUNWIND nodeIds AS nodeId\nRETURN gds.util.asNode(nodeId).id AS place;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:36.709",
+      "dateUpdated": "2020-02-08 22:04:25.213",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -560,7 +560,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "place\n\"Den Haag\"\n"
+            "data": "place\n\"London\"\n\"Colchester\"\n\"Ipswich\"\n\"Felixstowe\"\n\"Hoek van Holland\"\n\"Rotterdam\"\n"
           }
         ]
       },
@@ -568,15 +568,15 @@
       "jobName": "paragraph_1580233869625_1615641074",
       "id": "20200128-175109_1741413551",
       "dateCreated": "2020-01-28 17:51:09.625",
-      "dateStarted": "2020-02-06 22:11:36.730",
-      "dateFinished": "2020-02-06 22:11:36.745",
+      "dateStarted": "2020-02-08 22:04:25.233",
+      "dateFinished": "2020-02-08 22:04:25.276",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:36.830",
+      "dateUpdated": "2020-02-08 22:04:29.833",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -608,15 +608,15 @@
       "jobName": "paragraph_1581023336895_2041386555",
       "id": "20200206-210856_999144446",
       "dateCreated": "2020-02-06 21:08:56.895",
-      "dateStarted": "2020-02-06 22:11:36.853",
-      "dateFinished": "2020-02-06 22:11:36.856",
+      "dateStarted": "2020-02-08 22:04:29.838",
+      "dateFinished": "2020-02-08 22:04:29.857",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027randomwalk_example\u0027)",
+      "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027randomwalk_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:36.951",
+      "dateUpdated": "2020-02-08 22:04:31.805",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -641,15 +641,15 @@
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -683,7 +683,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"randomwalk_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"randomwalk_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
           }
         ]
       },
@@ -691,8 +691,8 @@
       "jobName": "paragraph_1581023706025_-2059184018",
       "id": "20200206-211506_1689368921",
       "dateCreated": "2020-02-06 21:15:06.025",
-      "dateStarted": "2020-02-06 22:11:36.973",
-      "dateFinished": "2020-02-06 22:11:36.985",
+      "dateStarted": "2020-02-08 22:04:31.830",
+      "dateFinished": "2020-02-08 22:04:31.860",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -731,7 +731,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

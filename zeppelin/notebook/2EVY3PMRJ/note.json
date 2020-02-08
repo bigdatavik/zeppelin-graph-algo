@@ -81,9 +81,49 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH p\u003d(:Library)-[:DEPENDS_ON]-\u003e(:Library)\nRETURN p\n",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:10:18.646",
+      "dateUpdated": "2020-02-08 21:13:32.432",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581196410643_1785021247",
+      "id": "20200208-211330_694577436",
+      "dateCreated": "2020-02-08 21:13:30.643",
+      "dateStarted": "2020-02-08 21:13:32.438",
+      "dateFinished": "2020-02-08 21:13:32.450",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nMATCH p\u003d(:Library)-[:DEPENDS_ON]-\u003e(:Library)\nRETURN p;\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:33:58.816",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -156,7 +196,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":9,\"data\":{\"partition\":0,\"id\":\"six\"},\"label\":\"Library\"},{\"id\":10,\"data\":{\"partition\":0,\"id\":\"pandas\"},\"label\":\"Library\"},{\"id\":11,\"data\":{\"partition\":0,\"id\":\"numpy\"},\"label\":\"Library\"},{\"id\":12,\"data\":{\"partition\":0,\"id\":\"python-dateutil\"},\"label\":\"Library\"},{\"id\":13,\"data\":{\"partition\":0,\"id\":\"pytz\"},\"label\":\"Library\"},{\"id\":14,\"data\":{\"partition\":5,\"id\":\"pyspark\"},\"label\":\"Library\"},{\"id\":15,\"data\":{\"partition\":0,\"id\":\"matplotlib\"},\"label\":\"Library\"},{\"id\":16,\"data\":{\"partition\":0,\"id\":\"spacy\"},\"label\":\"Library\"},{\"id\":17,\"data\":{\"partition\":5,\"id\":\"py4j\"},\"label\":\"Library\"},{\"id\":18,\"data\":{\"partition\":9,\"id\":\"jupyter\"},\"label\":\"Library\"},{\"id\":19,\"data\":{\"partition\":9,\"id\":\"jpy-console\"},\"label\":\"Library\"},{\"id\":20,\"data\":{\"partition\":9,\"id\":\"nbconvert\"},\"label\":\"Library\"},{\"id\":21,\"data\":{\"partition\":9,\"id\":\"ipykernel\"},\"label\":\"Library\"},{\"id\":22,\"data\":{\"partition\":9,\"id\":\"jpy-client\"},\"label\":\"Library\"},{\"id\":23,\"data\":{\"partition\":9,\"id\":\"jpy-core\"},\"label\":\"Library\"}],\"edges\":[{\"source\":22,\"target\":23,\"id\":32,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":20,\"target\":23,\"id\":33,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":11,\"id\":16,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":13,\"id\":17,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":12,\"id\":18,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":12,\"target\":9,\"id\":19,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":14,\"target\":17,\"id\":20,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":11,\"id\":21,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":12,\"id\":22,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":9,\"id\":23,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":13,\"id\":24,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":16,\"target\":9,\"id\":25,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":16,\"target\":11,\"id\":26,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":20,\"id\":27,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":21,\"id\":28,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":19,\"id\":29,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":19,\"target\":22,\"id\":30,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":19,\"target\":21,\"id\":31,\"data\":{},\"label\":\"DEPENDS_ON\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\"},\"types\":[\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"id\":\"six\"},\"label\":\"Library\"},{\"id\":1,\"data\":{\"id\":\"pandas\"},\"label\":\"Library\"},{\"id\":2,\"data\":{\"id\":\"numpy\"},\"label\":\"Library\"},{\"id\":3,\"data\":{\"id\":\"python-dateutil\"},\"label\":\"Library\"},{\"id\":4,\"data\":{\"id\":\"pytz\"},\"label\":\"Library\"},{\"id\":5,\"data\":{\"id\":\"pyspark\"},\"label\":\"Library\"},{\"id\":6,\"data\":{\"id\":\"matplotlib\"},\"label\":\"Library\"},{\"id\":7,\"data\":{\"id\":\"spacy\"},\"label\":\"Library\"},{\"id\":8,\"data\":{\"id\":\"py4j\"},\"label\":\"Library\"},{\"id\":9,\"data\":{\"id\":\"jupyter\"},\"label\":\"Library\"},{\"id\":10,\"data\":{\"id\":\"jpy-console\"},\"label\":\"Library\"},{\"id\":11,\"data\":{\"id\":\"nbconvert\"},\"label\":\"Library\"},{\"id\":12,\"data\":{\"id\":\"ipykernel\"},\"label\":\"Library\"},{\"id\":13,\"data\":{\"id\":\"jpy-client\"},\"label\":\"Library\"},{\"id\":14,\"data\":{\"id\":\"jpy-core\"},\"label\":\"Library\"}],\"edges\":[{\"source\":1,\"target\":2,\"id\":0,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":1,\"target\":4,\"id\":1,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":1,\"target\":3,\"id\":2,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":3,\"target\":0,\"id\":3,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":5,\"target\":8,\"id\":4,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":2,\"id\":5,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":3,\"id\":6,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":0,\"id\":7,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":4,\"id\":8,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":7,\"target\":0,\"id\":9,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":7,\"target\":2,\"id\":10,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":9,\"target\":11,\"id\":11,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":9,\"target\":12,\"id\":12,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":9,\"target\":10,\"id\":13,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":13,\"id\":14,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":12,\"id\":15,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":13,\"target\":14,\"id\":16,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":11,\"target\":14,\"id\":17,\"data\":{},\"label\":\"DEPENDS_ON\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -164,15 +204,15 @@
       "jobName": "paragraph_1579454788059_-1950039832",
       "id": "20200119-172628_1603876339",
       "dateCreated": "2020-01-19 17:26:28.059",
-      "dateStarted": "2020-02-06 18:10:18.659",
-      "dateFinished": "2020-02-06 18:10:18.694",
+      "dateStarted": "2020-02-08 21:13:41.040",
+      "dateFinished": "2020-02-08 21:13:41.108",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Neo4j graph algorithms library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:46:29.676",
+      "dateUpdated": "2020-02-08 21:13:49.244",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -184,8 +224,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -204,17 +244,17 @@
       "jobName": "paragraph_1581012642011_1425713061",
       "id": "20200206-181042_646534631",
       "dateCreated": "2020-02-06 18:10:42.011",
-      "dateStarted": "2020-02-06 18:10:44.394",
-      "dateFinished": "2020-02-06 18:10:44.397",
+      "dateStarted": "2020-02-08 21:13:49.244",
+      "dateFinished": "2020-02-08 21:13:49.276",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream Label propagation results\n",
+      "text": "%md\n### Stream Label propagation results\n\nThe syntax we have had in graph algorithms library was `algo.labelPropagation.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:14:34.897",
+      "dateUpdated": "2020-02-08 21:14:24.649",
       "config": {
-        "tableHide": true,
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
@@ -223,7 +263,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": false,
+        "editorHide": true,
         "results": {},
         "enabled": true
       },
@@ -236,7 +276,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream Label propagation results\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream Label propagation results\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was \u003ccode\u003ealgo.labelPropagation.stream(\u0026#39;Node label\u0026#39;, \u0026#39;Relationship type\u0026#39;, {configuration map})\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -244,15 +284,15 @@
       "jobName": "paragraph_1575719494465_-139499170",
       "id": "20191207-114641_1084520692",
       "dateCreated": "2019-12-07 11:51:34.466",
-      "dateStarted": "2020-02-06 18:10:52.032",
-      "dateFinished": "2020-02-06 18:10:52.056",
+      "dateStarted": "2020-02-08 21:14:24.649",
+      "dateFinished": "2020-02-08 21:14:24.667",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.labelPropagation.stream(\"Library\", \"DEPENDS_ON\",\n  { iterations: 10 })\nYIELD nodeId, label\nRETURN label,\n       collect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC\n\n\n",
+      "text": "%neo4j_algo\nCALL algo.labelPropagation.stream(\"Library\", \"DEPENDS_ON\",\n  { iterations: 10 })\nYIELD nodeId, label\nRETURN label,\n       collect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC;\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:10:58.972",
+      "dateUpdated": "2020-02-08 21:33:52.462",
       "config": {
         "editorSetting": {
           "editOnDblClick": false
@@ -301,7 +341,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "label\tlibraries\n9\t[\"six\",\"pandas\",\"python-dateutil\",\"matplotlib\",\"spacy\"]\n21\t[\"jupyter\",\"jpy-console\",\"ipykernel\"]\n23\t[\"nbconvert\",\"jpy-client\",\"jpy-core\"]\n17\t[\"pyspark\",\"py4j\"]\n11\t[\"numpy\"]\n13\t[\"pytz\"]\n"
+            "data": "label\tlibraries\n0\t[\"six\",\"pandas\",\"python-dateutil\",\"matplotlib\",\"spacy\"]\n12\t[\"jupyter\",\"jpy-console\",\"ipykernel\"]\n14\t[\"nbconvert\",\"jpy-client\",\"jpy-core\"]\n8\t[\"pyspark\",\"py4j\"]\n2\t[\"numpy\"]\n4\t[\"pytz\"]\n"
           }
         ]
       },
@@ -309,8 +349,8 @@
       "jobName": "paragraph_1575719494467_-2090337855",
       "id": "20191207-114720_18204489",
       "dateCreated": "2019-12-07 11:51:34.467",
-      "dateStarted": "2020-02-06 18:10:58.984",
-      "dateFinished": "2020-02-06 18:10:59.140",
+      "dateStarted": "2020-02-08 21:14:56.515",
+      "dateFinished": "2020-02-08 21:14:56.651",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -355,9 +395,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.labelPropagation.stream(\"Library\", \"DEPENDS_ON\",\n{ iterations: 10, direction: \"BOTH\" })\nYIELD nodeId, label\nRETURN label,\ncollect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
+      "text": "%neo4j_algo\nCALL algo.labelPropagation.stream(\"Library\", \"DEPENDS_ON\",\n{ iterations: 10, direction: \"BOTH\" })\nYIELD nodeId, label\nRETURN label,\ncollect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:11:09.027",
+      "dateUpdated": "2020-02-08 21:33:47.228",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -406,7 +446,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "label\tlibraries\n11\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n19\t[\"jupyter\",\"jpy-console\",\"nbconvert\",\"ipykernel\",\"jpy-client\",\"jpy-core\"]\n17\t[\"pyspark\",\"py4j\"]\n"
+            "data": "label\tlibraries\n2\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n10\t[\"jupyter\",\"jpy-console\",\"nbconvert\",\"ipykernel\",\"jpy-client\",\"jpy-core\"]\n8\t[\"pyspark\",\"py4j\"]\n"
           }
         ]
       },
@@ -414,8 +454,8 @@
       "jobName": "paragraph_1580236936415_-1698610224",
       "id": "20200128-184216_271239034",
       "dateCreated": "2020-01-28 18:42:16.415",
-      "dateStarted": "2020-02-06 18:11:09.051",
-      "dateFinished": "2020-02-06 18:11:09.158",
+      "dateStarted": "2020-02-08 21:15:01.254",
+      "dateFinished": "2020-02-08 21:15:01.366",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -460,11 +500,11 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Write-back Label propagation",
+      "text": "%md\n### Write-back Label propagation\nIf we want to store the results of the algorithm back to the graph, we can use the write-back version of the algorithm.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:17:24.462",
+      "dateUpdated": "2020-02-08 21:14:52.228",
       "config": {
-        "tableHide": true,
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
@@ -473,7 +513,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": false,
+        "editorHide": true,
         "results": {},
         "enabled": true
       },
@@ -486,7 +526,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back Label propagation\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back Label propagation\u003c/h3\u003e\n\u003cp\u003eIf we want to store the results of the algorithm back to the graph, we can use the write-back version of the algorithm.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -494,15 +534,15 @@
       "jobName": "paragraph_1575719494468_-58809927",
       "id": "20191207-114843_887180679",
       "dateCreated": "2019-12-07 11:51:34.468",
-      "dateStarted": "2020-02-06 18:13:17.045",
-      "dateFinished": "2020-02-06 18:13:17.053",
+      "dateStarted": "2020-02-08 21:14:52.230",
+      "dateFinished": "2020-02-08 21:14:52.266",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.labelPropagation(\"Library\", \"DEPENDS_ON\",\n  { iterations: 10 })",
+      "text": "%neo4j_algo\nCALL algo.labelPropagation(\"Library\", \"DEPENDS_ON\",\n  { iterations: 10 });",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:12:55.520",
+      "dateUpdated": "2020-02-08 21:33:42.982",
       "config": {
         "editorSetting": {
           "editOnDblClick": false
@@ -571,7 +611,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "loadMillis\tcomputeMillis\twriteMillis\tpostProcessingMillis\tnodes\tcommunityCount\titerations\tdidConverge\tp1\tp5\tp10\tp25\tp50\tp75\tp90\tp95\tp99\tp100\tweightProperty\twrite\tseedProperty\twriteProperty\n8\t1\t0\t13\t15\t6\t3\tTRUE\t1\t1\t1\t1\t2\t3\t3\t5\t5\t5\tNULL\tTRUE\tNULL\tNULL\n"
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tpostProcessingMillis\tnodes\tcommunityCount\titerations\tdidConverge\tp1\tp5\tp10\tp25\tp50\tp75\tp90\tp95\tp99\tp100\tweightProperty\twrite\tseedProperty\twriteProperty\n12\t3\t23\t12\t15\t6\t3\tTRUE\t1\t1\t1\t1\t2\t3\t3\t5\t5\t5\tNULL\tTRUE\tNULL\tNULL\n"
           }
         ]
       },
@@ -579,15 +619,15 @@
       "jobName": "paragraph_1575719494469_1732988087",
       "id": "20191207-114728_61427870",
       "dateCreated": "2019-12-07 11:51:34.469",
-      "dateStarted": "2020-02-06 18:12:55.535",
-      "dateFinished": "2020-02-06 18:12:55.615",
+      "dateStarted": "2020-02-08 21:15:07.739",
+      "dateFinished": "2020-02-08 21:15:07.872",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:48:22.959",
+      "dateUpdated": "2020-02-08 21:15:12.245",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -599,8 +639,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -619,15 +659,15 @@
       "jobName": "paragraph_1575719494477_558918148",
       "id": "20191207-114958_2002234398",
       "dateCreated": "2019-12-07 11:51:34.477",
-      "dateStarted": "2020-02-06 18:14:26.519",
-      "dateFinished": "2020-02-06 18:14:26.534",
+      "dateStarted": "2020-02-08 21:15:12.245",
+      "dateFinished": "2020-02-08 21:15:12.257",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\nWe can load both the directed and undirected projection of the relationships in a single named graph.",
+      "text": "%md\nThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\n\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.\n\nIn this example we want to run the label propagation algorithm on both the directed version of the graph as well as the undirected version.\nA single named graph allows us to project many relationship types as well as both the directed and the undirected version of a single relationship type,\nwhich can be filtered later when running a given algorithm on the named graph.\n\nRelationship type can be defined as:\n\n* Loading a single relationship type using a string: `\u0027TYPE\u0027`\n* Loading more relationship types using an array: `[\u0027TYPE1\u0027,\u0027TYPE2\u0027]`\n* Loading more relationship types with their properties using a configuration map: `{ALIAS_OF_TYPE: {type:\u0027RELATIONSHIP_TYPE\u0027, projection: \u0027NATURAL\u0027, properties:[property1,property2]}`",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 20:08:10.377",
+      "dateUpdated": "2020-02-08 21:29:06.010",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -639,8 +679,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -651,7 +691,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003cbr/\u003eWe can load both the directed and undirected projection of the relationships in a single named graph.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003cp\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eIn this example we want to run the label propagation algorithm on both the directed version of the graph as well as the undirected version.\u003cbr/\u003eA single named graph allows us to project many relationship types as well as both the directed and the undirected version of a single relationship type,\u003cbr/\u003ewhich can be filtered later when running a given algorithm on the named graph.\u003c/p\u003e\n\u003cp\u003eRelationship type can be defined as:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eLoading a single relationship type using a string: \u003ccode\u003e\u0026#39;TYPE\u0026#39;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more relationship types using an array: \u003ccode\u003e[\u0026#39;TYPE1\u0026#39;,\u0026#39;TYPE2\u0026#39;]\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more relationship types with their properties using a configuration map: \u003ccode\u003e{ALIAS_OF_TYPE: {type:\u0026#39;RELATIONSHIP_TYPE\u0026#39;, projection: \u0026#39;NATURAL\u0026#39;, properties:[property1,property2]}\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -659,15 +699,15 @@
       "jobName": "paragraph_1581012866498_690269968",
       "id": "20200206-181426_1835296011",
       "dateCreated": "2020-02-06 18:14:26.498",
-      "dateStarted": "2020-02-06 19:19:15.478",
-      "dateFinished": "2020-02-06 19:19:15.501",
+      "dateStarted": "2020-02-08 21:29:06.014",
+      "dateFinished": "2020-02-08 21:29:06.047",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027labelpropagation_example\u0027, \u0027Library\u0027, {\n  DEPENDS_ON_DIRECTED: {\n    type: \u0027DEPENDS_ON\u0027,\n    projection: \u0027NATURAL\u0027\n  },\n  DEPENDS_ON_UNDIRECTED: {\n    type: \u0027DEPENDS_ON\u0027,\n    projection: \u0027UNDIRECTED\u0027\n  }\n})",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027labelpropagation_example\u0027, \u0027Library\u0027, {\n  DEPENDS_ON_DIRECTED: {\n    type: \u0027DEPENDS_ON\u0027,\n    // loading a directed network\n    projection: \u0027NATURAL\u0027\n  },\n  DEPENDS_ON_UNDIRECTED: {\n    type: \u0027DEPENDS_ON\u0027,\n    // loading an undirected network\n    projection: \u0027UNDIRECTED\u0027\n  }\n});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:14:12.822",
+      "dateUpdated": "2020-02-08 21:33:38.948",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -727,7 +767,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON_UNDIRECTED.aggregation\trelationshipProjection.DEPENDS_ON_UNDIRECTED.projection\trelationshipProjection.DEPENDS_ON_UNDIRECTED.type\trelationshipProjection.DEPENDS_ON_DIRECTED.aggregation\trelationshipProjection.DEPENDS_ON_DIRECTED.projection\trelationshipProjection.DEPENDS_ON_DIRECTED.type\tnodeCount\trelationshipCount\tcreateMillis\n\"labelpropagation_example\"\tLibrary\tDEFAULT\tUNDIRECTED\tDEPENDS_ON\tDEFAULT\tNATURAL\tDEPENDS_ON\t15\t54\t8\n"
+            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON_UNDIRECTED.aggregation\trelationshipProjection.DEPENDS_ON_UNDIRECTED.projection\trelationshipProjection.DEPENDS_ON_UNDIRECTED.type\trelationshipProjection.DEPENDS_ON_DIRECTED.aggregation\trelationshipProjection.DEPENDS_ON_DIRECTED.projection\trelationshipProjection.DEPENDS_ON_DIRECTED.type\tnodeCount\trelationshipCount\tcreateMillis\n\"labelpropagation_example\"\tLibrary\tDEFAULT\tUNDIRECTED\tDEPENDS_ON\tDEFAULT\tNATURAL\tDEPENDS_ON\t15\t54\t21\n"
           }
         ]
       },
@@ -735,15 +775,15 @@
       "jobName": "paragraph_1581012873097_1110787093",
       "id": "20200206-181433_1503073811",
       "dateCreated": "2020-02-06 18:14:33.097",
-      "dateStarted": "2020-02-06 19:14:12.291",
-      "dateFinished": "2020-02-06 19:14:12.321",
+      "dateStarted": "2020-02-08 21:29:09.432",
+      "dateFinished": "2020-02-08 21:29:09.497",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream Label propagation results\n",
+      "text": "%md\n### Stream Label propagation results\n\nWe start with streaming the results of the directed network. We define the network using the `relationshipType` parameter.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:14:48.351",
+      "dateUpdated": "2020-02-08 21:30:36.416",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -767,7 +807,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream Label propagation results\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream Label propagation results\u003c/h3\u003e\n\u003cp\u003eWe start with streaming the results of the directed network. We define the network using the \u003ccode\u003erelationshipType\u003c/code\u003e parameter.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -775,15 +815,15 @@
       "jobName": "paragraph_1581016486094_-36654826",
       "id": "20200206-191446_726874451",
       "dateCreated": "2020-02-06 19:14:46.094",
-      "dateStarted": "2020-02-06 19:14:48.355",
-      "dateFinished": "2020-02-06 19:14:48.359",
+      "dateStarted": "2020-02-08 21:30:36.422",
+      "dateFinished": "2020-02-08 21:30:36.448",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.labelPropagation.stream(\u0027labelpropagation_example\u0027, {relationshipTypes: [\u0027DEPENDS_ON_DIRECTED\u0027]}) YIELD nodeId,communityId\nRETURN communityId, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
+      "text": "%neo4j_gds\nCALL gds.labelPropagation.stream(\u0027labelpropagation_example\u0027, {relationshipTypes: [\u0027DEPENDS_ON_DIRECTED\u0027]})\nYIELD nodeId,communityId\nRETURN communityId, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:17:02.970",
+      "dateUpdated": "2020-02-08 21:33:30.873",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -834,7 +874,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "communityId\tlibraries\n9\t[\"six\",\"pandas\",\"python-dateutil\",\"matplotlib\",\"spacy\"]\n21\t[\"jupyter\",\"jpy-console\",\"ipykernel\"]\n23\t[\"nbconvert\",\"jpy-client\",\"jpy-core\"]\n17\t[\"pyspark\",\"py4j\"]\n11\t[\"numpy\"]\n13\t[\"pytz\"]\n"
+            "data": "communityId\tlibraries\n0\t[\"six\",\"pandas\",\"python-dateutil\",\"matplotlib\",\"spacy\"]\n12\t[\"jupyter\",\"jpy-console\",\"ipykernel\"]\n14\t[\"nbconvert\",\"jpy-client\",\"jpy-core\"]\n8\t[\"pyspark\",\"py4j\"]\n2\t[\"numpy\"]\n4\t[\"pytz\"]\n"
           }
         ]
       },
@@ -842,82 +882,15 @@
       "jobName": "paragraph_1581016468147_-2072048308",
       "id": "20200206-191428_508484516",
       "dateCreated": "2020-02-06 19:14:28.147",
-      "dateStarted": "2020-02-06 19:17:01.442",
-      "dateFinished": "2020-02-06 19:17:01.515",
+      "dateStarted": "2020-02-08 21:32:30.982",
+      "dateFinished": "2020-02-08 21:32:31.040",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.labelPropagation.stream(\u0027labelpropagation_example\u0027, {relationshipTypes: [\u0027DEPENDS_ON_UNDIRECTED\u0027]}) YIELD nodeId,communityId\nRETURN communityId, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
+      "text": "%md \nLets now run the algorithm on the undirected network and compare results.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:17:17.161",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {
-          "0": {
-            "graph": {
-              "mode": "table",
-              "height": 300.0,
-              "optionOpen": false,
-              "setting": {
-                "table": {
-                  "tableGridState": {},
-                  "tableColumnTypeState": {
-                    "names": {
-                      "communityId": "string",
-                      "libraries": "string"
-                    },
-                    "updated": false
-                  },
-                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
-                  "tableOptionValue": {
-                    "useFilter": false,
-                    "showPagination": false,
-                    "showAggregationFooter": false
-                  },
-                  "updated": false,
-                  "initialized": false
-                }
-              },
-              "commonSetting": {}
-            }
-          }
-        },
-        "editorSetting": {
-          "language": "markdown",
-          "editOnDblClick": false,
-          "completionSupport": false
-        },
-        "editorMode": "ace/mode/undefined"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "communityId\tlibraries\n11\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n19\t[\"jupyter\",\"jpy-console\",\"nbconvert\",\"ipykernel\",\"jpy-client\",\"jpy-core\"]\n17\t[\"pyspark\",\"py4j\"]\n"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1581016629940_227664555",
-      "id": "20200206-191709_887891310",
-      "dateCreated": "2020-02-06 19:17:09.940",
-      "dateStarted": "2020-02-06 19:17:16.126",
-      "dateFinished": "2020-02-06 19:17:16.150",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%md\n### Write-back Label propagation",
-      "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:17:38.112",
+      "dateUpdated": "2020-02-08 21:32:06.714",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -941,7 +914,114 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back Label propagation\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eLets now run the algorithm on the undirected network and compare results.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581197454479_-1928985253",
+      "id": "20200208-213054_1052378846",
+      "dateCreated": "2020-02-08 21:30:54.479",
+      "dateStarted": "2020-02-08 21:32:06.714",
+      "dateFinished": "2020-02-08 21:32:06.729",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gds\nCALL gds.labelPropagation.stream(\u0027labelpropagation_example\u0027, {relationshipTypes: [\u0027DEPENDS_ON_UNDIRECTED\u0027]})\nYIELD nodeId,communityId\nRETURN communityId, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC;",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:33:26.728",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "communityId": "string",
+                      "libraries": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "communityId\tlibraries\n2\t[\"six\",\"pandas\",\"numpy\",\"python-dateutil\",\"pytz\",\"matplotlib\",\"spacy\"]\n10\t[\"jupyter\",\"jpy-console\",\"nbconvert\",\"ipykernel\",\"jpy-client\",\"jpy-core\"]\n8\t[\"pyspark\",\"py4j\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581016629940_227664555",
+      "id": "20200206-191709_887891310",
+      "dateCreated": "2020-02-06 19:17:09.940",
+      "dateStarted": "2020-02-08 21:32:22.767",
+      "dateFinished": "2020-02-08 21:32:22.814",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "### Write-back betweenness centrality\n\n`WriteProperty` parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:33:01.379",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eWriteProperty\u003c/code\u003e parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -949,15 +1029,15 @@
       "jobName": "paragraph_1581016655245_1147128132",
       "id": "20200206-191735_802134845",
       "dateCreated": "2020-02-06 19:17:35.245",
-      "dateStarted": "2020-02-06 19:17:38.114",
-      "dateFinished": "2020-02-06 19:17:38.131",
+      "dateStarted": "2020-02-08 21:33:01.375",
+      "dateFinished": "2020-02-08 21:33:01.394",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.labelPropagation.write(\u0027labelpropagation_example\u0027, {relationshipTypes: [\u0027DEPENDS_ON_DIRECTED\u0027], writeProperty:\u0027label_propagation\u0027})\n",
+      "text": "%neo4j_gds\nCALL gds.labelPropagation.write(\u0027labelpropagation_example\u0027, {relationshipTypes: [\u0027DEPENDS_ON_DIRECTED\u0027], writeProperty:\u0027label_propagation\u0027});\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:18:18.008",
+      "dateUpdated": "2020-02-08 21:33:18.144",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -974,7 +1054,6 @@
                   "tableColumnTypeState": {
                     "names": {
                       "nodePropertiesWritten": "string",
-                      "relationshipPropertiesWritten": "string",
                       "createMillis": "string",
                       "computeMillis": "string",
                       "writeMillis": "string",
@@ -1032,7 +1111,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "nodePropertiesWritten\trelationshipPropertiesWritten\tcreateMillis\tcomputeMillis\twriteMillis\tpostProcessingMillis\tcommunityCount\tranIterations\tdidConverge\tcommunityDistribution.p99\tcommunityDistribution.min\tcommunityDistribution.max\tcommunityDistribution.mean\tcommunityDistribution.p90\tcommunityDistribution.p50\tcommunityDistribution.p999\tcommunityDistribution.p95\tcommunityDistribution.p75\tconfiguration.maxIterations\tconfiguration.writeConcurrency\tconfiguration.seedProperty\tconfiguration.writeProperty\tconfiguration.relationshipWeightProperty\tconfiguration.nodeWeightProperty\tconfiguration.relationshipTypes\tconfiguration.concurrency\n15\t0\t0\t13\t5\t0\t6\t3\tTRUE\t5\t1\t5\t2.5\t3\t2\t5\t5\t3\t10\t4\t\tlabel_propagation\t\t\t[\"DEPENDS_ON_DIRECTED\"]\t4\n"
+            "data": "nodePropertiesWritten\tcreateMillis\tcomputeMillis\twriteMillis\tpostProcessingMillis\tcommunityCount\tranIterations\tdidConverge\tcommunityDistribution.p99\tcommunityDistribution.min\tcommunityDistribution.max\tcommunityDistribution.mean\tcommunityDistribution.p90\tcommunityDistribution.p50\tcommunityDistribution.p999\tcommunityDistribution.p95\tcommunityDistribution.p75\tconfiguration.maxIterations\tconfiguration.writeConcurrency\tconfiguration.seedProperty\tconfiguration.writeProperty\tconfiguration.relationshipWeightProperty\tconfiguration.nodeWeightProperty\tconfiguration.relationshipTypes\tconfiguration.concurrency\n15\t0\t1\t5\t2\t6\t3\tTRUE\t5\t1\t5\t2.5\t3\t2\t5\t5\t3\t10\t4\t\tlabel_propagation\t\t\t[\"DEPENDS_ON_DIRECTED\"]\t4\n"
           }
         ]
       },
@@ -1040,15 +1119,15 @@
       "jobName": "paragraph_1581016667804_1803489122",
       "id": "20200206-191747_684571656",
       "dateCreated": "2020-02-06 19:17:47.804",
-      "dateStarted": "2020-02-06 19:18:16.078",
-      "dateFinished": "2020-02-06 19:18:16.127",
+      "dateStarted": "2020-02-08 21:33:08.139",
+      "dateFinished": "2020-02-08 21:33:08.205",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:50:11.240",
+      "dateUpdated": "2020-02-08 21:33:14.090",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1060,35 +1139,27 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory\u003c/p\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1581016703570_-1944614770",
       "id": "20200206-191823_177085855",
       "dateCreated": "2020-02-06 19:18:23.570",
-      "dateStarted": "2020-02-06 19:18:32.145",
-      "dateFinished": "2020-02-06 19:18:32.149",
+      "dateStarted": "2020-02-08 21:33:14.090",
+      "dateFinished": "2020-02-08 21:33:14.100",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027labelpropagation_example\u0027)",
+      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027labelpropagation_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:18:36.642",
+      "dateUpdated": "2020-02-08 21:33:23.224",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1195,7 +1266,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

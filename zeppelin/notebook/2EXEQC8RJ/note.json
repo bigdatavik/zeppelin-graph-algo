@@ -42,9 +42,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# Degree centrality\nAs we used plain cypher, there is no need for migration to GDS",
+      "text": "%md\n# Degree centrality\nAs we used plain cypher, there is no need for migration guide to GDS library.\n\n\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:58:05.892",
+      "dateUpdated": "2020-02-08 21:00:30.691",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -63,14 +63,22 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eDegree centrality\u003c/h1\u003e\n\u003cp\u003eAs we used plain cypher, there is no need for migration guide to GDS library.\u003c/p\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1577984895560_-623880520",
       "id": "20200102-170815_1433853924",
       "dateCreated": "2020-01-02 17:08:15.560",
-      "dateStarted": "2020-02-06 17:58:05.895",
-      "dateFinished": "2020-02-06 17:58:05.906",
+      "dateStarted": "2020-02-08 21:00:30.693",
+      "dateFinished": "2020-02-08 21:00:30.706",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -163,9 +171,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Streaming degree centrality\n\nWe can get the in and out degree using plain cypher.",
+      "text": "%md\n## Streaming degree centrality\n\nWe can get the in and out-degree using plain cypher.",
       "user": "anonymous",
-      "dateUpdated": "2020-01-28 18:23:57.346",
+      "dateUpdated": "2020-02-08 21:00:43.697",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -190,7 +198,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming degree centrality\u003c/h2\u003e\n\u003cp\u003eWe can get the in and out degree using plain cypher.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eStreaming degree centrality\u003c/h2\u003e\n\u003cp\u003eWe can get the in and out-degree using plain cypher.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -198,8 +206,8 @@
       "jobName": "paragraph_1575718324870_2049827122",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:32:04.870",
-      "dateStarted": "2020-01-28 18:23:57.350",
-      "dateFinished": "2020-01-28 18:23:57.365",
+      "dateStarted": "2020-02-08 21:00:43.697",
+      "dateFinished": "2020-02-08 21:00:43.717",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -313,9 +321,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Write back degree centrality\n",
+      "text": "%md\n## Write back degree centrality\nUsing plain cypher we store the results back to the property `followers`of users.",
       "user": "anonymous",
-      "dateUpdated": "2019-12-07 11:32:28.538",
+      "dateUpdated": "2020-02-08 21:01:35.451",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -340,7 +348,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back degree centrality\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWrite back degree centrality\u003c/h2\u003e\n\u003cp\u003eUsing plain cypher we store the results back to the property \u003ccode\u003efollowers\u003c/code\u003eof users.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -348,8 +356,8 @@
       "jobName": "paragraph_1575718324874_-734143563",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:32:04.874",
-      "dateStarted": "2019-12-07 11:32:28.539",
-      "dateFinished": "2019-12-07 11:32:28.555",
+      "dateStarted": "2020-02-08 21:01:35.456",
+      "dateFinished": "2020-02-08 21:01:35.469",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

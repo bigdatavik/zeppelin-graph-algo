@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EW6YXEM1)",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:40.419",
+      "dateUpdated": "2020-02-08 20:27:12.212",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -36,15 +36,15 @@
       "jobName": "paragraph_1577984106045_1688990764",
       "id": "20200102-165506_39980812",
       "dateCreated": "2020-01-02 16:55:06.045",
-      "dateStarted": "2020-02-06 17:41:40.447",
-      "dateFinished": "2020-02-06 17:41:40.452",
+      "dateStarted": "2020-02-08 20:27:12.243",
+      "dateFinished": "2020-02-08 20:27:12.250",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n# Betweenness centrality migration guide",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:40.546",
+      "dateUpdated": "2020-02-08 20:27:12.343",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -76,15 +76,55 @@
       "jobName": "paragraph_1577984822128_-299498228",
       "id": "20200102-170702_2102842280",
       "dateCreated": "2020-01-02 17:07:02.129",
-      "dateStarted": "2020-02-06 17:41:40.587",
-      "dateFinished": "2020-02-06 17:41:40.600",
+      "dateStarted": "2020-02-08 20:27:12.381",
+      "dateFinished": "2020-02-08 20:27:12.390",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nreturn p",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:40.683",
+      "dateUpdated": "2020-02-08 20:50:07.080",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581193332164_-13958474",
+      "id": "20200208-202212_585872031",
+      "dateCreated": "2020-02-08 20:22:12.164",
+      "dateStarted": "2020-02-08 20:44:02.399",
+      "dateFinished": "2020-02-08 20:44:02.431",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nreturn p;",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 20:44:02.224",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -157,7 +197,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"centrality\":10.0,\"id\":\"Alice\",\"pagerank\":1.1116563910618424},\"label\":\"User\"},{\"id\":1,\"data\":{\"centrality\":0.0,\"id\":\"Bridget\",\"pagerank\":0.5358271526871249},\"label\":\"User\"},{\"id\":2,\"data\":{\"centrality\":0.0,\"id\":\"Charles\",\"pagerank\":0.38475333093665537},\"label\":\"User\"},{\"id\":3,\"data\":{\"centrality\":7.0,\"id\":\"Doug\",\"pagerank\":1.671956494869664},\"label\":\"User\"},{\"id\":4,\"data\":{\"centrality\":7.0,\"id\":\"Mark\",\"pagerank\":1.5623059164267037},\"label\":\"User\"},{\"id\":5,\"data\":{\"centrality\":0.0,\"id\":\"Michael\",\"pagerank\":0.5358271526871249},\"label\":\"User\"},{\"id\":6,\"data\":{\"centrality\":1.0,\"id\":\"David\",\"pagerank\":0.27750000506639483},\"label\":\"User\"},{\"id\":7,\"data\":{\"centrality\":0.0,\"id\":\"Amy\",\"pagerank\":0.3858750030398369},\"label\":\"User\"},{\"id\":8,\"data\":{\"centrality\":0.0,\"id\":\"James\",\"pagerank\":0.15000000000000002},\"label\":\"User\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":2,\"id\":1,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":3,\"id\":2,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":5,\"id\":3,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":3,\"target\":4,\"id\":4,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":0,\"id\":5,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":5,\"id\":6,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":0,\"id\":7,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":1,\"id\":8,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":2,\"target\":3,\"id\":9,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":1,\"target\":3,\"id\":10,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":5,\"target\":3,\"id\":11,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":0,\"target\":3,\"id\":12,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":4,\"target\":0,\"id\":13,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":6,\"target\":7,\"id\":14,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":8,\"target\":6,\"id\":15,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"User\":\"#6FF08D\"},\"types\":[\"FOLLOWS\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":32,\"data\":{\"id\":\"Alice\",\"betweenness\":10.0},\"label\":\"User\"},{\"id\":33,\"data\":{\"id\":\"Bridget\",\"betweenness\":0.0},\"label\":\"User\"},{\"id\":34,\"data\":{\"id\":\"Charles\",\"betweenness\":0.0},\"label\":\"User\"},{\"id\":35,\"data\":{\"id\":\"Doug\",\"betweenness\":7.0},\"label\":\"User\"},{\"id\":36,\"data\":{\"id\":\"Mark\",\"betweenness\":7.0},\"label\":\"User\"},{\"id\":37,\"data\":{\"id\":\"Michael\",\"betweenness\":0.0},\"label\":\"User\"},{\"id\":38,\"data\":{\"id\":\"David\",\"betweenness\":1.0},\"label\":\"User\"},{\"id\":39,\"data\":{\"id\":\"Amy\",\"betweenness\":0.0},\"label\":\"User\"},{\"id\":15,\"data\":{\"id\":\"James\",\"betweenness\":0.0},\"label\":\"User\"}],\"edges\":[{\"source\":32,\"target\":33,\"id\":35,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":32,\"target\":34,\"id\":36,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":36,\"target\":35,\"id\":37,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":33,\"target\":37,\"id\":38,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":35,\"target\":36,\"id\":39,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":33,\"target\":32,\"id\":40,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":37,\"target\":33,\"id\":41,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":34,\"target\":35,\"id\":42,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":33,\"target\":35,\"id\":43,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":37,\"target\":35,\"id\":44,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":32,\"target\":35,\"id\":45,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":36,\"target\":32,\"id\":46,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":38,\"target\":39,\"id\":47,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":15,\"target\":38,\"id\":48,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":37,\"target\":32,\"id\":18,\"data\":{},\"label\":\"FOLLOWS\"},{\"source\":32,\"target\":37,\"id\":19,\"data\":{},\"label\":\"FOLLOWS\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -165,15 +205,15 @@
       "jobName": "paragraph_1579454244644_280127710",
       "id": "20200119-171724_513834356",
       "dateCreated": "2020-01-19 17:17:24.644",
-      "dateStarted": "2020-02-06 17:41:40.712",
-      "dateFinished": "2020-02-06 17:41:40.743",
+      "dateStarted": "2020-02-08 20:44:02.280",
+      "dateFinished": "2020-02-08 20:44:02.328",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Neo4j graph algorithms library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:40.812",
+      "dateUpdated": "2020-02-08 20:27:12.757",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -205,17 +245,17 @@
       "jobName": "paragraph_1581010049273_1356784817",
       "id": "20200206-172729_943531952",
       "dateCreated": "2020-02-06 17:27:29.273",
-      "dateStarted": "2020-02-06 17:41:40.865",
-      "dateFinished": "2020-02-06 17:41:40.872",
+      "dateStarted": "2020-02-08 20:27:12.798",
+      "dateFinished": "2020-02-08 20:27:12.814",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Streaming betweenness centrality\n\nThe syntax we have had in graph algorithms library was algo.betwenness.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})",
+      "text": "%md\n### Streaming betweenness centrality\n\nThe syntax we have had in graph algorithms library was `algo.betwenness.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})`",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:40.959",
+      "dateUpdated": "2020-02-08 21:13:58.281",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -225,7 +265,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -238,7 +278,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming betweenness centrality\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was algo.betwenness.stream(\u0026lsquo;Node label\u0026rsquo;, \u0026lsquo;Relationship type\u0026rsquo;, {configuration map})\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming betweenness centrality\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was \u003ccode\u003ealgo.betwenness.stream(\u0026#39;Node label\u0026#39;, \u0026#39;Relationship type\u0026#39;, {configuration map})\u003c/code\u003e\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -246,15 +286,15 @@
       "jobName": "paragraph_1575718417138_-786578012",
       "id": "20191207-112728_2069065216",
       "dateCreated": "2019-12-07 11:33:37.138",
-      "dateStarted": "2020-02-06 17:41:41.011",
-      "dateFinished": "2020-02-06 17:41:41.048",
+      "dateStarted": "2020-02-08 20:44:23.004",
+      "dateFinished": "2020-02-08 20:44:23.051",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.betweenness.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id  AS user, centrality\nORDER BY centrality DESC\n",
+      "text": "%neo4j_algo\nCALL algo.betweenness.stream(\"User\", \"FOLLOWS\")\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id  AS user, centrality\nORDER BY centrality DESC;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:41.105",
+      "dateUpdated": "2020-02-08 20:27:13.049",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -334,7 +374,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "user\tcentrality\n\"Alice\"\t10.0\n\"Doug\"\t7.0\n\"Mark\"\t7.0\n\"David\"\t1.0\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Michael\"\t0.0\n\"Amy\"\t0.0\n\"James\"\t0.0\n"
+            "data": "user\tcentrality\n\"Alice\"\t10.0\n\"Doug\"\t7.0\n\"Mark\"\t7.0\n\"David\"\t1.0\n\"James\"\t0.0\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Michael\"\t0.0\n\"Amy\"\t0.0\n"
           }
         ]
       },
@@ -342,15 +382,15 @@
       "jobName": "paragraph_1575718417139_929098113",
       "id": "20191207-112455_1660358477",
       "dateCreated": "2019-12-07 11:33:37.139",
-      "dateStarted": "2020-02-06 17:41:41.129",
-      "dateFinished": "2020-02-06 17:41:41.149",
+      "dateStarted": "2020-02-08 20:27:13.103",
+      "dateFinished": "2020-02-08 20:27:13.153",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\nAs we can see in results, Alice is the main broker in this network, but Mark and\nDoug aren’t far behind. In the smaller subgraph all shortest paths go through David,\nso he is important for information flow among those nodes.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:41.229",
+      "dateUpdated": "2020-02-08 20:27:13.203",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -382,17 +422,17 @@
       "jobName": "paragraph_1580234790342_1858011081",
       "id": "20200128-180630_875191064",
       "dateCreated": "2020-01-28 18:06:30.342",
-      "dateStarted": "2020-02-06 17:41:41.253",
-      "dateFinished": "2020-02-06 17:41:41.263",
+      "dateStarted": "2020-02-08 20:27:13.278",
+      "dateFinished": "2020-02-08 20:27:13.288",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Write-back betweenness centrality\n",
+      "text": "%md\n### Write-back betweenness centrality\nIf we want to store the results of the algorithm back to the graph, we can use the write-back version of the algorithm.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:55.762",
+      "dateUpdated": "2020-02-08 20:51:19.791",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -402,7 +442,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
@@ -415,7 +455,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003cp\u003eIf we want to store the results of the algorithm back to the graph, we can use the write-back version of the algorithm.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -423,15 +463,15 @@
       "jobName": "paragraph_1575718417139_1396218524",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:33:37.139",
-      "dateStarted": "2020-02-06 17:41:55.770",
-      "dateFinished": "2020-02-06 17:41:55.811",
+      "dateStarted": "2020-02-08 20:45:29.281",
+      "dateFinished": "2020-02-08 20:45:29.294",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.betweenness(\u0027User\u0027, \u0027FOLLOWS\u0027)",
+      "text": "%neo4j_algo\nCALL algo.betweenness(\u0027User\u0027, \u0027FOLLOWS\u0027, {writeProperty:\u0027betweenness\u0027});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:41.487",
+      "dateUpdated": "2020-02-08 20:27:13.515",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -488,7 +528,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\tminCentrality\tmaxCentrality\tsumCentrality\n7\t3\t1\t9\t-1.0\t-1.0\t-1.0\n"
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\tminCentrality\tmaxCentrality\tsumCentrality\n16\t1\t2\t9\t-1.0\t-1.0\t-1.0\n"
           }
         ]
       },
@@ -496,15 +536,15 @@
       "jobName": "paragraph_1575718417140_146659566",
       "id": "20191207-112554_511336751",
       "dateCreated": "2019-12-07 11:33:37.140",
-      "dateStarted": "2020-02-06 17:41:41.526",
-      "dateFinished": "2020-02-06 17:41:41.549",
+      "dateStarted": "2020-02-08 20:27:13.543",
+      "dateFinished": "2020-02-08 20:27:13.583",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n### Approximate betweenness centrality\n\nRecall that calculating the exact betweenness centrality on large graphs can be very\nexpensive. We could therefore choose to use an approximation algorithm that runs\nmuch faster but still provides useful (albeit imprecise) information.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:58.813",
+      "dateUpdated": "2020-02-08 20:27:13.642",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -537,15 +577,15 @@
       "jobName": "paragraph_1575718516225_-1909108411",
       "id": "20191207-113516_619668073",
       "dateCreated": "2019-12-07 11:35:16.225",
-      "dateStarted": "2020-02-06 17:41:58.813",
-      "dateFinished": "2020-02-06 17:41:58.820",
+      "dateStarted": "2020-02-08 20:27:13.677",
+      "dateFinished": "2020-02-08 20:27:13.691",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.betweenness.sampled.stream(\"User\", \"FOLLOWS\", {strategy:\"degree\"})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC\n",
+      "text": "%neo4j_algo\nCALL algo.betweenness.sampled.stream(\"User\", \"FOLLOWS\", {strategy:\"degree\"})\nYIELD nodeId, centrality\nRETURN algo.getNodeById(nodeId).id AS user, centrality\nORDER BY centrality DESC;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:41.767",
+      "dateUpdated": "2020-02-08 20:27:13.777",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -597,7 +637,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "user\tcentrality\n\"Alice\"\t15.75\n\"Mark\"\t9.0\n\"Doug\"\t4.5\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Michael\"\t0.0\n\"David\"\t0.0\n\"Amy\"\t0.0\n\"James\"\t0.0\n"
+            "data": "user\tcentrality\n\"Alice\"\t7.5\n\"Mark\"\t6.0\n\"Doug\"\t4.5\n\"David\"\t1.5\n\"James\"\t0.0\n\"Bridget\"\t0.0\n\"Charles\"\t0.0\n\"Michael\"\t0.0\n\"Amy\"\t0.0\n"
           }
         ]
       },
@@ -605,15 +645,15 @@
       "jobName": "paragraph_1575718474692_-2062144139",
       "id": "20191207-113434_913302487",
       "dateCreated": "2019-12-07 11:34:34.692",
-      "dateStarted": "2020-02-06 17:41:41.793",
-      "dateFinished": "2020-02-06 17:41:41.826",
+      "dateStarted": "2020-02-08 20:27:13.809",
+      "dateFinished": "2020-02-08 20:27:13.842",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\nOur top influencers are similar to before, although Mark now has a higher ranking\nthan Doug.\nDue to the random nature of this algorithm, we may see different results each time\nthat we run it. On larger graphs this randomness will have less of an impact than it\ndoes on our small sample graph.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:41.893",
+      "dateUpdated": "2020-02-08 20:27:13.908",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -645,15 +685,15 @@
       "jobName": "paragraph_1579461895624_1077283437",
       "id": "20200119-192455_1947109107",
       "dateCreated": "2020-01-19 19:24:55.624",
-      "dateStarted": "2020-02-06 17:41:41.918",
-      "dateFinished": "2020-02-06 17:41:41.948",
+      "dateStarted": "2020-02-08 20:27:13.935",
+      "dateFinished": "2020-02-08 20:27:13.945",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.018",
+      "dateUpdated": "2020-02-08 20:27:14.035",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -685,15 +725,15 @@
       "jobName": "paragraph_1580234999136_406360066",
       "id": "20200128-180959_1298769479",
       "dateCreated": "2020-01-28 18:09:59.136",
-      "dateStarted": "2020-02-06 17:41:42.049",
-      "dateFinished": "2020-02-06 17:41:42.054",
+      "dateStarted": "2020-02-08 20:27:14.076",
+      "dateFinished": "2020-02-08 20:27:14.082",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.",
+      "text": "%md\nThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\n\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.148",
+      "dateUpdated": "2020-02-08 20:53:30.400",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -705,8 +745,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -717,7 +757,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003cp\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -725,15 +765,15 @@
       "jobName": "paragraph_1580234975383_-1138436639",
       "id": "20200128-180935_132037506",
       "dateCreated": "2020-01-28 18:09:35.383",
-      "dateStarted": "2020-02-06 17:41:42.177",
-      "dateFinished": "2020-02-06 17:41:42.186",
+      "dateStarted": "2020-02-08 20:47:32.859",
+      "dateFinished": "2020-02-08 20:47:32.898",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027betweenness_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027)",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027betweenness_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.277",
+      "dateUpdated": "2020-02-08 20:27:14.303",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -785,28 +825,20 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"betweenness_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t6\n"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1581010220842_910217437",
       "id": "20200206-173020_1439132590",
       "dateCreated": "2020-02-06 17:30:20.842",
-      "dateStarted": "2020-02-06 17:41:42.314",
-      "dateFinished": "2020-02-06 17:41:42.366",
+      "dateStarted": "2020-02-08 20:27:14.331",
+      "dateFinished": "2020-02-08 20:27:14.355",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "### Streaming betweenness centrality\n",
+      "text": "### Streaming betweenness centrality\nIf we want to run the betweenness algorithm on the whole in-memory named graph, we don\u0027t have to specify any additional configuration. Other than that, the syntax is similar to that of the Graph algorithms library.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.413",
+      "dateUpdated": "2020-02-08 20:54:13.315",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -818,8 +850,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -830,7 +862,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming betweenness centrality\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming betweenness centrality\u003c/h3\u003e\n\u003cp\u003eIf we want to run the betweenness algorithm on the whole in-memory named graph, we don\u0026rsquo;t have to specify any additional configuration. Other than that, the syntax is similar to that of the Graph algorithms library.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -838,15 +870,15 @@
       "jobName": "paragraph_1581010277251_838095796",
       "id": "20200206-173117_480923154",
       "dateCreated": "2020-02-06 17:31:17.251",
-      "dateStarted": "2020-02-06 17:41:42.452",
-      "dateFinished": "2020-02-06 17:41:42.468",
+      "dateStarted": "2020-02-08 20:27:14.562",
+      "dateFinished": "2020-02-08 20:27:14.569",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.alpha.betweenness.stream(\u0027betweenness_example\u0027) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality ORDER BY centrality DESC LIMIT 10",
+      "text": "%neo4j_gds\nCALL gds.alpha.betweenness.stream(\u0027betweenness_example\u0027) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality ORDER BY centrality DESC LIMIT 10",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.547",
+      "dateUpdated": "2020-02-08 20:27:14.662",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -905,15 +937,15 @@
       "jobName": "paragraph_1581010275340_-1275312609",
       "id": "20200206-173115_20114644",
       "dateCreated": "2020-02-06 17:31:15.340",
-      "dateStarted": "2020-02-06 17:41:42.570",
-      "dateFinished": "2020-02-06 17:41:42.595",
+      "dateStarted": "2020-02-08 20:27:14.713",
+      "dateFinished": "2020-02-08 20:27:14.741",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "### Write-back betweenness centrality\n",
+      "text": "### Write-back betweenness centrality\n\n`WriteProperty` parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.670",
+      "dateUpdated": "2020-02-08 20:54:42.955",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -925,8 +957,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -937,7 +969,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eWriteProperty\u003c/code\u003e parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -945,15 +977,15 @@
       "jobName": "paragraph_1581010701758_1772750861",
       "id": "20200206-173821_280671772",
       "dateCreated": "2020-02-06 17:38:21.758",
-      "dateStarted": "2020-02-06 17:41:42.691",
-      "dateFinished": "2020-02-06 17:41:42.698",
+      "dateStarted": "2020-02-08 20:48:41.622",
+      "dateFinished": "2020-02-08 20:48:41.641",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.alpha.betweenness.write(\u0027betweenness_example\u0027,{writeProperty:\u0027betweenness\u0027}) ",
+      "text": "%neo4j_gds\nCALL gds.alpha.betweenness.write(\u0027betweenness_example\u0027,{writeProperty:\u0027betweenness\u0027}) ",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.791",
+      "dateUpdated": "2020-02-08 20:27:14.950",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1009,7 +1041,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\tminCentrality\tmaxCentrality\tsumCentrality\n0\t2\t1\t9\t0.0\t10.0\t25.0\n"
+            "data": "loadMillis\tcomputeMillis\twriteMillis\tnodes\tminCentrality\tmaxCentrality\tsumCentrality\n0\t2\t2\t9\t0.0\t10.0\t25.0\n"
           }
         ]
       },
@@ -1017,15 +1049,15 @@
       "jobName": "paragraph_1581010670758_-1838050492",
       "id": "20200206-173750_1085131096",
       "dateCreated": "2020-02-06 17:37:50.758",
-      "dateStarted": "2020-02-06 17:41:42.823",
-      "dateFinished": "2020-02-06 17:41:42.845",
+      "dateStarted": "2020-02-08 20:27:15.010",
+      "dateFinished": "2020-02-08 20:27:15.040",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Approximate betweenness centrality\n\nRecall that calculating the exact betweenness centrality on large graphs can be very\nexpensive. We could therefore choose to use an approximation algorithm that runs\nmuch faster but still provides useful (albeit imprecise) information.",
+      "text": "%md\n### Approximate betweenness centrality",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:42.921",
+      "dateUpdated": "2020-02-08 20:27:15.104",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1049,7 +1081,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eApproximate betweenness centrality\u003c/h3\u003e\n\u003cp\u003eRecall that calculating the exact betweenness centrality on large graphs can be very\u003cbr/\u003eexpensive. We could therefore choose to use an approximation algorithm that runs\u003cbr/\u003emuch faster but still provides useful (albeit imprecise) information.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eApproximate betweenness centrality\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -1057,15 +1089,15 @@
       "jobName": "paragraph_1581010761696_-1181577967",
       "id": "20200206-173921_494425193",
       "dateCreated": "2020-02-06 17:39:21.696",
-      "dateStarted": "2020-02-06 17:41:42.945",
-      "dateFinished": "2020-02-06 17:41:42.951",
+      "dateStarted": "2020-02-08 20:27:15.174",
+      "dateFinished": "2020-02-08 20:27:15.208",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.alpha.betweenness.sampled.stream(\u0027betweenness_example\u0027,{strategy:\"degree\"}) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality ORDER BY centrality DESC LIMIT 10",
+      "text": "%neo4j_gds\nCALL gds.alpha.betweenness.sampled.stream(\u0027betweenness_example\u0027,{strategy:\"degree\"}) YIELD nodeId, centrality\nRETURN gds.util.asNode(nodeId).id AS name, centrality \nORDER BY centrality DESC LIMIT 10;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:43.045",
+      "dateUpdated": "2020-02-08 20:27:15.262",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1116,7 +1148,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "name\tcentrality\n\"Doug\"\t6.75\n\"Alice\"\t4.5\n\"David\"\t2.25\n\"Charles\"\t0.0\n\"Michael\"\t0.0\n\"Amy\"\t0.0\n\"Mark\"\t0.0\n\"James\"\t0.0\n\"Bridget\"\t0.0\n"
+            "data": "name\tcentrality\n\"Alice\"\t11.25\n\"Doug\"\t6.75\n\"Charles\"\t0.0\n\"Amy\"\t0.0\n\"Michael\"\t0.0\n\"David\"\t0.0\n\"Mark\"\t0.0\n\"James\"\t0.0\n\"Bridget\"\t0.0\n"
           }
         ]
       },
@@ -1124,15 +1156,15 @@
       "jobName": "paragraph_1581010247786_2034081321",
       "id": "20200206-173047_397492639",
       "dateCreated": "2020-02-06 17:30:47.786",
-      "dateStarted": "2020-02-06 17:41:43.084",
-      "dateFinished": "2020-02-06 17:41:43.121",
+      "dateStarted": "2020-02-08 20:27:15.315",
+      "dateFinished": "2020-02-08 20:27:15.353",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nAfter we are done with our analyisis we release the graph from memory\n",
+      "text": "%md\nAfter we are done with our analyisis we release the graph from memory.\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:43.183",
+      "dateUpdated": "2020-02-08 20:49:13.793",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1156,7 +1188,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -1164,15 +1196,15 @@
       "jobName": "paragraph_1581010840866_832222128",
       "id": "20200206-174040_1768614544",
       "dateCreated": "2020-02-06 17:40:40.866",
-      "dateStarted": "2020-02-06 17:41:43.207",
-      "dateFinished": "2020-02-06 17:41:43.211",
+      "dateStarted": "2020-02-08 20:49:13.797",
+      "dateFinished": "2020-02-08 20:49:13.839",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027betweenness_example\u0027);",
+      "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027betweenness_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:43.307",
+      "dateUpdated": "2020-02-08 20:27:15.538",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1197,15 +1229,15 @@
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -1239,7 +1271,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"betweenness_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\tNULL\tNULL\t9\t16\t4\t0\t4\t1.7777777777777777\t3\t1\t4\t4\t3\n"
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"betweenness_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\tNULL\tNULL\t9\t16\t4\t0\t4\t1.7777777777777777\t3\t1\t4\t4\t3\n"
           }
         ]
       },
@@ -1247,15 +1279,15 @@
       "jobName": "paragraph_1581010833481_62441147",
       "id": "20200206-174033_1277021809",
       "dateCreated": "2020-02-06 17:40:33.481",
-      "dateStarted": "2020-02-06 17:41:43.339",
-      "dateFinished": "2020-02-06 17:41:43.353",
+      "dateStarted": "2020-02-08 20:27:15.567",
+      "dateFinished": "2020-02-08 20:27:15.599",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gdn\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:41:43.435",
+      "dateUpdated": "2020-02-08 20:27:15.667",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1287,7 +1319,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

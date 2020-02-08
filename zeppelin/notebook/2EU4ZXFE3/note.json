@@ -81,9 +81,49 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH p\u003d(:Library)-[:DEPENDS_ON]-\u003e(:Library)\nRETURN p",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:01:46.743",
+      "dateUpdated": "2020-02-08 21:07:29.719",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581196047153_-1874166318",
+      "id": "20200208-210727_332979687",
+      "dateCreated": "2020-02-08 21:07:27.153",
+      "dateStarted": "2020-02-08 21:07:29.719",
+      "dateFinished": "2020-02-08 21:07:29.747",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nMATCH p\u003d(:Library)-[:DEPENDS_ON]-\u003e(:Library)\nRETURN p;",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:07:37.003",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -156,7 +196,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":9,\"data\":{\"id\":\"six\"},\"label\":\"Library\"},{\"id\":10,\"data\":{\"id\":\"pandas\"},\"label\":\"Library\"},{\"id\":11,\"data\":{\"id\":\"numpy\"},\"label\":\"Library\"},{\"id\":12,\"data\":{\"id\":\"python-dateutil\"},\"label\":\"Library\"},{\"id\":13,\"data\":{\"id\":\"pytz\"},\"label\":\"Library\"},{\"id\":14,\"data\":{\"id\":\"pyspark\"},\"label\":\"Library\"},{\"id\":15,\"data\":{\"id\":\"matplotlib\"},\"label\":\"Library\"},{\"id\":16,\"data\":{\"id\":\"spacy\"},\"label\":\"Library\"},{\"id\":17,\"data\":{\"id\":\"py4j\"},\"label\":\"Library\"},{\"id\":18,\"data\":{\"id\":\"jupyter\"},\"label\":\"Library\"},{\"id\":19,\"data\":{\"id\":\"jpy-console\"},\"label\":\"Library\"},{\"id\":20,\"data\":{\"id\":\"nbconvert\"},\"label\":\"Library\"},{\"id\":21,\"data\":{\"id\":\"ipykernel\"},\"label\":\"Library\"},{\"id\":22,\"data\":{\"id\":\"jpy-client\"},\"label\":\"Library\"},{\"id\":23,\"data\":{\"id\":\"jpy-core\"},\"label\":\"Library\"}],\"edges\":[{\"source\":22,\"target\":23,\"id\":32,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":20,\"target\":23,\"id\":33,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":11,\"id\":16,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":13,\"id\":17,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":12,\"id\":18,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":12,\"target\":9,\"id\":19,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":14,\"target\":17,\"id\":20,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":11,\"id\":21,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":12,\"id\":22,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":9,\"id\":23,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":15,\"target\":13,\"id\":24,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":16,\"target\":9,\"id\":25,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":16,\"target\":11,\"id\":26,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":20,\"id\":27,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":21,\"id\":28,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":18,\"target\":19,\"id\":29,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":19,\"target\":22,\"id\":30,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":19,\"target\":21,\"id\":31,\"data\":{},\"label\":\"DEPENDS_ON\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\"},\"types\":[\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"id\":\"six\"},\"label\":\"Library\"},{\"id\":1,\"data\":{\"id\":\"pandas\"},\"label\":\"Library\"},{\"id\":2,\"data\":{\"id\":\"numpy\"},\"label\":\"Library\"},{\"id\":3,\"data\":{\"id\":\"python-dateutil\"},\"label\":\"Library\"},{\"id\":4,\"data\":{\"id\":\"pytz\"},\"label\":\"Library\"},{\"id\":5,\"data\":{\"id\":\"pyspark\"},\"label\":\"Library\"},{\"id\":6,\"data\":{\"id\":\"matplotlib\"},\"label\":\"Library\"},{\"id\":7,\"data\":{\"id\":\"spacy\"},\"label\":\"Library\"},{\"id\":8,\"data\":{\"id\":\"py4j\"},\"label\":\"Library\"},{\"id\":9,\"data\":{\"id\":\"jupyter\"},\"label\":\"Library\"},{\"id\":10,\"data\":{\"id\":\"jpy-console\"},\"label\":\"Library\"},{\"id\":11,\"data\":{\"id\":\"nbconvert\"},\"label\":\"Library\"},{\"id\":12,\"data\":{\"id\":\"ipykernel\"},\"label\":\"Library\"},{\"id\":13,\"data\":{\"id\":\"jpy-client\"},\"label\":\"Library\"},{\"id\":14,\"data\":{\"id\":\"jpy-core\"},\"label\":\"Library\"}],\"edges\":[{\"source\":1,\"target\":2,\"id\":0,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":1,\"target\":4,\"id\":1,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":1,\"target\":3,\"id\":2,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":3,\"target\":0,\"id\":3,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":5,\"target\":8,\"id\":4,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":2,\"id\":5,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":3,\"id\":6,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":0,\"id\":7,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":6,\"target\":4,\"id\":8,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":7,\"target\":0,\"id\":9,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":7,\"target\":2,\"id\":10,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":9,\"target\":11,\"id\":11,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":9,\"target\":12,\"id\":12,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":9,\"target\":10,\"id\":13,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":13,\"id\":14,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":10,\"target\":12,\"id\":15,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":13,\"target\":14,\"id\":16,\"data\":{},\"label\":\"DEPENDS_ON\"},{\"source\":11,\"target\":14,\"id\":17,\"data\":{},\"label\":\"DEPENDS_ON\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -164,8 +204,8 @@
       "jobName": "paragraph_1579454689628_-2125341374",
       "id": "20200119-172449_638415466",
       "dateCreated": "2020-01-19 17:24:49.628",
-      "dateStarted": "2020-02-06 18:01:46.754",
-      "dateFinished": "2020-02-06 18:01:46.782",
+      "dateStarted": "2020-02-08 21:07:37.034",
+      "dateFinished": "2020-02-08 21:07:37.119",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -210,9 +250,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream connected components\n\nThe syntax we have had in graph algorithms library was algo.unionFind.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})",
+      "text": "%md\n### Stream connected components\n\nThe syntax we have had in graph algorithms library was `algo.unionFind.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:03:51.752",
+      "dateUpdated": "2020-02-08 21:08:30.695",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -236,7 +276,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream connected components\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was algo.unionFind.stream(\u0026lsquo;Node label\u0026rsquo;, \u0026lsquo;Relationship type\u0026rsquo;, {configuration map})\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream connected components\u003c/h3\u003e\n\u003cp\u003eThe syntax we have had in graph algorithms library was \u003ccode\u003ealgo.unionFind.stream(\u0026#39;Node label\u0026#39;, \u0026#39;Relationship type\u0026#39;, {configuration map})\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -244,15 +284,15 @@
       "jobName": "paragraph_1575719798113_-1137185665",
       "id": "20191207-114641_1084520692",
       "dateCreated": "2019-12-07 11:56:38.113",
-      "dateStarted": "2020-02-06 18:03:51.752",
-      "dateFinished": "2020-02-06 18:03:51.780",
+      "dateStarted": "2020-02-08 21:08:30.692",
+      "dateFinished": "2020-02-08 21:08:30.717",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.unionFind.stream(\"Library\", \"DEPENDS_ON\")\nYIELD nodeId,setId\nRETURN setId, collect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
+      "text": "%neo4j_algo\nCALL algo.unionFind.stream(\"Library\", \"DEPENDS_ON\")\nYIELD nodeId,setId\nRETURN setId, collect(algo.getNodeById(nodeId).id) AS libraries\nORDER BY size(libraries) DESC;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:02:26.133",
+      "dateUpdated": "2020-02-08 21:08:36.316",
       "config": {
         "editorSetting": {
           "editOnDblClick": false
@@ -309,8 +349,8 @@
       "jobName": "paragraph_1575719798114_-1699246869",
       "id": "20191207-114720_18204489",
       "dateCreated": "2019-12-07 11:56:38.114",
-      "dateStarted": "2020-02-06 18:02:26.155",
-      "dateFinished": "2020-02-06 18:02:26.253",
+      "dateStarted": "2020-02-08 21:08:36.351",
+      "dateFinished": "2020-02-08 21:08:36.559",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -355,11 +395,11 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Write-back connected components",
+      "text": "%md\n### Write-back connected components\nIf we want to store the results of the algorithm back to the graph, we can use the write-back version of the algorithm.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:07:04.608",
+      "dateUpdated": "2020-02-08 21:09:04.512",
       "config": {
-        "tableHide": true,
+        "tableHide": false,
         "editorSetting": {
           "editOnDblClick": true,
           "language": "markdown",
@@ -368,7 +408,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": false,
+        "editorHide": true,
         "results": {},
         "enabled": true
       },
@@ -381,7 +421,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back connected components\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back connected components\u003c/h3\u003e\n\u003cp\u003eIf we want to store the results of the algorithm back to the graph, we can use the write-back version of the algorithm.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -389,8 +429,8 @@
       "jobName": "paragraph_1575719798115_-1343420582",
       "id": "20191207-114843_887180679",
       "dateCreated": "2019-12-07 11:56:38.115",
-      "dateStarted": "2020-02-06 18:03:58.500",
-      "dateFinished": "2020-02-06 18:03:58.517",
+      "dateStarted": "2020-02-08 21:09:04.521",
+      "dateFinished": "2020-02-08 21:09:04.548",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -480,7 +520,7 @@
     {
       "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:14:20.541",
+      "dateUpdated": "2020-02-08 21:09:15.275",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -492,8 +532,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -512,15 +552,15 @@
       "jobName": "paragraph_1575719798118_-1954079372",
       "id": "20191207-114958_2002234398",
       "dateCreated": "2019-12-07 11:56:38.118",
-      "dateStarted": "2020-02-06 18:02:55.545",
-      "dateFinished": "2020-02-06 18:02:55.548",
+      "dateStarted": "2020-02-08 21:09:15.275",
+      "dateFinished": "2020-02-08 21:09:15.293",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.",
+      "text": "%md\nThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\n\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:14:29.955",
+      "dateUpdated": "2020-02-08 21:09:27.048",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -532,8 +572,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -544,7 +584,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003cp\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -552,15 +592,15 @@
       "jobName": "paragraph_1581012175533_1570833763",
       "id": "20200206-180255_376958029",
       "dateCreated": "2020-02-06 18:02:55.533",
-      "dateStarted": "2020-02-06 18:04:02.724",
-      "dateFinished": "2020-02-06 18:04:02.735",
+      "dateStarted": "2020-02-08 21:09:27.048",
+      "dateFinished": "2020-02-08 21:09:27.067",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027wcc_example\u0027, \u0027Library\u0027, \u0027DEPENDS_ON\u0027)\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027wcc_example\u0027, \u0027Library\u0027, \u0027DEPENDS_ON\u0027);\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:08:37.983",
+      "dateUpdated": "2020-02-08 21:09:56.148",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -617,7 +657,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeCount\trelationshipCount\tcreateMillis\n\"wcc_example\"\tLibrary\tDEFAULT\tNATURAL\tDEPENDS_ON\t15\t18\t4\n"
+            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeCount\trelationshipCount\tcreateMillis\n\"wcc_example\"\tLibrary\tDEFAULT\tNATURAL\tDEPENDS_ON\t15\t18\t11\n"
           }
         ]
       },
@@ -625,15 +665,15 @@
       "jobName": "paragraph_1581012183211_325200965",
       "id": "20200206-180303_500790663",
       "dateCreated": "2020-02-06 18:03:03.211",
-      "dateStarted": "2020-02-06 18:08:38.001",
-      "dateFinished": "2020-02-06 18:08:38.012",
+      "dateStarted": "2020-02-08 21:09:56.186",
+      "dateFinished": "2020-02-08 21:09:56.240",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream connected components",
+      "text": "### Streaming connected components\nIf we want to run the weakly connected components algorithm on the whole in-memory named graph, we don\u0027t have to specify any additional configuration. Other than that, the syntax is similar to that of the Graph algorithms library.\n\nNotice that the algorithm has been renamed from `algo.unionFind()` to `gds.wcc()`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:04:08.722",
+      "dateUpdated": "2020-02-08 21:12:04.309",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -657,7 +697,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream connected components\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming connected components\u003c/h3\u003e\n\u003cp\u003eIf we want to run the weakly connected components algorithm on the whole in-memory named graph, we don\u0026rsquo;t have to specify any additional configuration. Other than that, the syntax is similar to that of the Graph algorithms library.\u003c/p\u003e\n\u003cp\u003eNotice that the algorithm has been renamed from \u003ccode\u003ealgo.unionFind()\u003c/code\u003e to \u003ccode\u003egds.wcc()\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -665,15 +705,15 @@
       "jobName": "paragraph_1581012220177_961194273",
       "id": "20200206-180340_1133405322",
       "dateCreated": "2020-02-06 18:03:40.177",
-      "dateStarted": "2020-02-06 18:04:08.722",
-      "dateFinished": "2020-02-06 18:04:08.724",
+      "dateStarted": "2020-02-08 21:12:04.315",
+      "dateFinished": "2020-02-08 21:12:04.334",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.wcc.stream(\u0027wcc_example\u0027) YIELD nodeId,componentId\nRETURN componentId, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
+      "text": "%neo4j_gds\nCALL gds.wcc.stream(\u0027wcc_example\u0027) YIELD nodeId,componentId\nRETURN componentId, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:06:49.975",
+      "dateUpdated": "2020-02-08 21:12:07.770",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -732,15 +772,15 @@
       "jobName": "paragraph_1581012204780_-639558604",
       "id": "20200206-180324_1814848618",
       "dateCreated": "2020-02-06 18:03:24.780",
-      "dateStarted": "2020-02-06 18:06:49.126",
-      "dateFinished": "2020-02-06 18:06:49.219",
+      "dateStarted": "2020-02-08 21:12:07.795",
+      "dateFinished": "2020-02-08 21:12:07.991",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Write-back connected components",
+      "text": "### Write-back betweenness centrality\n\n`WriteProperty` parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:07:09.509",
+      "dateUpdated": "2020-02-08 21:12:25.795",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -764,7 +804,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back connected components\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eWriteProperty\u003c/code\u003e parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -772,8 +812,8 @@
       "jobName": "paragraph_1581012416510_-1349236893",
       "id": "20200206-180656_1726080397",
       "dateCreated": "2020-02-06 18:06:56.510",
-      "dateStarted": "2020-02-06 18:07:09.511",
-      "dateFinished": "2020-02-06 18:07:09.534",
+      "dateStarted": "2020-02-08 21:12:25.795",
+      "dateFinished": "2020-02-08 21:12:25.821",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -869,7 +909,7 @@
     {
       "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 19:18:29.113",
+      "dateUpdated": "2020-02-08 21:12:33.344",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -881,8 +921,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -901,15 +941,15 @@
       "jobName": "paragraph_1581012456568_-2144438413",
       "id": "20200206-180736_447126449",
       "dateCreated": "2020-02-06 18:07:36.568",
-      "dateStarted": "2020-02-06 18:09:36.382",
-      "dateFinished": "2020-02-06 18:09:36.404",
+      "dateStarted": "2020-02-08 21:12:33.343",
+      "dateFinished": "2020-02-08 21:12:33.374",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027wcc_example\u0027);",
+      "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027wcc_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 18:08:41.516",
+      "dateUpdated": "2020-02-08 21:12:39.472",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -934,15 +974,15 @@
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -976,7 +1016,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"wcc_example\"\tLibrary\tDEFAULT\tNATURAL\tDEPENDS_ON\tNULL\tNULL\t15\t18\t4\t0\t4\t1.2\t3\t1\t4\t3\t2\n"
+            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"wcc_example\"\tLibrary\tDEFAULT\tNATURAL\tDEPENDS_ON\tNULL\tNULL\t15\t18\t4\t0\t4\t1.2\t3\t1\t4\t3\t2\n"
           }
         ]
       },
@@ -984,8 +1024,8 @@
       "jobName": "paragraph_1581012496269_-610003406",
       "id": "20200206-180816_1988353040",
       "dateCreated": "2020-02-06 18:08:16.270",
-      "dateStarted": "2020-02-06 18:08:41.534",
-      "dateFinished": "2020-02-06 18:08:41.549",
+      "dateStarted": "2020-02-08 21:12:38.760",
+      "dateFinished": "2020-02-08 21:12:38.790",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -1013,7 +1053,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

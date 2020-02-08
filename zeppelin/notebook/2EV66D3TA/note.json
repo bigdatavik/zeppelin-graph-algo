@@ -42,9 +42,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# PageRank migration guide\n\nNeo4j graph algorithms are being deprecated and Neo4j Data Science library will be its successor.\n\nThis notebook is intended to demonstrate how to migrate PageRank algorithm procedure call from Neo4j Graph algorithms library to Neo4j Graph Data Science library. \n",
+      "text": "%md\n# PageRank migration guide",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:43:14.250",
+      "dateUpdated": "2020-02-08 21:02:26.661",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -56,8 +56,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -68,7 +68,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePageRank migration guide\u003c/h1\u003e\n\u003cp\u003eNeo4j graph algorithms are being deprecated and Neo4j Data Science library will be its successor.\u003c/p\u003e\n\u003cp\u003eThis notebook is intended to demonstrate how to migrate PageRank algorithm procedure call from Neo4j Graph algorithms library to Neo4j Graph Data Science library.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePageRank migration guide\u003c/h1\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -76,15 +76,55 @@
       "jobName": "paragraph_1577984933048_828394210",
       "id": "20200102-170853_1997624530",
       "dateCreated": "2020-01-02 17:08:53.048",
-      "dateStarted": "2020-02-06 17:15:50.138",
-      "dateFinished": "2020-02-06 17:15:50.151",
+      "dateStarted": "2020-02-08 21:02:26.669",
+      "dateFinished": "2020-02-08 21:02:26.685",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nRETURN p\n",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:50.233",
+      "dateUpdated": "2020-02-08 21:02:34.727",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581195752559_372553179",
+      "id": "20200208-210232_1520850940",
+      "dateCreated": "2020-02-08 21:02:32.559",
+      "dateStarted": "2020-02-08 21:02:34.727",
+      "dateFinished": "2020-02-08 21:02:34.755",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nMATCH p\u003d(:User)-[:FOLLOWS]-\u003e(:User)\nRETURN p;\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:05:22.654",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -173,7 +213,7 @@
     {
       "text": "%md\n## Neo4j graph algorithms library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:27:22.080",
+      "dateUpdated": "2020-02-08 21:02:47.285",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -185,8 +225,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -205,15 +245,15 @@
       "jobName": "paragraph_1580741311396_729811383",
       "id": "20200203-144831_1920245850",
       "dateCreated": "2020-02-03 14:48:31.396",
-      "dateStarted": "2020-02-06 17:15:50.534",
-      "dateFinished": "2020-02-06 17:15:50.548",
+      "dateStarted": "2020-02-08 21:02:47.294",
+      "dateFinished": "2020-02-08 21:02:47.336",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n### Streaming PageRank results\nThe syntax we have had in graph algorithms library was algo.pageRank.stream(\u0027Node label\u0027, \u0027Relationship type\u0027, {configuration map})",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:27:41.691",
+      "dateUpdated": "2020-02-08 21:02:48.936",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -225,8 +265,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -245,15 +285,15 @@
       "jobName": "paragraph_1581008749571_-1904024254",
       "id": "20200206-170549_1750664458",
       "dateCreated": "2020-02-06 17:05:49.571",
-      "dateStarted": "2020-02-06 17:15:50.659",
-      "dateFinished": "2020-02-06 17:15:50.678",
+      "dateStarted": "2020-02-08 21:02:48.936",
+      "dateFinished": "2020-02-08 21:02:48.963",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.pageRank.stream(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})\nYIELD nodeId, score\nRETURN algo.getNodeById(nodeId).id AS name, score\nORDER BY score DESC\n",
+      "text": "%neo4j_algo\nCALL algo.pageRank.stream(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})\nYIELD nodeId, score\nRETURN algo.getNodeById(nodeId).id AS name, score\nORDER BY score DESC;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:50.759",
+      "dateUpdated": "2020-02-08 21:05:26.483",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -319,6 +359,46 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\nAs we might expect, Doug has the highest PageRank because he is followed by all\nother users in his subgraph. Although Mark only has one follower, that follower is\nDoug, so Mark is also considered important in this graph. It’s not only the number of\nfollowers that is important, but also the importance of those followers.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 21:04:02.608",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAs we might expect, Doug has the highest PageRank because he is followed by all\u003cbr/\u003eother users in his subgraph. Although Mark only has one follower, that follower is\u003cbr/\u003eDoug, so Mark is also considered important in this graph. It’s not only the number of\u003cbr/\u003efollowers that is important, but also the importance of those followers.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581195836711_1789043732",
+      "id": "20200208-210356_1787584745",
+      "dateCreated": "2020-02-08 21:03:56.711",
+      "dateStarted": "2020-02-08 21:04:02.609",
+      "dateFinished": "2020-02-08 21:04:02.620",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n### Write-back PageRank centrality\n",
       "user": "anonymous",
       "dateUpdated": "2020-02-06 17:15:50.989",
@@ -359,9 +439,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nCALL algo.pageRank(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85})",
+      "text": "%neo4j_algo\nCALL algo.pageRank(\u0027User\u0027, \u0027FOLLOWS\u0027, {iterations:20, dampingFactor:0.85, writeProperty: \u0027pagerank\u0027});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:51.137",
+      "dateUpdated": "2020-02-08 21:05:30.204",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -418,7 +498,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "nodes\titerations\tloadMillis\tcomputeMillis\twriteMillis\tdampingFactor\twrite\twriteProperty\n9\t20\t9\t4\t2\t0.85\tTRUE\t\"pagerank\"\n"
+            "data": "nodes\titerations\tloadMillis\tcomputeMillis\twriteMillis\tdampingFactor\twrite\twriteProperty\n9\t20\t15\t42\t4\t0.85\tTRUE\t\"pagerank\"\n"
           }
         ]
       },
@@ -426,15 +506,15 @@
       "jobName": "paragraph_1581008776045_-1608121320",
       "id": "20200206-170616_1912805005",
       "dateCreated": "2020-02-06 17:06:16.045",
-      "dateStarted": "2020-02-06 17:15:51.173",
-      "dateFinished": "2020-02-06 17:15:51.228",
+      "dateStarted": "2020-02-08 21:04:42.530",
+      "dateFinished": "2020-02-08 21:04:42.686",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n## Neo4j graph data science library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:30:07.440",
+      "dateUpdated": "2020-02-08 21:05:32.290",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -446,35 +526,27 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph data science library\u003c/h2\u003e\n\u003c/div\u003e"
-          }
-        ]
       },
       "apps": [],
       "jobName": "paragraph_1580740734588_-1494957418",
       "id": "20200203-143854_1787539181",
       "dateCreated": "2020-02-03 14:38:54.589",
-      "dateStarted": "2020-02-06 17:15:51.330",
-      "dateFinished": "2020-02-06 17:15:51.349",
+      "dateStarted": "2020-02-08 21:05:32.290",
+      "dateFinished": "2020-02-08 21:05:32.296",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.",
+      "text": "%md\nThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\n\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:30:15.583",
+      "dateUpdated": "2020-02-08 21:05:00.057",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -486,8 +558,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -498,7 +570,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003cp\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -506,15 +578,15 @@
       "jobName": "paragraph_1581008814438_-1271528214",
       "id": "20200206-170654_1099246051",
       "dateCreated": "2020-02-06 17:06:54.439",
-      "dateStarted": "2020-02-06 17:16:17.471",
-      "dateFinished": "2020-02-06 17:16:17.514",
+      "dateStarted": "2020-02-08 21:05:00.058",
+      "dateFinished": "2020-02-08 21:05:00.088",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027pagerank_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027)\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027pagerank_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027);\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:51.552",
+      "dateUpdated": "2020-02-08 21:05:39.369",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -571,7 +643,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t7\n"
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t54\n"
           }
         ]
       },
@@ -579,15 +651,15 @@
       "jobName": "paragraph_1581008827047_-94058781",
       "id": "20200206-170707_2067501281",
       "dateCreated": "2020-02-06 17:07:07.047",
-      "dateStarted": "2020-02-06 17:15:51.592",
-      "dateFinished": "2020-02-06 17:15:51.612",
+      "dateStarted": "2020-02-08 21:05:39.401",
+      "dateFinished": "2020-02-08 21:05:39.500",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Streaming PageRank results\nThe first parameter defines the in-memory graph we want to run the algorithm on and the second parameter is the configuration map.",
+      "text": "%md\n### Streaming PageRank results\nIf we want to run the pageRank algorithm on the whole in-memory named graph, we don\u0027t have to specify any additional configuration. Other than that, the syntax is similar to that of the Graph algorithms library.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:17:23.021",
+      "dateUpdated": "2020-02-08 21:06:04.724",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -611,7 +683,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming PageRank results\u003c/h3\u003e\n\u003cp\u003eThe first parameter defines the in-memory graph we want to run the algorithm on and the second parameter is the configuration map.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStreaming PageRank results\u003c/h3\u003e\n\u003cp\u003eIf we want to run the pageRank algorithm on the whole in-memory named graph, we don\u0026rsquo;t have to specify any additional configuration. Other than that, the syntax is similar to that of the Graph algorithms library.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -619,8 +691,8 @@
       "jobName": "paragraph_1581008940837_-867501071",
       "id": "20200206-170900_1031405434",
       "dateCreated": "2020-02-06 17:09:00.837",
-      "dateStarted": "2020-02-06 17:17:23.022",
-      "dateFinished": "2020-02-06 17:17:23.055",
+      "dateStarted": "2020-02-08 21:06:04.723",
+      "dateFinished": "2020-02-08 21:06:04.771",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -692,11 +764,11 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Write-back PageRank centrality\n",
+      "text": "### Write-back betweenness centrality\n\n`WriteProperty` parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:38:01.074",
+      "dateUpdated": "2020-02-08 21:06:23.534",
       "config": {
-        "tableHide": true,
+        "tableHide": false,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -706,7 +778,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": false,
+        "editorHide": true,
         "results": {},
         "enabled": true
       },
@@ -719,7 +791,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back PageRank centrality\u003c/h3\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eWrite-back betweenness centrality\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eWriteProperty\u003c/code\u003e parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -727,8 +799,8 @@
       "jobName": "paragraph_1575718233544_756286542",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:30:33.544",
-      "dateStarted": "2020-02-06 17:15:51.964",
-      "dateFinished": "2020-02-06 17:15:51.972",
+      "dateStarted": "2020-02-08 21:06:23.534",
+      "dateFinished": "2020-02-08 21:06:23.561",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -857,9 +929,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027pagerank_example\u0027);",
+      "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027pagerank_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:52.331",
+      "dateUpdated": "2020-02-08 21:06:43.242",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -884,15 +956,15 @@
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -926,7 +998,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\tNULL\tNULL\t9\t16\t4\t0\t4\t1.7777777777777777\t3\t1\t4\t4\t3\n"
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\tNULL\tNULL\t9\t16\t4\t0\t4\t1.7777777777777777\t3\t1\t4\t4\t3\n"
           }
         ]
       },
@@ -934,8 +1006,8 @@
       "jobName": "paragraph_1580591272826_1392172660",
       "id": "20200201-210752_1545325576",
       "dateCreated": "2020-02-01 21:07:52.826",
-      "dateStarted": "2020-02-06 17:15:52.356",
-      "dateFinished": "2020-02-06 17:15:52.377",
+      "dateStarted": "2020-02-08 21:06:42.706",
+      "dateFinished": "2020-02-08 21:06:42.738",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -974,7 +1046,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

@@ -1,9 +1,49 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n## Import social graph to Neo4j graph algorithms",
+      "text": "%md\nThe example data is available online on GitHub. To demonstrate the migration from Graph Algorithms library to Graph data science library, we have to use two instances of Neo4j, as the libraries do not and will not work together on a single Neo4j instance.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-03 14:45:26.973",
+      "dateUpdated": "2020-02-08 20:21:56.745",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe example data is available online on GitHub. To demonstrate the migration from Graph Algorithms library to Graph data science library, we have to use two instances of Neo4j, as the libraries do not and will not work together on a single Neo4j instance.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581191200357_1179024568",
+      "id": "20200208-194640_632818291",
+      "dateCreated": "2020-02-08 19:46:40.357",
+      "dateStarted": "2020-02-08 20:21:56.805",
+      "dateFinished": "2020-02-08 20:21:56.826",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Import social graph into Graph algorithms Neo4j",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 20:21:56.899",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -27,7 +67,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport social graph to Neo4j graph algorithms\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport social graph into Graph algorithms Neo4j\u003c/h2\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -35,15 +75,15 @@
       "jobName": "paragraph_1577984068012_840732035",
       "id": "20200102-165428_1530215617",
       "dateCreated": "2020-01-02 16:54:28.012",
-      "dateStarted": "2020-02-03 14:45:26.984",
-      "dateFinished": "2020-02-03 14:45:27.004",
+      "dateStarted": "2020-02-08 20:21:56.914",
+      "dateFinished": "2020-02-08 20:21:56.925",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_algo\n// import nodes\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:User {id: row.id})\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:01:24.005",
+      "dateUpdated": "2020-02-08 20:21:57.013",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -70,15 +110,15 @@
       "jobName": "paragraph_1575717341970_-1273236391",
       "id": "20191207-111541_1437265370",
       "dateCreated": "2019-12-07 11:15:41.970",
-      "dateStarted": "2020-02-06 17:01:24.149",
-      "dateFinished": "2020-02-06 17:01:26.610",
+      "dateStarted": "2020-02-08 20:21:57.031",
+      "dateFinished": "2020-02-08 20:21:57.105",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_algo\n// import relationships\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:User {id: row.src})\nMATCH (destination:User {id: row.dst})\nMERGE (source)-[:FOLLOWS]-\u003e(destination)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:01:29.263",
+      "dateUpdated": "2020-02-08 20:21:57.131",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -103,15 +143,15 @@
       "jobName": "paragraph_1575717470757_235724351",
       "id": "20191207-111750_1475912359",
       "dateCreated": "2019-12-07 11:17:50.757",
-      "dateStarted": "2020-02-06 17:01:29.346",
-      "dateFinished": "2020-02-06 17:01:30.445",
+      "dateStarted": "2020-02-08 20:21:57.158",
+      "dateFinished": "2020-02-08 20:21:57.816",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n## Import social graph to Neo4j data science",
+      "text": "%md\n\n## Import social graph into Graph data science Neo4j\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-01 20:47:48.056",
+      "dateUpdated": "2020-02-08 20:21:57.859",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -135,7 +175,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport social graph to Neo4j data science\u003c/h2\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eImport social graph into Graph data science Neo4j\u003c/h2\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -143,15 +183,15 @@
       "jobName": "paragraph_1575717586972_968643562",
       "id": "20191207-111946_1789842762",
       "dateCreated": "2019-12-07 11:19:46.972",
-      "dateStarted": "2020-02-01 20:47:48.066",
-      "dateFinished": "2020-02-01 20:47:49.724",
+      "dateStarted": "2020-02-08 20:21:57.896",
+      "dateFinished": "2020-02-08 20:21:57.904",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\n// import nodes\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:User {id: row.id})\n",
+      "text": "%neo4j_gds\n// import nodes\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:User {id: row.id})\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:01:34.266",
+      "dateUpdated": "2020-02-08 20:21:57.991",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -176,15 +216,15 @@
       "jobName": "paragraph_1580590067978_707781796",
       "id": "20200201-204747_1224861690",
       "dateCreated": "2020-02-01 20:47:47.978",
-      "dateStarted": "2020-02-06 17:01:34.323",
-      "dateFinished": "2020-02-06 17:01:37.501",
+      "dateStarted": "2020-02-08 20:21:58.010",
+      "dateFinished": "2020-02-08 20:21:58.508",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\n// import relationships\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:User {id: row.src})\nMATCH (destination:User {id: row.dst})\nMERGE (source)-[:FOLLOWS]-\u003e(destination)",
+      "text": "%neo4j_gds\n// import relationships\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:User {id: row.src})\nMATCH (destination:User {id: row.dst})\nMERGE (source)-[:FOLLOWS]-\u003e(destination)",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:01:39.851",
+      "dateUpdated": "2020-02-08 20:21:58.511",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -211,16 +251,27 @@
       "jobName": "paragraph_1580590077643_1769930561",
       "id": "20200201-204757_755456677",
       "dateCreated": "2020-02-01 20:47:57.643",
-      "dateStarted": "2020-02-06 17:01:39.877",
-      "dateFinished": "2020-02-06 17:01:40.364",
+      "dateStarted": "2020-02-08 20:21:58.579",
+      "dateFinished": "2020-02-08 20:21:58.985",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gdn\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-01 20:48:05.429",
-      "config": {},
+      "dateUpdated": "2020-02-08 20:21:59.079",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown"
+      },
       "settings": {
         "params": {},
         "forms": {}
@@ -229,7 +280,7 @@
       "jobName": "paragraph_1580590085422_172615906",
       "id": "20200201-204805_667411830",
       "dateCreated": "2020-02-01 20:48:05.422",
-      "status": "READY",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     }
   ],
@@ -240,7 +291,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

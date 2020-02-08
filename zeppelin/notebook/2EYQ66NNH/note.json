@@ -41,9 +41,49 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 21:45:52.467",
+      "dateUpdated": "2020-02-08 22:09:16.327",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample graph\u003c/h3\u003e\n\u003cp\u003eWe can visualize the example graph in Zeppelin by using the following cypher statement:\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581199754424_370215007",
+      "id": "20200208-220914_2068962324",
+      "dateCreated": "2020-02-08 22:09:14.424",
+      "dateStarted": "2020-02-08 22:09:16.327",
+      "dateFinished": "2020-02-08 22:09:16.337",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p;",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 22:09:28.382",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -123,7 +163,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":32,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":33,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":34,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":35,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":36,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":37,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":38,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":39,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"}],\"edges\":[{\"source\":29,\"target\":30,\"id\":36,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":29,\"target\":31,\"id\":37,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":31,\"target\":39,\"id\":38,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":29,\"target\":32,\"id\":39,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":32,\"target\":33,\"id\":40,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":33,\"target\":38,\"id\":41,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":34,\"target\":31,\"id\":42,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":35,\"target\":34,\"id\":43,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":36,\"target\":35,\"id\":44,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":37,\"target\":36,\"id\":45,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":38,\"target\":37,\"id\":46,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":40,\"target\":39,\"id\":47,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":40,\"target\":30,\"id\":48,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":31,\"target\":40,\"id\":49,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":34,\"target\":39,\"id\":50,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\",\"Place\":\"#039A40\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":20,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":21,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":22,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":23,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":24,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":25,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":26,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":27,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":28,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"}],\"edges\":[{\"source\":31,\"target\":21,\"id\":32,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":22,\"target\":31,\"id\":33,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":25,\"target\":30,\"id\":34,\"data\":{\"distance\":33},\"label\":\"EROAD\"},{\"source\":20,\"target\":21,\"id\":20,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":20,\"target\":22,\"id\":21,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":22,\"target\":30,\"id\":22,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":20,\"target\":23,\"id\":23,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":23,\"target\":24,\"id\":24,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":24,\"target\":29,\"id\":25,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":25,\"target\":22,\"id\":26,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":26,\"target\":25,\"id\":27,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":27,\"target\":26,\"id\":28,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":28,\"target\":27,\"id\":29,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":29,\"target\":28,\"id\":30,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":31,\"target\":30,\"id\":31,\"data\":{\"distance\":25},\"label\":\"EROAD\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -131,8 +171,8 @@
       "jobName": "paragraph_1579455555807_-1128772440",
       "id": "20200119-173915_1773293344",
       "dateCreated": "2020-01-19 17:39:15.807",
-      "dateStarted": "2020-02-06 21:45:52.481",
-      "dateFinished": "2020-02-06 21:45:52.528",
+      "dateStarted": "2020-02-08 22:09:28.404",
+      "dateFinished": "2020-02-08 22:09:28.422",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -880,11 +920,7 @@
   "id": "2EYQ66NNH",
   "noteParams": {},
   "noteForms": {},
-  "angularObjects": {
-    "neo4j_algo:shared_process": [],
-    "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
-  },
+  "angularObjects": {},
   "config": {
     "isZeppelinNotebookCronEnable": false
   },

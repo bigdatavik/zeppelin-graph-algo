@@ -81,9 +81,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n## Neo4j graph algorithms library",
+      "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:00.746",
+      "dateUpdated": "2020-02-08 22:05:20.363",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -102,28 +102,20 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph algorithms library\u003c/h2\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1581024193687_1859546313",
       "id": "20200206-212313_1308906098",
       "dateCreated": "2020-02-06 21:23:13.687",
-      "dateStarted": "2020-02-06 22:12:00.785",
-      "dateFinished": "2020-02-06 22:12:00.787",
+      "dateStarted": "2020-02-08 22:05:20.363",
+      "dateFinished": "2020-02-08 22:05:20.374",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p",
+      "text": "%neo4j_algo\nMATCH p\u003d(:Place)-[:EROAD]-\u003e(:Place)\nRETURN p;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:00.985",
+      "dateUpdated": "2020-02-08 22:05:25.336",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -203,7 +195,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":32,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":33,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":34,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":35,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":36,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":37,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":38,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":39,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":40,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"}],\"edges\":[{\"source\":29,\"target\":30,\"id\":36,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":29,\"target\":31,\"id\":37,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":31,\"target\":39,\"id\":38,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":29,\"target\":32,\"id\":39,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":32,\"target\":33,\"id\":40,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":33,\"target\":38,\"id\":41,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":34,\"target\":31,\"id\":42,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":35,\"target\":34,\"id\":43,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":36,\"target\":35,\"id\":44,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":37,\"target\":36,\"id\":45,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":38,\"target\":37,\"id\":46,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":40,\"target\":39,\"id\":47,\"data\":{\"distance\":25},\"label\":\"EROAD\"},{\"source\":40,\"target\":30,\"id\":48,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":31,\"target\":40,\"id\":49,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":34,\"target\":39,\"id\":50,\"data\":{\"distance\":33},\"label\":\"EROAD\"}],\"labels\":{\"User\":\"#6FF08D\",\"Library\":\"#6EAEB9\",\"Place\":\"#039A40\"},\"types\":[\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\",\"MINST\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":20,\"data\":{\"latitude\":52.379189,\"id\":\"Amsterdam\",\"longitude\":52.379189,\"population\":821752},\"label\":\"Place\"},{\"id\":21,\"data\":{\"latitude\":52.092876,\"id\":\"Utrecht\",\"longitude\":52.092876,\"population\":334176},\"label\":\"Place\"},{\"id\":22,\"data\":{\"latitude\":52.078663,\"id\":\"Den Haag\",\"longitude\":52.078663,\"population\":514861},\"label\":\"Place\"},{\"id\":23,\"data\":{\"latitude\":53.61239,\"id\":\"Immingham\",\"longitude\":53.61239,\"population\":9642},\"label\":\"Place\"},{\"id\":24,\"data\":{\"latitude\":53.52285,\"id\":\"Doncaster\",\"longitude\":53.52285,\"population\":302400},\"label\":\"Place\"},{\"id\":25,\"data\":{\"latitude\":51.9775,\"id\":\"Hoek van Holland\",\"longitude\":51.9775,\"population\":9382},\"label\":\"Place\"},{\"id\":26,\"data\":{\"latitude\":51.96375,\"id\":\"Felixstowe\",\"longitude\":51.96375,\"population\":23689},\"label\":\"Place\"},{\"id\":27,\"data\":{\"latitude\":52.05917,\"id\":\"Ipswich\",\"longitude\":52.05917,\"population\":133384},\"label\":\"Place\"},{\"id\":28,\"data\":{\"latitude\":51.88921,\"id\":\"Colchester\",\"longitude\":51.88921,\"population\":104390},\"label\":\"Place\"},{\"id\":29,\"data\":{\"latitude\":51.509865,\"id\":\"London\",\"longitude\":51.509865,\"population\":8787892},\"label\":\"Place\"},{\"id\":30,\"data\":{\"latitude\":51.9225,\"id\":\"Rotterdam\",\"longitude\":51.9225,\"population\":623652},\"label\":\"Place\"},{\"id\":31,\"data\":{\"latitude\":52.01667,\"id\":\"Gouda\",\"longitude\":52.01667,\"population\":70939},\"label\":\"Place\"}],\"edges\":[{\"source\":31,\"target\":21,\"id\":32,\"data\":{\"distance\":35},\"label\":\"EROAD\"},{\"source\":22,\"target\":31,\"id\":33,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":25,\"target\":30,\"id\":34,\"data\":{\"distance\":33},\"label\":\"EROAD\"},{\"source\":20,\"target\":21,\"id\":20,\"data\":{\"distance\":46},\"label\":\"EROAD\"},{\"source\":20,\"target\":22,\"id\":21,\"data\":{\"distance\":59},\"label\":\"EROAD\"},{\"source\":22,\"target\":30,\"id\":22,\"data\":{\"distance\":26},\"label\":\"EROAD\"},{\"source\":20,\"target\":23,\"id\":23,\"data\":{\"distance\":369},\"label\":\"EROAD\"},{\"source\":23,\"target\":24,\"id\":24,\"data\":{\"distance\":74},\"label\":\"EROAD\"},{\"source\":24,\"target\":29,\"id\":25,\"data\":{\"distance\":277},\"label\":\"EROAD\"},{\"source\":25,\"target\":22,\"id\":26,\"data\":{\"distance\":27},\"label\":\"EROAD\"},{\"source\":26,\"target\":25,\"id\":27,\"data\":{\"distance\":207},\"label\":\"EROAD\"},{\"source\":27,\"target\":26,\"id\":28,\"data\":{\"distance\":22},\"label\":\"EROAD\"},{\"source\":28,\"target\":27,\"id\":29,\"data\":{\"distance\":32},\"label\":\"EROAD\"},{\"source\":29,\"target\":28,\"id\":30,\"data\":{\"distance\":106},\"label\":\"EROAD\"},{\"source\":31,\"target\":30,\"id\":31,\"data\":{\"distance\":25},\"label\":\"EROAD\"}],\"labels\":{\"Library\":\"#3D4308\",\"Place\":\"#FDF8A5\",\"User\":\"#7F5158\"},\"types\":[\"EROAD\",\"FOLLOWS\",\"DEPENDS_ON\"],\"directed\":true}"
           }
         ]
       },
@@ -211,15 +203,55 @@
       "jobName": "paragraph_1579455374646_1911330449",
       "id": "20200119-173614_1320011153",
       "dateCreated": "2020-01-19 17:36:14.646",
-      "dateStarted": "2020-02-06 22:12:01.010",
-      "dateFinished": "2020-02-06 22:12:01.027",
+      "dateStarted": "2020-02-08 22:05:25.373",
+      "dateFinished": "2020-02-08 22:05:25.423",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream weighted shortest-path algorithm\n\nWe can execute the Weighted Shortest Path algorithm to find the shortest path\nbetween Amsterdam and London like this",
+      "text": "%md\n## Neo4j graph algorithms library",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:01.110",
+      "dateUpdated": "2020-02-08 22:05:30.191",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNeo4j graph algorithms library\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581199499149_1883377110",
+      "id": "20200208-220459_358374816",
+      "dateCreated": "2020-02-08 22:04:59.149",
+      "dateStarted": "2020-02-08 22:05:30.195",
+      "dateFinished": "2020-02-08 22:05:30.221",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Stream weighted shortest-path algorithm\n\nWe can execute the Weighted Shortest Path algorithm to find the shortest path\nbetween Amsterdam and London with the following procedure call.",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-08 22:05:46.998",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -231,8 +263,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -243,7 +275,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted shortest-path algorithm\u003c/h3\u003e\n\u003cp\u003eWe can execute the Weighted Shortest Path algorithm to find the shortest path\u003cbr/\u003ebetween Amsterdam and London like this\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted shortest-path algorithm\u003c/h3\u003e\n\u003cp\u003eWe can execute the Weighted Shortest Path algorithm to find the shortest path\u003cbr/\u003ebetween Amsterdam and London with the following procedure call.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -251,15 +283,15 @@
       "jobName": "paragraph_1579455396217_-306193771",
       "id": "20200119-173636_77792805",
       "dateCreated": "2020-01-19 17:36:36.218",
-      "dateStarted": "2020-02-06 22:12:01.136",
-      "dateFinished": "2020-02-06 22:12:01.142",
+      "dateStarted": "2020-02-08 22:05:47.004",
+      "dateFinished": "2020-02-08 22:05:47.018",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination,  \"distance\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost",
+      "text": "%neo4j_algo\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination,  \"distance\")\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:01.236",
+      "dateUpdated": "2020-02-08 22:05:52.565",
       "config": {
         "editorSetting": {
           "editOnDblClick": false,
@@ -310,7 +342,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "place\tcost\n\"Amsterdam\"\t0.0\n\"Den Haag\"\t59.0\n\"Hoek van Holland\"\t59.0\n\"Felixstowe\"\t59.0\n\"Ipswich\"\t59.0\n\"Colchester\"\t59.0\n\"London\"\t59.0\n"
+            "data": "place\tcost\n\"Amsterdam\"\t0.0\n\"Den Haag\"\t59.0\n\"Hoek van Holland\"\t86.0\n\"Felixstowe\"\t293.0\n\"Ipswich\"\t315.0\n\"Colchester\"\t347.0\n\"London\"\t453.0\n"
           }
         ]
       },
@@ -318,8 +350,8 @@
       "jobName": "paragraph_1577905354836_-958505578",
       "id": "20200101-190009_1220471711",
       "dateCreated": "2020-01-01 19:02:34.836",
-      "dateStarted": "2020-02-06 22:12:01.259",
-      "dateFinished": "2020-02-06 22:12:01.283",
+      "dateStarted": "2020-02-08 22:05:52.595",
+      "dateFinished": "2020-02-08 22:05:52.723",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -366,7 +398,7 @@
     {
       "text": "%md\n### Stream un-weighted shortest-path\n\nTo have Neo4j’s Shortest Path algorithm ignore weights we need to pass null as the\nthird parameter to the procedure, which indicates that we don’t want to consider a\nweight property when executing the algorithm. The algorithm will then assume a\ndefault weight of 1.0 for each relationship",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:01.491",
+      "dateUpdated": "2020-02-08 22:05:59.388",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -378,27 +410,35 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted shortest-path\u003c/h3\u003e\n\u003cp\u003eTo have Neo4j’s Shortest Path algorithm ignore weights we need to pass null as the\u003cbr/\u003ethird parameter to the procedure, which indicates that we don’t want to consider a\u003cbr/\u003eweight property when executing the algorithm. The algorithm will then assume a\u003cbr/\u003edefault weight of 1.0 for each relationship\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1579455417808_-1649056098",
       "id": "20200119-173657_1051699637",
       "dateCreated": "2020-01-19 17:36:57.808",
-      "dateStarted": "2020-02-06 22:12:01.524",
-      "dateFinished": "2020-02-06 22:12:01.531",
+      "dateStarted": "2020-02-08 22:05:59.397",
+      "dateFinished": "2020-02-08 22:05:59.406",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination, null)\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost\n",
+      "text": "%neo4j_algo\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination, null)\nYIELD nodeId, cost\nRETURN algo.getNodeById(nodeId).id AS place, cost;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:01.623",
+      "dateUpdated": "2020-02-08 22:06:02.798",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -457,15 +497,15 @@
       "jobName": "paragraph_1577905354837_1016917406",
       "id": "20200101-190028_1585661323",
       "dateCreated": "2020-01-01 19:02:34.837",
-      "dateStarted": "2020-02-06 22:12:01.647",
-      "dateFinished": "2020-02-06 22:12:01.662",
+      "dateStarted": "2020-02-08 22:06:02.830",
+      "dateFinished": "2020-02-08 22:06:02.904",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n### Calculate the un-weighted shortest path and work out the cumulative cost (weight) of the path\n\nWe could even work out the total distance of following this path by writing a bit of\npostprocessing Cypher. The following procedure calculates the shortest unweighted\npath and then works out what the actual cost of that path would be",
+      "text": "%md\n\n### Calculate the un-weighted shortest path and work out the cumulative cost (weight) of the path\n\nWe could even work out the total distance of following this path by writing a bit of\npostprocessing Cypher. The following procedure calculates the shortest unweighted\npath and then works out what the actual cost of that path would be.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:01.747",
+      "dateUpdated": "2020-02-08 22:06:11.590",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -484,28 +524,20 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eCalculate the un-weighted shortest path and work out the cumulative cost (weight) of the path\u003c/h3\u003e\n\u003cp\u003eWe could even work out the total distance of following this path by writing a bit of\u003cbr/\u003epostprocessing Cypher. The following procedure calculates the shortest unweighted\u003cbr/\u003epath and then works out what the actual cost of that path would be\u003c/p\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1579465356760_-1603407387",
       "id": "20200119-202236_461835569",
       "dateCreated": "2020-01-19 20:22:36.760",
-      "dateStarted": "2020-02-06 22:12:01.782",
-      "dateFinished": "2020-02-06 22:12:01.795",
+      "dateStarted": "2020-02-08 22:06:11.594",
+      "dateFinished": "2020-02-08 22:06:11.606",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_algo\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination, null)\nYIELD nodeId, cost\n\nWITH collect(algo.getNodeById(nodeId)) AS path\nUNWIND range(0, size(path)-1) AS index\nWITH path[index] AS current, path[index+1] AS next\nWITH current, next, [(current)-[r:EROAD]-(next) | r.distance][0] AS distance\n\nWITH collect({current: current, next:next, distance: distance}) AS stops\nUNWIND range(0, size(stops)-1) AS index\nWITH stops[index] AS location, stops, index\nRETURN location.current.id AS place,\n       reduce(acc\u003d0.0,\n              distance in [stop in stops[0..index] | stop.distance] |\n              acc + distance) AS cost\n",
+      "text": "%neo4j_algo\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL algo.shortestPath.stream(source, destination, null)\nYIELD nodeId, cost\n\nWITH collect(algo.getNodeById(nodeId)) AS path\nUNWIND range(0, size(path)-1) AS index\nWITH path[index] AS current, path[index+1] AS next\nWITH current, next, [(current)-[r:EROAD]-(next) | r.distance][0] AS distance\n\nWITH collect({current: current, next:next, distance: distance}) AS stops\nUNWIND range(0, size(stops)-1) AS index\nWITH stops[index] AS location, stops, index\nRETURN location.current.id AS place,\n       reduce(acc\u003d0.0,\n              distance in [stop in stops[0..index] | stop.distance] |\n              acc + distance) AS cost;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:01.976",
+      "dateUpdated": "2020-02-08 22:06:15.502",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -564,8 +596,8 @@
       "jobName": "paragraph_1577905371067_-1410446213",
       "id": "20200101-190251_1003831668",
       "dateCreated": "2020-01-01 19:02:51.067",
-      "dateStarted": "2020-02-06 22:12:02.021",
-      "dateFinished": "2020-02-06 22:12:02.093",
+      "dateStarted": "2020-02-08 22:06:15.531",
+      "dateFinished": "2020-02-08 22:06:15.820",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -647,9 +679,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.",
+      "text": "%md\nThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.\n\nBecause we want to calculate shortest *weighted* paths, we have to also project the property, that stores the weight.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:02.447",
+      "dateUpdated": "2020-02-08 22:06:39.170",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -673,7 +705,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ePreferred way to use GDS library is with loaded named graphs, where we first load the graph into memory and then proceed to run algorithms on it.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe recommended way to use the GDS library is using the named graphs, where we first load the graph in memory and then proceed to run algorithms on it.\u003cbr/\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eBecause we want to calculate shortest \u003cem\u003eweighted\u003c/em\u003e paths, we have to also project the property, that stores the weight.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -681,15 +713,15 @@
       "jobName": "paragraph_1581024269824_1821189485",
       "id": "20200206-212429_2029554005",
       "dateCreated": "2020-02-06 21:24:29.824",
-      "dateStarted": "2020-02-06 22:12:02.469",
-      "dateFinished": "2020-02-06 22:12:02.474",
+      "dateStarted": "2020-02-08 22:06:39.179",
+      "dateFinished": "2020-02-08 22:06:39.201",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027sssp_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Natural\u0027, properties:\u0027distance\u0027}});\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027sssp_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Natural\u0027, properties:\u0027distance\u0027}});\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:02.569",
+      "dateUpdated": "2020-02-08 22:06:45.024",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -757,15 +789,15 @@
       "jobName": "paragraph_1581024308555_553598325",
       "id": "20200206-212508_667747220",
       "dateCreated": "2020-02-06 21:25:08.555",
-      "dateStarted": "2020-02-06 22:12:02.603",
-      "dateFinished": "2020-02-06 22:12:02.618",
+      "dateStarted": "2020-02-08 22:06:45.052",
+      "dateFinished": "2020-02-08 22:06:45.075",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream weighted shortest-path algorithm\n\nWe can execute the Weighted Shortest Path algorithm to find the shortest path\nbetween Amsterdam and London like this",
+      "text": "%md\n### Stream weighted shortest-path algorithm\n\nWe define the start node, end node, and the relationship weight property to be evaluated when calculated the weighted shortest path in the configuration map.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:02.699",
+      "dateUpdated": "2020-02-08 22:07:40.162",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -789,7 +821,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted shortest-path algorithm\u003c/h3\u003e\n\u003cp\u003eWe can execute the Weighted Shortest Path algorithm to find the shortest path\u003cbr/\u003ebetween Amsterdam and London like this\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream weighted shortest-path algorithm\u003c/h3\u003e\n\u003cp\u003eWe define the start node, end node, and the relationship weight property to be evaluated when calculated the weighted shortest path in the configuration map.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -797,15 +829,15 @@
       "jobName": "paragraph_1581024447020_1385639840",
       "id": "20200206-212727_973472600",
       "dateCreated": "2020-02-06 21:27:27.020",
-      "dateStarted": "2020-02-06 22:12:02.725",
-      "dateFinished": "2020-02-06 22:12:02.731",
+      "dateStarted": "2020-02-08 22:07:40.162",
+      "dateFinished": "2020-02-08 22:07:40.166",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.stream(\u0027sssp_example\u0027, {startNode:source, endNode: destination, relationshipWeightProperty: \u0027distance\u0027})\nYIELD nodeId, cost\nRETURN gds.util.asNode(nodeId).id AS place, cost",
+      "text": "%neo4j_gds\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.stream(\u0027sssp_example\u0027, {startNode:source, endNode: destination, relationshipWeightProperty: \u0027distance\u0027})\nYIELD nodeId, cost\nRETURN gds.util.asNode(nodeId).id AS place, cost;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:02.825",
+      "dateUpdated": "2020-02-08 20:04:36.565",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -864,15 +896,15 @@
       "jobName": "paragraph_1581024408862_1090691961",
       "id": "20200206-212648_535380198",
       "dateCreated": "2020-02-06 21:26:48.862",
-      "dateStarted": "2020-02-06 22:12:02.856",
-      "dateFinished": "2020-02-06 22:12:02.867",
+      "dateStarted": "2020-02-08 20:03:58.496",
+      "dateFinished": "2020-02-08 20:03:59.260",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n### Stream un-weighted shortest-path\n\nTo have Neo4j’s Shortest Path algorithm ignore weights we need to pass null as the\nthird parameter to the procedure, which indicates that we don’t want to consider a\nweight property when executing the algorithm. The algorithm will then assume a\ndefault weight of 1.0 for each relationship",
+      "text": "%md\n### Stream un-weighted shortest-path\n\nTo stream un-weighted shortest paths we define the *relationshipWeightProperty* as ˙null˙.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:02.956",
+      "dateUpdated": "2020-02-08 22:08:34.156",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -896,7 +928,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted shortest-path\u003c/h3\u003e\n\u003cp\u003eTo have Neo4j’s Shortest Path algorithm ignore weights we need to pass null as the\u003cbr/\u003ethird parameter to the procedure, which indicates that we don’t want to consider a\u003cbr/\u003eweight property when executing the algorithm. The algorithm will then assume a\u003cbr/\u003edefault weight of 1.0 for each relationship\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eStream un-weighted shortest-path\u003c/h3\u003e\n\u003cp\u003eTo stream un-weighted shortest paths we define the \u003cem\u003erelationshipWeightProperty\u003c/em\u003e as ˙null˙.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -904,15 +936,15 @@
       "jobName": "paragraph_1581024639550_1211164240",
       "id": "20200206-213039_56537070",
       "dateCreated": "2020-02-06 21:30:39.550",
-      "dateStarted": "2020-02-06 22:12:02.992",
-      "dateFinished": "2020-02-06 22:12:02.999",
+      "dateStarted": "2020-02-08 22:08:34.154",
+      "dateFinished": "2020-02-08 22:08:34.162",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.stream(\u0027sssp_example\u0027, {startNode:source, endNode: destination, relationshipWeightProperty: null})\nYIELD nodeId, cost\nRETURN gds.util.asNode(nodeId).id AS place, cost",
+      "text": "%neo4j_gds\nMATCH (source:Place {id: \"Amsterdam\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.stream(\u0027sssp_example\u0027, {startNode:source, endNode: destination, relationshipWeightProperty: null})\nYIELD nodeId, cost\nRETURN gds.util.asNode(nodeId).id AS place, cost;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:03.089",
+      "dateUpdated": "2020-02-08 22:08:38.866",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -971,15 +1003,15 @@
       "jobName": "paragraph_1581024534773_448704833",
       "id": "20200206-212854_848711178",
       "dateCreated": "2020-02-06 21:28:54.773",
-      "dateStarted": "2020-02-06 22:12:03.127",
-      "dateFinished": "2020-02-06 22:12:03.145",
+      "dateStarted": "2020-02-08 22:08:38.896",
+      "dateFinished": "2020-02-08 22:08:38.928",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nAfter we are done with our analyisis we release the graph from memory",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:03.224",
+      "dateUpdated": "2020-02-08 22:08:42.864",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -998,28 +1030,20 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAfter we are done with our analyisis we release the graph from memory\u003c/p\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1581024657522_1628356570",
       "id": "20200206-213057_1588328442",
       "dateCreated": "2020-02-06 21:30:57.522",
-      "dateStarted": "2020-02-06 22:12:03.263",
-      "dateFinished": "2020-02-06 22:12:03.275",
+      "dateStarted": "2020-02-08 22:08:42.864",
+      "dateFinished": "2020-02-08 22:08:42.873",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027sssp_example\u0027)",
+      "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027sssp_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:12:03.359",
+      "dateUpdated": "2020-02-08 22:08:45.445",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1047,15 +1071,15 @@
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -1089,7 +1113,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"sssp_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"sssp_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
           }
         ]
       },
@@ -1097,8 +1121,8 @@
       "jobName": "paragraph_1581025428993_-1824945556",
       "id": "20200206-214348_1166390783",
       "dateCreated": "2020-02-06 21:43:48.993",
-      "dateStarted": "2020-02-06 22:12:03.403",
-      "dateFinished": "2020-02-06 22:12:03.429",
+      "dateStarted": "2020-02-08 22:08:45.473",
+      "dateFinished": "2020-02-08 22:08:45.483",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -1137,7 +1161,7 @@
   "angularObjects": {
     "neo4j_algo:shared_process": [],
     "md:shared_process": [],
-    "neo4j_gdn:shared_process": []
+    "neo4j_gds:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false
