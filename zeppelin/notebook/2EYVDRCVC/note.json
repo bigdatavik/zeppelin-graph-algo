@@ -41,19 +41,22 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.\n\nNode labels can be defined as:\n\n* Loading a single label using a string: `\u0027Label\u0027`\n* Loading more labels using an array: `[\u0027Label1\u0027,\u0027Label2\u0027]`\n* Loading more labels with their properties using a configuration map: `{Label:{properties:[\u0027property1,property2\u0027]}}`\n\nRelationship type can be defined as:\n\n* Loading a single relationship type using a string: `\u0027TYPE\u0027`\n* Loading more relationship types using an array: `[\u0027TYPE1\u0027,\u0027TYPE2\u0027]`\n* Loading more relationship types with their properties using a configuration map: `{ALIAS_OF_TYPE: {type:\u0027RELATIONSHIP_TYPE\u0027, projection: \u0027NATURAL\u0027, properties:[property1,property2]}`",
+      "text": "%md\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.\n\nNode labels can be defined as:\n\n* Loading a single label using a string: `\u0027Label\u0027`\n* Loading more labels using an pipe operator: `\u0027Label1 | Label2\u0027`\n* Loading more labels with their properties using a configuration map: `{LabelAlias:{label: \u0027Label1 | Label2\u0027, properties:[\u0027property1,property2\u0027]}}`\n\nRelationship type can be defined as:\n\n* Loading a single relationship type using a string: `\u0027TYPE\u0027`\n* Loading more relationship types using an array: `[\u0027TYPE1\u0027,\u0027TYPE2\u0027]`\n* Loading more relationship types with their properties using a configuration map: `{ALIAS_OF_TYPE: {type:\u0027RELATIONSHIP_TYPE\u0027, projection: \u0027NATURAL\u0027, properties:[property1,property2]}`",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 12:25:04.023",
+      "dateUpdated": "2020-02-09 21:15:00.562",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "editOnDblClick": false
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
         },
-        "editorMode": "ace/mode/undefined",
-        "editorHide": true
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -64,7 +67,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eNode labels can be defined as:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eLoading a single label using a string: \u003ccode\u003e\u0026#39;Label\u0026#39;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more labels using an array: \u003ccode\u003e[\u0026#39;Label1\u0026#39;,\u0026#39;Label2\u0026#39;]\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more labels with their properties using a configuration map: \u003ccode\u003e{Label:{properties:[\u0026#39;property1,property2\u0026#39;]}}\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eRelationship type can be defined as:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eLoading a single relationship type using a string: \u003ccode\u003e\u0026#39;TYPE\u0026#39;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more relationship types using an array: \u003ccode\u003e[\u0026#39;TYPE1\u0026#39;,\u0026#39;TYPE2\u0026#39;]\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more relationship types with their properties using a configuration map: \u003ccode\u003e{ALIAS_OF_TYPE: {type:\u0026#39;RELATIONSHIP_TYPE\u0026#39;, projection: \u0026#39;NATURAL\u0026#39;, properties:[property1,property2]}\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe syntax for creating named graphs is \u003ccode\u003eCALL gds.graph.create(in-memory graph name, node label, relationship type)\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eNode labels can be defined as:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eLoading a single label using a string: \u003ccode\u003e\u0026#39;Label\u0026#39;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more labels using an pipe operator: \u003ccode\u003e\u0026#39;Label1 | Label2\u0026#39;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more labels with their properties using a configuration map: \u003ccode\u003e{LabelAlias:{label: \u0026#39;Label1 | Label2\u0026#39;, properties:[\u0026#39;property1,property2\u0026#39;]}}\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eRelationship type can be defined as:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003eLoading a single relationship type using a string: \u003ccode\u003e\u0026#39;TYPE\u0026#39;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more relationship types using an array: \u003ccode\u003e[\u0026#39;TYPE1\u0026#39;,\u0026#39;TYPE2\u0026#39;]\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eLoading more relationship types with their properties using a configuration map: \u003ccode\u003e{ALIAS_OF_TYPE: {type:\u0026#39;RELATIONSHIP_TYPE\u0026#39;, projection: \u0026#39;NATURAL\u0026#39;, properties:[property1,property2]}\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -72,8 +75,8 @@
       "jobName": "paragraph_1581250707271_-1641387964",
       "id": "20200209-121827_520017085",
       "dateCreated": "2020-02-09 12:18:27.271",
-      "dateStarted": "2020-02-09 12:25:00.278",
-      "dateFinished": "2020-02-09 12:25:00.340",
+      "dateStarted": "2020-02-09 21:15:00.562",
+      "dateFinished": "2020-02-09 21:15:00.582",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -120,7 +123,7 @@
     {
       "text": "%neo4j_gds\nMERGE (a:Person{id:\u0027Amy\u0027, seed_property:1})\nMERGE (m:Person{id: \u0027Mark\u0027, seed_property:1})\nMERGE (h:Hobby{id:\u0027cycling\u0027, activity:10})\nMERGE (h1:Hobby{id:\u0027tv\u0027, activity:0})\nMERGE (a)-[:FRIEND{weight:5}]-\u003e(m)\nMERGE (a)-[:LIKES{weight:2}]-\u003e(h)\nMERGE (m)-[:DISLIKES{weight:6}]-\u003e(h1);\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 12:43:39.461",
+      "dateUpdated": "2020-02-09 21:15:09.981",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -145,15 +148,15 @@
       "jobName": "paragraph_1581251127427_-261864795",
       "id": "20200209-122527_277165764",
       "dateCreated": "2020-02-09 12:25:27.427",
-      "dateStarted": "2020-02-09 12:43:39.506",
-      "dateFinished": "2020-02-09 12:43:39.723",
+      "dateStarted": "2020-02-09 21:15:10.005",
+      "dateFinished": "2020-02-09 21:15:10.649",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\nMATCH p\u003d(:Person)--()\nRETURN p;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 13:08:05.103",
+      "dateUpdated": "2020-02-09 21:15:12.660",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -205,7 +208,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":36,\"data\":{\"id\":\"Amy\",\"seed_property\":1},\"label\":\"Person\"},{\"id\":37,\"data\":{\"id\":\"Mark\",\"seed_property\":1},\"label\":\"Person\"},{\"id\":38,\"data\":{\"activity\":10,\"id\":\"cycling\"},\"label\":\"Hobby\"},{\"id\":39,\"data\":{\"activity\":0,\"id\":\"tv\"},\"label\":\"Hobby\"}],\"edges\":[{\"source\":36,\"target\":37,\"id\":49,\"data\":{},\"label\":\"FRIEND\"},{\"source\":36,\"target\":38,\"id\":50,\"data\":{},\"label\":\"LIKES\"},{\"source\":37,\"target\":39,\"id\":51,\"data\":{},\"label\":\"DISLIKES\"},{\"source\":36,\"target\":37,\"id\":69,\"data\":{\"weight\":5},\"label\":\"FRIEND\"},{\"source\":36,\"target\":38,\"id\":70,\"data\":{\"weight\":2},\"label\":\"LIKES\"},{\"source\":37,\"target\":39,\"id\":71,\"data\":{\"weight\":6},\"label\":\"DISLIKES\"}],\"labels\":{\"Library\":\"#BD0704\",\"User\":\"#D54D18\",\"Place\":\"#AD00FA\",\"Person\":\"#4DC42A\",\"Hobby\":\"#64E9E5\"},\"types\":[\"DISLIKES\",\"FRIEND\",\"FOLLOWS\",\"EROAD\",\"DEPENDS_ON\",\"LIKES\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":145030,\"data\":{\"activity\":10,\"id\":\"cycling\"},\"label\":\"Hobby\"},{\"id\":145031,\"data\":{\"activity\":0,\"id\":\"tv\"},\"label\":\"Hobby\"},{\"id\":145028,\"data\":{\"id\":\"Amy\",\"seed_property\":1},\"label\":\"Person\"},{\"id\":145029,\"data\":{\"id\":\"Mark\",\"seed_property\":1},\"label\":\"Person\"}],\"edges\":[{\"source\":145028,\"target\":145029,\"id\":328073,\"data\":{\"weight\":5},\"label\":\"FRIEND\"},{\"source\":145029,\"target\":145031,\"id\":328075,\"data\":{\"weight\":6},\"label\":\"DISLIKES\"},{\"source\":145028,\"target\":145030,\"id\":328074,\"data\":{\"weight\":2},\"label\":\"LIKES\"}],\"labels\":{\"Article\":\"#BBE2A0\",\"Author\":\"#322FE9\",\"Person\":\"#5F5521\",\"Hobby\":\"#948422\"},\"types\":[\"CO_AUTHOR_EARLY\",\"DISLIKES\",\"FRIEND\",\"AUTHOR\",\"CO_AUTHOR\",\"CO_AUTHOR_LATE\",\"LIKES\"],\"directed\":true}"
           }
         ]
       },
@@ -213,8 +216,8 @@
       "jobName": "paragraph_1581251338651_598065555",
       "id": "20200209-122858_1050021088",
       "dateCreated": "2020-02-09 12:28:58.651",
-      "dateStarted": "2020-02-09 13:08:05.138",
-      "dateFinished": "2020-02-09 13:08:05.193",
+      "dateStarted": "2020-02-09 21:15:12.692",
+      "dateFinished": "2020-02-09 21:15:12.818",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -261,7 +264,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.create(\u0027single\u0027, \u0027Person\u0027, \u0027FRIEND\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 12:32:24.591",
+      "dateUpdated": "2020-02-09 21:15:24.709",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -316,7 +319,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Person.label\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\tnodeCount\trelationshipCount\tcreateMillis\n\"single\"\tPerson\tDEFAULT\tNATURAL\tFRIEND\t2\t1\t137\n"
+            "data": "graphName\tnodeProjection.Person.label\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\tnodeCount\trelationshipCount\tcreateMillis\n\"single\"\tPerson\tDEFAULT\tNATURAL\tFRIEND\t2\t1\t29\n"
           }
         ]
       },
@@ -324,15 +327,107 @@
       "jobName": "paragraph_1581251488787_-980330708",
       "id": "20200209-123128_1288506944",
       "dateCreated": "2020-02-09 12:31:28.787",
-      "dateStarted": "2020-02-09 12:32:23.834",
-      "dateFinished": "2020-02-09 12:32:24.046",
+      "dateStarted": "2020-02-09 21:15:24.747",
+      "dateFinished": "2020-02-09 21:15:24.803",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nLets run the pageRank to see results\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-09 21:16:08.107",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1581282940980_1011009179",
+      "id": "20200209-211540_793530759",
+      "dateCreated": "2020-02-09 21:15:40.980",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gds\nCALL gds.pageRank.stream(\u0027single\u0027) YIELD nodeId, score\nRETURN gds.util.asNode(nodeId).id as id, score",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-09 21:16:59.333",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "score": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tscore\n\"Amy\"\t0.15000000000000002\n\"Mark\"\t0.27750000506639483\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581282938763_1549950983",
+      "id": "20200209-211538_277884644",
+      "dateCreated": "2020-02-09 21:15:38.763",
+      "dateStarted": "2020-02-09 21:16:58.522",
+      "dateFinished": "2020-02-09 21:16:58.582",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027single\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 12:33:09.008",
+      "dateUpdated": "2020-02-09 21:17:04.379",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -405,8 +500,8 @@
       "jobName": "paragraph_1581251451739_-575453408",
       "id": "20200209-123051_2107831494",
       "dateCreated": "2020-02-09 12:30:51.739",
-      "dateStarted": "2020-02-09 12:33:08.157",
-      "dateFinished": "2020-02-09 12:33:08.219",
+      "dateStarted": "2020-02-09 21:17:04.418",
+      "dateFinished": "2020-02-09 21:17:04.449",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -453,7 +548,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.create(\u0027multi\u0027, \u0027Person | Hobby\u0027, [\u0027LIKES\u0027,\u0027DISLIKES\u0027,\u0027FRIEND\u0027]);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 12:39:43.006",
+      "dateUpdated": "2020-02-09 21:17:21.884",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -514,7 +609,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Person | Hobby.label\trelationshipProjection.DISLIKES.aggregation\trelationshipProjection.DISLIKES.projection\trelationshipProjection.DISLIKES.type\trelationshipProjection.LIKES.aggregation\trelationshipProjection.LIKES.projection\trelationshipProjection.LIKES.type\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\tnodeCount\trelationshipCount\tcreateMillis\n\"multi\"\tPerson | Hobby\tDEFAULT\tNATURAL\tDISLIKES\tDEFAULT\tNATURAL\tLIKES\tDEFAULT\tNATURAL\tFRIEND\t4\t3\t61\n"
+            "data": "graphName\tnodeProjection.Person | Hobby.label\trelationshipProjection.DISLIKES.aggregation\trelationshipProjection.DISLIKES.projection\trelationshipProjection.DISLIKES.type\trelationshipProjection.LIKES.aggregation\trelationshipProjection.LIKES.projection\trelationshipProjection.LIKES.type\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\tnodeCount\trelationshipCount\tcreateMillis\n\"multi\"\tPerson | Hobby\tDEFAULT\tNATURAL\tDISLIKES\tDEFAULT\tNATURAL\tLIKES\tDEFAULT\tNATURAL\tFRIEND\t4\t3\t67\n"
           }
         ]
       },
@@ -522,8 +617,113 @@
       "jobName": "paragraph_1581251588107_-1970853667",
       "id": "20200209-123308_1498817098",
       "dateCreated": "2020-02-09 12:33:08.107",
-      "dateStarted": "2020-02-09 12:39:43.047",
-      "dateFinished": "2020-02-09 12:39:43.150",
+      "dateStarted": "2020-02-09 21:17:21.926",
+      "dateFinished": "2020-02-09 21:17:22.040",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gds\nCALL gds.pageRank.stream(\u0027multi\u0027) YIELD nodeId, score\nRETURN gds.util.asNode(nodeId).id as id, score",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-09 21:17:53.119",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "score": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tscore\n\"Amy\"\t0.15000000000000002\n\"Mark\"\t0.21375000253319743\n\"cycling\"\t0.21375000253319743\n\"tv\"\t0.33168750405311587\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581283062531_-221142941",
+      "id": "20200209-211742_1382340303",
+      "dateCreated": "2020-02-09 21:17:42.531",
+      "dateStarted": "2020-02-09 21:17:52.357",
+      "dateFinished": "2020-02-09 21:17:52.382",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nLets run the pageRank to see results\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-09 21:17:32.986",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "markdown",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eLets run the pageRank to see results\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1581283045044_1712667498",
+      "id": "20200209-211725_1930849019",
+      "dateCreated": "2020-02-09 21:17:25.044",
+      "dateStarted": "2020-02-09 21:17:32.986",
+      "dateFinished": "2020-02-09 21:17:32.996",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -615,9 +815,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md \nLoading more labels and relationship types, but also their properties\n\n",
+      "text": "%md \n### Loading more labels and relationship types, but also their properties and defined projections\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 12:46:07.537",
+      "dateUpdated": "2020-02-09 21:18:40.166",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -641,7 +841,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eLoading more labels and relationship types, but also their properties\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eLoading more labels and relationship types, but also their properties and defined projections\u003c/h3\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -649,15 +849,15 @@
       "jobName": "paragraph_1581252016789_591888570",
       "id": "20200209-124016_379042647",
       "dateCreated": "2020-02-09 12:40:16.789",
-      "dateStarted": "2020-02-09 12:46:07.538",
-      "dateFinished": "2020-02-09 12:46:07.554",
+      "dateStarted": "2020-02-09 21:18:40.165",
+      "dateFinished": "2020-02-09 21:18:40.172",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\nCALL gds.graph.create(\u0027config_map\u0027, \n// node configuration map\n   {\n   Person:{\n      properties:[\u0027seed_property\u0027, \u0027activity\u0027],\n      label:\u0027Person | Hobby\u0027\n   \n        }\n    },\n// relationship configuration map{\n   {\n    FRIEND:{\n      type:\u0027FRIEND\u0027,\n      projection:\u0027UNDIRECTED\u0027,\n      properties:{\n         weight:{\n            property:\u0027weight\u0027,\n            aggregation:\u0027SINGLE\u0027,\n            defaultValue:1.0\n         \n            }\n        }\n    }\n})",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 13:25:17.670",
+      "dateUpdated": "2020-02-09 21:18:44.244",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -719,7 +919,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Person.properties.seed_property.property\tnodeProjection.Person.properties.seed_property.defaultValue\tnodeProjection.Person.properties.activity.property\tnodeProjection.Person.properties.activity.defaultValue\tnodeProjection.Person.label\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\trelationshipProjection.FRIEND.properties.weight.property\trelationshipProjection.FRIEND.properties.weight.defaultValue\trelationshipProjection.FRIEND.properties.weight.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"config_map\"\tseed_property\tNaN\tactivity\tNaN\tPerson | Hobby\tDEFAULT\tUNDIRECTED\tFRIEND\tweight\t1.0\tSINGLE\t4\t2\t10\n"
+            "data": "graphName\tnodeProjection.Person.properties.seed_property.property\tnodeProjection.Person.properties.seed_property.defaultValue\tnodeProjection.Person.properties.activity.property\tnodeProjection.Person.properties.activity.defaultValue\tnodeProjection.Person.label\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\trelationshipProjection.FRIEND.properties.weight.property\trelationshipProjection.FRIEND.properties.weight.defaultValue\trelationshipProjection.FRIEND.properties.weight.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"config_map\"\tseed_property\tNaN\tactivity\tNaN\tPerson | Hobby\tDEFAULT\tUNDIRECTED\tFRIEND\tweight\t1.0\tSINGLE\t4\t2\t67\n"
           }
         ]
       },
@@ -727,15 +927,15 @@
       "jobName": "paragraph_1581251806890_-87970371",
       "id": "20200209-123646_539857450",
       "dateCreated": "2020-02-09 12:36:46.891",
-      "dateStarted": "2020-02-09 13:25:17.354",
-      "dateFinished": "2020-02-09 13:25:17.420",
+      "dateStarted": "2020-02-09 21:18:44.284",
+      "dateFinished": "2020-02-09 21:18:44.397",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.pageRank.stream(\u0027config_map\u0027) YIELD nodeId, score",
+      "text": "%neo4j_gds\nCALL gds.pageRank.stream(\u0027config_map\u0027) YIELD nodeId, score\nRETURN gds.util.asNode(nodeId).id as id, score",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 13:13:04.890",
+      "dateUpdated": "2020-02-09 21:19:04.006",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -751,7 +951,7 @@
                   "tableGridState": {},
                   "tableColumnTypeState": {
                     "names": {
-                      "nodeId": "string",
+                      "id": "string",
                       "score": "string"
                     },
                     "updated": false
@@ -784,7 +984,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "nodeId\tscore\n36\t0.9670543998479844\n37\t0.9670543998479844\n38\t0.15000000000000002\n39\t0.15000000000000002\n"
+            "data": "id\tscore\n\"Amy\"\t0.9670543998479844\n\"Mark\"\t0.9670543998479844\n\"cycling\"\t0.15000000000000002\n\"tv\"\t0.15000000000000002\n"
           }
         ]
       },
@@ -792,15 +992,15 @@
       "jobName": "paragraph_1581252370797_-337116866",
       "id": "20200209-124610_923398545",
       "dateCreated": "2020-02-09 12:46:10.797",
-      "dateStarted": "2020-02-09 13:13:04.918",
-      "dateFinished": "2020-02-09 13:13:04.948",
+      "dateStarted": "2020-02-09 21:19:03.623",
+      "dateFinished": "2020-02-09 21:19:03.654",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027config_map\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 13:25:03.535",
+      "dateUpdated": "2020-02-09 21:19:36.827",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -819,6 +1019,8 @@
                       "graphName": "string",
                       "nodeProjection.Person.properties.seed_property.property": "string",
                       "nodeProjection.Person.properties.seed_property.defaultValue": "string",
+                      "nodeProjection.Person.properties.activity.property": "string",
+                      "nodeProjection.Person.properties.activity.defaultValue": "string",
                       "nodeProjection.Person.label": "string",
                       "relationshipProjection.FRIEND.aggregation": "string",
                       "relationshipProjection.FRIEND.projection": "string",
@@ -870,7 +1072,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Person.properties.seed_property.property\tnodeProjection.Person.properties.seed_property.defaultValue\tnodeProjection.Person.label\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\trelationshipProjection.FRIEND.properties.weight.property\trelationshipProjection.FRIEND.properties.weight.defaultValue\trelationshipProjection.FRIEND.properties.weight.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"config_map\"\tseed_property\tNaN\tPerson | Hobby\tDEFAULT\tUNDIRECTED\tFRIEND\tweight\t1.0\tSINGLE\tNULL\tNULL\t4\t2\t1\t0\t1\t0.5\t1\t0\t1\t1\t1\n"
+            "data": "graphName\tnodeProjection.Person.properties.seed_property.property\tnodeProjection.Person.properties.seed_property.defaultValue\tnodeProjection.Person.properties.activity.property\tnodeProjection.Person.properties.activity.defaultValue\tnodeProjection.Person.label\trelationshipProjection.FRIEND.aggregation\trelationshipProjection.FRIEND.projection\trelationshipProjection.FRIEND.type\trelationshipProjection.FRIEND.properties.weight.property\trelationshipProjection.FRIEND.properties.weight.defaultValue\trelationshipProjection.FRIEND.properties.weight.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"config_map\"\tseed_property\tNaN\tactivity\tNaN\tPerson | Hobby\tDEFAULT\tUNDIRECTED\tFRIEND\tweight\t1.0\tSINGLE\tNULL\tNULL\t4\t2\t1\t0\t1\t0.5\t1\t0\t1\t1\t1\n"
           }
         ]
       },
@@ -878,8 +1080,8 @@
       "jobName": "paragraph_1581253601364_-1353565310",
       "id": "20200209-130641_729821940",
       "dateCreated": "2020-02-09 13:06:41.364",
-      "dateStarted": "2020-02-09 13:25:03.614",
-      "dateFinished": "2020-02-09 13:25:03.637",
+      "dateStarted": "2020-02-09 21:19:36.459",
+      "dateFinished": "2020-02-09 21:19:36.482",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

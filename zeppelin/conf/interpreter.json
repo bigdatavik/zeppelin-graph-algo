@@ -1369,7 +1369,7 @@
         },
         "neo4j.url": {
           "name": "neo4j.url",
-          "value": "bolt://neo4j-gdn:7687",
+          "value": "bolt://neo4j-gds:7687",
           "type": "string"
         }
       },
@@ -1655,7 +1655,7 @@
           "type": "number"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "kylin",
@@ -2279,24 +2279,7 @@
     "2F1GBE9E5": [
       "spark",
       "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "sap"
+      "neo4j_gds"
     ],
     "2EW8M6FY9": [
       "md",
