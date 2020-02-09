@@ -16,8 +16,8 @@ services:
         - ./zeppelin/data:/zeppelin/spark-warehouse
         environment:
             - PYSPARK_PYTHON=python3
-#            - ZEPPELIN_NOTEBOOK_HOMESCREEN=2EYYCADG3
-#            - ZEPPELIN_NOTEBOOK_HOMESCREEN_HIDE=true
+            - ZEPPELIN_NOTEBOOK_HOMESCREEN=2EYYCADG3
+            - ZEPPELIN_NOTEBOOK_HOMESCREEN_HIDE=true
     neo4j-algo:
         hostname: neo4j-algo
         container_name: neo4j-algo
@@ -39,6 +39,7 @@ services:
         volumes:
             - ./neo4j/data:/data
             - ./neo4j/plugins:/plugins
+            - ./neo4j/import:/import
         environment:
             - NEO4J_AUTH=neo4j/zeppelin
             - NEO4J_dbms_security_procedures_unrestricted=apoc.*, gds.*

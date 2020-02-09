@@ -594,7 +594,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.create(\u0027scc_example\u0027, \u0027Library\u0027, \u0027DEPENDS_ON\u0027);\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:40:57.938",
+      "dateUpdated": "2020-02-09 16:33:19.127",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -651,7 +651,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeCount\trelationshipCount\tcreateMillis\n\"scc_example\"\tLibrary\tDEFAULT\tNATURAL\tDEPENDS_ON\t15\t18\t10\n"
+            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeCount\trelationshipCount\tcreateMillis\n\"scc_example\"\tLibrary\tDEFAULT\tNATURAL\tDEPENDS_ON\t15\t18\t7\n"
           }
         ]
       },
@@ -659,8 +659,8 @@
       "jobName": "paragraph_1581019694677_-26408017",
       "id": "20200206-200814_1608079068",
       "dateCreated": "2020-02-06 20:08:14.677",
-      "dateStarted": "2020-02-08 21:40:57.973",
-      "dateFinished": "2020-02-08 21:40:58.039",
+      "dateStarted": "2020-02-09 16:33:19.153",
+      "dateFinished": "2020-02-09 16:33:19.174",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -707,7 +707,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.scc.stream(\u0027scc_example\u0027) YIELD nodeId,partition\nRETURN partition, collect(gds.util.asNode(nodeId).id) AS libraries\nORDER BY size(libraries) DESC;\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:42:06.969",
+      "dateUpdated": "2020-02-09 16:33:26.249",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -766,8 +766,8 @@
       "jobName": "paragraph_1581019743085_371388882",
       "id": "20200206-200903_1453702666",
       "dateCreated": "2020-02-06 20:09:03.085",
-      "dateStarted": "2020-02-08 21:41:20.824",
-      "dateFinished": "2020-02-08 21:41:21.042",
+      "dateStarted": "2020-02-09 16:33:26.287",
+      "dateFinished": "2020-02-09 16:33:26.539",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

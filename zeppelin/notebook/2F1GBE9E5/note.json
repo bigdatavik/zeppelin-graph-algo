@@ -3,7 +3,7 @@
     {
       "text": "%pyspark\nimport pandas as pd\nfrom numpy.random import randint\nfrom pyspark.ml import Pipeline\nfrom pyspark.ml.classification import RandomForestClassifier\nfrom pyspark.ml.feature import StringIndexer, VectorAssembler\nfrom pyspark.ml.evaluation import BinaryClassificationEvaluator\nfrom pyspark.sql.types import *\nfrom pyspark.sql import functions as F\nfrom sklearn.metrics import roc_curve, auc\nfrom collections import Counter\nfrom cycler import cycler\nimport matplotlib\nimport matplotlib.pyplot as plt",
       "user": "anonymous",
-      "dateUpdated": "2020-01-30 20:27:56.865",
+      "dateUpdated": "2020-02-09 17:00:24.691",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -22,16 +22,21 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
-        "msg": []
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Fail to execute line 9: from sklearn.metrics import roc_curve, auc\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-6949356338289067518.py\", line 375, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 9, in \u003cmodule\u003e\nImportError: No module named \u0027sklearn\u0027\n"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1580415107422_-1030430996",
       "id": "20200130-201147_175473249",
       "dateCreated": "2020-01-30 20:11:47.423",
-      "dateStarted": "2020-01-30 20:27:46.841",
-      "dateFinished": "2020-01-30 20:27:46.909",
-      "status": "FINISHED",
+      "dateStarted": "2020-02-09 17:00:25.021",
+      "dateFinished": "2020-02-09 17:00:41.276",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {

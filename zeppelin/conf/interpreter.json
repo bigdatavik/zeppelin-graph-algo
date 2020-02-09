@@ -1655,7 +1655,7 @@
           "type": "number"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "kylin",
@@ -2042,6 +2042,30 @@
       "bigquery",
       "pig",
       "groovy",
+      "sap"
+    ],
+    "2EYVDRCVC": [
+      "neo4j_gds",
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j_algo",
       "sap"
     ],
     "2EYGMDMY2": [
