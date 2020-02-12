@@ -586,7 +586,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.create(\u0027pagerank_example\u0027, \u0027User\u0027, \u0027FOLLOWS\u0027);\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:05:39.369",
+      "dateUpdated": "2020-02-12 18:17:14.431",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -643,7 +643,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t54\n"
+            "data": "graphName\tnodeProjection.User.label\trelationshipProjection.FOLLOWS.aggregation\trelationshipProjection.FOLLOWS.projection\trelationshipProjection.FOLLOWS.type\tnodeCount\trelationshipCount\tcreateMillis\n\"pagerank_example\"\tUser\tDEFAULT\tNATURAL\tFOLLOWS\t9\t16\t400\n"
           }
         ]
       },
@@ -651,8 +651,8 @@
       "jobName": "paragraph_1581008827047_-94058781",
       "id": "20200206-170707_2067501281",
       "dateCreated": "2020-02-06 17:07:07.047",
-      "dateStarted": "2020-02-08 21:05:39.401",
-      "dateFinished": "2020-02-08 21:05:39.500",
+      "dateStarted": "2020-02-12 18:17:14.568",
+      "dateFinished": "2020-02-12 18:17:15.182",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -697,9 +697,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.pageRank.stream(\u0027pagerank_example\u0027,{maxIterations: 20,  dampingFactor: 0.85}) YIELD nodeId, score\nRETURN gds.util.asNode(nodeId).id AS name, score ORDER BY score DESC LIMIT 10\n",
+      "text": "%neo4j_gds\nCALL gds.pageRank.stream(\u0027pagerank_example\u0027,{maxIterations: 20,  dampingFactor: 0.85}) YIELD nodeId, score\nRETURN gds.util.asNode(nodeId).id AS name, score ORDER BY score DESC LIMIT 10\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:51.814",
+      "dateUpdated": "2020-02-12 18:17:18.385",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -758,15 +758,15 @@
       "jobName": "paragraph_1580590166713_-1946443068",
       "id": "20200201-204926_589092598",
       "dateCreated": "2020-02-01 20:49:26.713",
-      "dateStarted": "2020-02-06 17:15:51.833",
-      "dateFinished": "2020-02-06 17:15:51.858",
+      "dateStarted": "2020-02-12 18:17:18.494",
+      "dateFinished": "2020-02-12 18:17:18.758",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "### Write-back betweenness centrality\n\n`WriteProperty` parameter defines the property of the node, where the results of the algorithm should be stored. If it is not defined, the results will not be stored in any property.",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:06:23.534",
+      "dateUpdated": "2020-02-12 18:17:23.241",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -799,15 +799,15 @@
       "jobName": "paragraph_1575718233544_756286542",
       "id": "20191207-112839_1421236737",
       "dateCreated": "2019-12-07 11:30:33.544",
-      "dateStarted": "2020-02-08 21:06:23.534",
-      "dateFinished": "2020-02-08 21:06:23.561",
+      "dateStarted": "2020-02-12 18:17:23.250",
+      "dateFinished": "2020-02-12 18:17:24.858",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.pageRank.write(\u0027pagerank_example\u0027,{maxIterations: 20,  dampingFactor: 0.85, writeProperty:\u0027pageRank\u0027}) ",
+      "text": "%neo4j_gds\nCALL gds.pageRank.write(\u0027pagerank_example\u0027,{maxIterations: 20,  dampingFactor: 0.85, writeProperty:\u0027pageRank\u0027}) ",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 17:15:52.063",
+      "dateUpdated": "2020-02-12 18:17:26.818",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -824,7 +824,6 @@
                   "tableColumnTypeState": {
                     "names": {
                       "nodePropertiesWritten": "string",
-                      "relationshipPropertiesWritten": "string",
                       "createMillis": "string",
                       "computeMillis": "string",
                       "writeMillis": "string",
@@ -875,7 +874,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "nodePropertiesWritten\trelationshipPropertiesWritten\tcreateMillis\tcomputeMillis\twriteMillis\tranIterations\tdidConverge\tconfiguration.maxIterations\tconfiguration.writeConcurrency\tconfiguration.sourceNodes\tconfiguration.writeProperty\tconfiguration.relationshipWeightProperty\tconfiguration.dampingFactor\tconfiguration.relationshipTypes\tconfiguration.cacheWeights\tconfiguration.tolerance\tconfiguration.concurrency\n9\t0\t0\t11\t1\t20\tFALSE\t20\t4\t[]\tpageRank\t\t0.85\t[\"*\"]\tfalse\t1.0E-7\t4\n"
+            "data": "nodePropertiesWritten\tcreateMillis\tcomputeMillis\twriteMillis\tranIterations\tdidConverge\tconfiguration.maxIterations\tconfiguration.writeConcurrency\tconfiguration.sourceNodes\tconfiguration.writeProperty\tconfiguration.relationshipWeightProperty\tconfiguration.dampingFactor\tconfiguration.relationshipTypes\tconfiguration.cacheWeights\tconfiguration.tolerance\tconfiguration.concurrency\n9\t0\t22\t8\t20\tFALSE\t20\t4\t[]\tpageRank\t\t0.85\t[\"*\"]\tfalse\t1.0E-7\t4\n"
           }
         ]
       },
@@ -883,8 +882,8 @@
       "jobName": "paragraph_1580591038597_-1365372607",
       "id": "20200201-210358_1423498944",
       "dateCreated": "2020-02-01 21:03:58.597",
-      "dateStarted": "2020-02-06 17:15:52.093",
-      "dateFinished": "2020-02-06 17:15:52.136",
+      "dateStarted": "2020-02-12 18:17:26.894",
+      "dateFinished": "2020-02-12 18:17:27.037",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -931,7 +930,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027pagerank_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:06:43.242",
+      "dateUpdated": "2020-02-12 18:17:30.567",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1006,8 +1005,8 @@
       "jobName": "paragraph_1580591272826_1392172660",
       "id": "20200201-210752_1545325576",
       "dateCreated": "2020-02-01 21:07:52.826",
-      "dateStarted": "2020-02-08 21:06:42.706",
-      "dateFinished": "2020-02-08 21:06:42.738",
+      "dateStarted": "2020-02-12 18:17:30.678",
+      "dateFinished": "2020-02-12 18:17:30.721",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
