@@ -633,9 +633,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027allpair_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Natural\u0027, properties: \u0027distance\u0027}});\n\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027allpair_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Undirected\u0027, properties: \u0027distance\u0027}});\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:56:26.103",
+      "dateUpdated": "2020-02-20 07:12:56.648",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -695,7 +695,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"allpair_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t48\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"allpair_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\t12\t30\t294\n"
           }
         ]
       },
@@ -703,8 +703,8 @@
       "jobName": "paragraph_1581021304851_-1327454323",
       "id": "20200206-203504_1299689562",
       "dateCreated": "2020-02-06 20:35:04.851",
-      "dateStarted": "2020-02-08 21:56:26.130",
-      "dateFinished": "2020-02-08 21:56:26.191",
+      "dateStarted": "2020-02-20 07:12:56.955",
+      "dateFinished": "2020-02-20 07:12:59.261",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -751,7 +751,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.allShortestPaths.stream(\u0027allpair_example\u0027, {relationshipWeightProperty:null})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN gds.util.asNode(sourceNodeId).id AS source,\n       gds.util.asNode(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:56:26.380",
+      "dateUpdated": "2020-02-20 07:13:04.493",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -803,7 +803,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "source\ttarget\tdistance\n\"Immingham\"\t\"Gouda\"\t8.0\n\"Amsterdam\"\t\"Hoek van Holland\"\t7.0\n\"Doncaster\"\t\"Gouda\"\t7.0\n\"Immingham\"\t\"Rotterdam\"\t7.0\n\"Doncaster\"\t\"Rotterdam\"\t6.0\n\"Amsterdam\"\t\"Felixstowe\"\t6.0\n\"London\"\t\"Gouda\"\t6.0\n\"Immingham\"\t\"Hoek van Holland\"\t6.0\n\"Amsterdam\"\t\"Ipswich\"\t5.0\n\"Doncaster\"\t\"Hoek van Holland\"\t5.0\n"
+            "data": "source\ttarget\tdistance\n\"London\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Ipswich\"\t5.0\n\"London\"\t\"Rotterdam\"\t5.0\n\"Colchester\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Colchester\"\t5.0\n\"Den Haag\"\t\"Colchester\"\t4.0\n\"Amsterdam\"\t\"Ipswich\"\t4.0\n\"Amsterdam\"\t\"Colchester\"\t4.0\n\"Utrecht\"\t\"Felixstowe\"\t4.0\n\"Immingham\"\t\"Felixstowe\"\t4.0\n"
           }
         ]
       },
@@ -811,8 +811,8 @@
       "jobName": "paragraph_1581021278861_-852709497",
       "id": "20200206-203438_771657057",
       "dateCreated": "2020-02-06 20:34:38.861",
-      "dateStarted": "2020-02-08 21:56:26.408",
-      "dateFinished": "2020-02-08 21:56:26.440",
+      "dateStarted": "2020-02-20 07:13:04.634",
+      "dateFinished": "2020-02-20 07:13:05.335",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -859,7 +859,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.allShortestPaths.stream(\u0027allpair_example\u0027, {relationshipWeightProperty:\u0027distance\u0027})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN gds.util.asNode(sourceNodeId).id AS source,\n       gds.util.asNode(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:56:26.633",
+      "dateUpdated": "2020-02-20 07:13:09.330",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -911,7 +911,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "source\ttarget\tdistance\n\"Amsterdam\"\t\"Hoek van Holland\"\t1087.0\n\"Amsterdam\"\t\"Felixstowe\"\t880.0\n\"Amsterdam\"\t\"Ipswich\"\t858.0\n\"Amsterdam\"\t\"Colchester\"\t826.0\n\"Immingham\"\t\"Gouda\"\t777.0\n\"Immingham\"\t\"Rotterdam\"\t751.0\n\"Amsterdam\"\t\"London\"\t720.0\n\"Immingham\"\t\"Hoek van Holland\"\t718.0\n\"Doncaster\"\t\"Gouda\"\t703.0\n\"Doncaster\"\t\"Rotterdam\"\t677.0\n"
+            "data": "source\ttarget\tdistance\n\"Doncaster\"\t\"Hoek van Holland\"\t529.0\n\"Doncaster\"\t\"Rotterdam\"\t528.0\n\"Doncaster\"\t\"Gouda\"\t524.0\n\"Immingham\"\t\"Felixstowe\"\t511.0\n\"Den Haag\"\t\"Doncaster\"\t502.0\n\"Immingham\"\t\"Ipswich\"\t489.0\n\"Utrecht\"\t\"Doncaster\"\t489.0\n\"Utrecht\"\t\"London\"\t460.0\n\"Immingham\"\t\"Colchester\"\t457.0\n\"Immingham\"\t\"Hoek van Holland\"\t455.0\n"
           }
         ]
       },
@@ -919,8 +919,8 @@
       "jobName": "paragraph_1581021519523_1658418537",
       "id": "20200206-203839_252538629",
       "dateCreated": "2020-02-06 20:38:39.523",
-      "dateStarted": "2020-02-08 21:56:26.657",
-      "dateFinished": "2020-02-08 21:56:26.679",
+      "dateStarted": "2020-02-20 07:13:09.442",
+      "dateFinished": "2020-02-20 07:13:09.654",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -967,7 +967,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027allpair_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:56:26.895",
+      "dateUpdated": "2020-02-20 07:13:13.467",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1037,7 +1037,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"allpair_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"allpair_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t30\t4\t2\t4\t2.5\t3\t2\t4\t3\t3\n"
           }
         ]
       },
@@ -1045,8 +1045,8 @@
       "jobName": "paragraph_1581021694217_1233019215",
       "id": "20200206-204134_1643659125",
       "dateCreated": "2020-02-06 20:41:34.217",
-      "dateStarted": "2020-02-08 21:56:26.921",
-      "dateFinished": "2020-02-08 21:56:26.941",
+      "dateStarted": "2020-02-20 07:13:13.571",
+      "dateFinished": "2020-02-20 07:13:13.663",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

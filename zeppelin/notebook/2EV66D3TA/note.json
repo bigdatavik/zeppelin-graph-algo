@@ -84,7 +84,7 @@
     {
       "text": "%md\n### Example graph\n\nWe can visualize the example graph in Zeppelin by using the following cypher statement:",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:02:34.727",
+      "dateUpdated": "2020-02-12 18:42:51.835",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -96,8 +96,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},

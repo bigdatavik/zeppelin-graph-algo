@@ -191,7 +191,7 @@
     {
       "text": "%neo4j_gds\n// import nodes\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMERGE (:User {id: row.id})\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 20:21:57.991",
+      "dateUpdated": "2020-02-12 18:17:02.105",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -216,15 +216,15 @@
       "jobName": "paragraph_1580590067978_707781796",
       "id": "20200201-204747_1224861690",
       "dateCreated": "2020-02-01 20:47:47.978",
-      "dateStarted": "2020-02-08 20:21:58.010",
-      "dateFinished": "2020-02-08 20:21:58.508",
+      "dateStarted": "2020-02-12 18:17:02.318",
+      "dateFinished": "2020-02-12 18:17:05.060",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\n// import relationships\nWITH \"https://raw.githubusercontent.com/neo4j-graph-analytics/book/master/data/social-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (source:User {id: row.src})\nMATCH (destination:User {id: row.dst})\nMERGE (source)-[:FOLLOWS]-\u003e(destination)",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 20:21:58.511",
+      "dateUpdated": "2020-02-12 18:17:05.655",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -251,8 +251,8 @@
       "jobName": "paragraph_1580590077643_1769930561",
       "id": "20200201-204757_755456677",
       "dateCreated": "2020-02-01 20:47:57.643",
-      "dateStarted": "2020-02-08 20:21:58.579",
-      "dateFinished": "2020-02-08 20:21:58.985",
+      "dateStarted": "2020-02-12 18:17:05.793",
+      "dateFinished": "2020-02-12 18:17:06.811",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

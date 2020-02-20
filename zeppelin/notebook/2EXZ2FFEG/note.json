@@ -437,7 +437,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.create(\u0027randomwalk_example\u0027, \u0027Place\u0027, \u0027EROAD\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 22:04:04.601",
+      "dateUpdated": "2020-02-20 07:13:50.518",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -494,7 +494,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\tnodeCount\trelationshipCount\tcreateMillis\n\"randomwalk_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\t12\t15\t5\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\tnodeCount\trelationshipCount\tcreateMillis\n\"randomwalk_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\t12\t15\t53\n"
           }
         ]
       },
@@ -502,15 +502,55 @@
       "jobName": "paragraph_1581023359644_1505700256",
       "id": "20200206-210919_1153713382",
       "dateCreated": "2020-02-06 21:09:19.644",
-      "dateStarted": "2020-02-08 22:04:04.624",
-      "dateFinished": "2020-02-08 22:04:04.645",
+      "dateStarted": "2020-02-20 07:13:50.569",
+      "dateFinished": "2020-02-20 07:13:50.675",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\n//MATCH (source:Place {id: \"London\"})\nCALL gds.alpha.randomWalk.stream(\u0027randomwalk_example\u0027, {steps: 5})\nYIELD nodeIds\nUNWIND nodeIds AS nodeId\nRETURN gds.util.asNode(nodeId).id AS place;",
+      "text": "%md\nCurrently the randomWalk algorithm does not support providing a start node",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 22:04:25.213",
+      "dateUpdated": "2020-02-20 07:01:44.347",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eCurrently the randomWalk algorithm does not support providing a start node\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1582182082283_1851524406",
+      "id": "20200220-070122_2121973454",
+      "dateCreated": "2020-02-20 07:01:22.283",
+      "dateStarted": "2020-02-20 07:01:44.350",
+      "dateFinished": "2020-02-20 07:01:45.914",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_gds\nCALL gds.alpha.randomWalk.stream(\u0027randomwalk_example\u0027, {steps: 5})\nYIELD nodeIds\nUNWIND nodeIds AS nodeId\nRETURN gds.util.asNode(nodeId).id AS place;",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-20 07:13:56.434",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -560,7 +600,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "place\n\"London\"\n\"Colchester\"\n\"Ipswich\"\n\"Felixstowe\"\n\"Hoek van Holland\"\n\"Rotterdam\"\n"
+            "data": "place\n\"Doncaster\"\n\"London\"\n\"Colchester\"\n\"Ipswich\"\n\"Felixstowe\"\n\"Hoek van Holland\"\n"
           }
         ]
       },
@@ -568,8 +608,8 @@
       "jobName": "paragraph_1580233869625_1615641074",
       "id": "20200128-175109_1741413551",
       "dateCreated": "2020-01-28 17:51:09.625",
-      "dateStarted": "2020-02-08 22:04:25.233",
-      "dateFinished": "2020-02-08 22:04:25.276",
+      "dateStarted": "2020-02-20 07:13:56.502",
+      "dateFinished": "2020-02-20 07:13:56.523",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -616,7 +656,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027randomwalk_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 22:04:31.805",
+      "dateUpdated": "2020-02-20 07:14:00.642",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -691,35 +731,8 @@
       "jobName": "paragraph_1581023706025_-2059184018",
       "id": "20200206-211506_1689368921",
       "dateCreated": "2020-02-06 21:15:06.025",
-      "dateStarted": "2020-02-08 22:04:31.830",
-      "dateFinished": "2020-02-08 22:04:31.860",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%neo4j_gdn\n",
-      "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:11:37.073",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "markdown",
-          "editOnDblClick": false,
-          "completionSupport": false
-        },
-        "editorMode": "ace/mode/undefined"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "jobName": "paragraph_1581023721248_-1684845646",
-      "id": "20200206-211521_906805506",
-      "dateCreated": "2020-02-06 21:15:21.248",
+      "dateStarted": "2020-02-20 07:14:00.785",
+      "dateFinished": "2020-02-20 07:14:00.807",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     }

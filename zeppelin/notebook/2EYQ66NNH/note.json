@@ -1,6 +1,46 @@
 {
   "paragraphs": [
     {
+      "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-20 07:18:04.101",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003eExample taken from \u0026ldquo;Graph Algorithms: Practical Examples in Apache Spark and Neo4j\u0026rdquo; (\u003ca href\u003d\"https://neo4j.com/graph-algorithms-book/\"\u003ehttps://neo4j.com/graph-algorithms-book/\u003c/a\u003e)\u003c/h3\u003e\n\u003ch3\u003ePlease make sure that you have previously executed \u003ca href\u003d\"/#/notebook/2EZ4GSKAZ\"\u003ethis notebook\u003c/a\u003e\u003c/h3\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1582183080103_558935609",
+      "id": "20200220-071800_1368262197",
+      "dateCreated": "2020-02-20 07:18:00.103",
+      "dateStarted": "2020-02-20 07:18:04.118",
+      "dateFinished": "2020-02-20 07:18:04.161",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n# The Minimum Weight Spanning Tree algorithm migration guide",
       "user": "anonymous",
       "dateUpdated": "2020-02-06 21:45:41.831",
@@ -516,9 +556,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.create(\u0027spanningtree_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027,projection:\u0027Natural\u0027,properties:\u0027distance\u0027}});",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027spanningtree_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027,projection:\u0027Natural\u0027,properties:\u0027distance\u0027}});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 21:58:39.954",
+      "dateUpdated": "2020-02-20 07:28:57.401",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -578,7 +618,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t13\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t39\n"
           }
         ]
       },
@@ -586,8 +626,8 @@
       "jobName": "paragraph_1581025655253_1738926662",
       "id": "20200206-214735_466643794",
       "dateCreated": "2020-02-06 21:47:35.253",
-      "dateStarted": "2020-02-06 21:58:38.923",
-      "dateFinished": "2020-02-06 21:58:38.963",
+      "dateStarted": "2020-02-20 07:28:57.439",
+      "dateFinished": "2020-02-20 07:28:57.499",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -632,9 +672,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nMATCH (n:Place {id:\"Amsterdam\"})\nCALL gds.alpha.spanningTree.minimum.write(\u0027spanningtree_example\u0027, {weightWriteProperty:\u0027cost\u0027, startNodeId: id(n), writeProperty:\u0027MNIST\u0027, relationshipWeightProperty:\u0027distance\u0027})\nYIELD createMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN createMillis, computeMillis, writeMillis, effectiveNodeCount",
+      "text": "%neo4j_gds\nMATCH (n:Place {id:\"Amsterdam\"})\nCALL gds.alpha.spanningTree.minimum.write(\u0027spanningtree_example\u0027, {weightWriteProperty:\u0027distance\u0027, startNodeId: id(n), writeProperty:\u0027MNIST\u0027,relationshipWeightProperty:\u0027distance\u0027})\nYIELD createMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN createMillis, computeMillis, writeMillis, effectiveNodeCount",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 21:59:46.177",
+      "dateUpdated": "2020-02-20 07:29:00.855",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -683,11 +723,11 @@
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
-            "type": "TABLE",
-            "data": "createMillis\tcomputeMillis\twriteMillis\teffectiveNodeCount\n0\t4\t9\t1\n"
+            "type": "TEXT",
+            "data": "Failed to invoke procedure `gds.alpha.spanningTree.minimum.write`: Caused by: java.lang.ArrayIndexOutOfBoundsException: 30258"
           }
         ]
       },
@@ -695,9 +735,9 @@
       "jobName": "paragraph_1581025688853_798874747",
       "id": "20200206-214808_284803239",
       "dateCreated": "2020-02-06 21:48:08.853",
-      "dateStarted": "2020-02-06 21:59:46.198",
-      "dateFinished": "2020-02-06 21:59:46.249",
-      "status": "FINISHED",
+      "dateStarted": "2020-02-20 07:29:00.876",
+      "dateFinished": "2020-02-20 07:29:00.886",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -741,9 +781,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nMATCH path \u003d (n:Place {id:\"Amsterdam\"})-[:MINST*]-()\nWITH relationships(path) AS rels\nUNWIND rels AS rel\nWITH DISTINCT rel AS rel\nRETURN startNode(rel).id AS source, endNode(rel).id AS destination, rel.distance AS cost",
+      "text": "%neo4j_gds\nMATCH path \u003d (n:Place {id:\"Amsterdam\"})-[:MINST*]-()\nWITH relationships(path) AS rels\nUNWIND rels AS rel\nWITH DISTINCT rel AS rel\nRETURN startNode(rel).id AS source, endNode(rel).id AS destination, rel.distance AS cost",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 21:59:57.613",
+      "dateUpdated": "2020-02-20 07:29:08.490",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -768,8 +808,8 @@
       "jobName": "paragraph_1581025778151_-742356042",
       "id": "20200206-214938_1721484523",
       "dateCreated": "2020-02-06 21:49:38.151",
-      "dateStarted": "2020-02-06 21:59:57.635",
-      "dateFinished": "2020-02-06 21:59:57.641",
+      "dateStarted": "2020-02-20 07:29:08.510",
+      "dateFinished": "2020-02-20 07:29:08.525",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -814,9 +854,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gdn\nCALL gds.graph.drop(\u0027spanningtree_example\u0027)",
+      "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027spanningtree_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-06 22:00:05.223",
+      "dateUpdated": "2020-02-20 07:29:11.175",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -844,15 +884,15 @@
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -886,7 +926,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
           }
         ]
       },
@@ -894,8 +934,8 @@
       "jobName": "paragraph_1581026289441_933162842",
       "id": "20200206-215809_726587180",
       "dateCreated": "2020-02-06 21:58:09.441",
-      "dateStarted": "2020-02-06 22:00:02.801",
-      "dateFinished": "2020-02-06 22:00:02.807",
+      "dateStarted": "2020-02-20 07:29:11.206",
+      "dateFinished": "2020-02-20 07:29:11.234",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -920,7 +960,11 @@
   "id": "2EYQ66NNH",
   "noteParams": {},
   "noteForms": {},
-  "angularObjects": {},
+  "angularObjects": {
+    "neo4j_algo:shared_process": [],
+    "md:shared_process": [],
+    "neo4j_gds:shared_process": []
+  },
   "config": {
     "isZeppelinNotebookCronEnable": false
   },

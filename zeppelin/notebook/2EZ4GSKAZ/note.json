@@ -191,7 +191,7 @@
     {
       "text": "%neo4j_gds\n// Import nodes\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-nodes.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri  AS row\nMERGE (place:Place {id:row.id})\nSET place.latitude \u003d toFloat(row.latitude),\n    place.longitude \u003d toFloat(row.latitude),\n    place.population \u003d toInteger(row.population)\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 19:48:29.576",
+      "dateUpdated": "2020-02-20 06:50:57.198",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -216,15 +216,15 @@
       "jobName": "paragraph_1581021155200_-262920754",
       "id": "20200206-203235_1735498676",
       "dateCreated": "2020-02-06 20:32:35.200",
-      "dateStarted": "2020-02-08 19:48:29.626",
-      "dateFinished": "2020-02-08 19:48:30.451",
+      "dateStarted": "2020-02-20 06:50:57.285",
+      "dateFinished": "2020-02-20 06:50:59.433",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\n// Import relationships\nWITH \"https://github.com/neo4j-graph-analytics/book/raw/master/data/transport-relationships.csv\"\nAS uri\nLOAD CSV WITH HEADERS FROM uri AS row\nMATCH (origin:Place {id: row.src})\nMATCH (destination:Place {id: row.dst})\nMERGE (origin)-[:EROAD {distance: toInteger(row.cost)}]-\u003e(destination)",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 19:48:30.513",
+      "dateUpdated": "2020-02-20 06:51:01.353",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -249,8 +249,8 @@
       "jobName": "paragraph_1581021187148_1394422100",
       "id": "20200206-203307_1829891686",
       "dateCreated": "2020-02-06 20:33:07.148",
-      "dateStarted": "2020-02-08 19:48:30.576",
-      "dateFinished": "2020-02-08 19:48:31.313",
+      "dateStarted": "2020-02-20 06:51:01.395",
+      "dateFinished": "2020-02-20 06:51:02.846",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

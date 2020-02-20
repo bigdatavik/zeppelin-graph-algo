@@ -1723,7 +1723,11 @@
     "2EXEQC8RJ": [
       "md"
     ],
-    "2EWRRUE4E": [],
+    "2EWRRUE4E": [
+      "md",
+      "neo4j_algo",
+      "neo4j_gds"
+    ],
     "2EYQR9WE6": [
       "spark",
       "md",
@@ -2044,30 +2048,7 @@
       "groovy",
       "sap"
     ],
-    "2EYVDRCVC": [
-      "neo4j_gds",
-      "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "neo4j_algo",
-      "sap"
-    ],
+    "2EYVDRCVC": [],
     "2EYGMDMY2": [
       "spark",
       "md",
@@ -2090,7 +2071,11 @@
       "groovy",
       "sap"
     ],
-    "2EYQ66NNH": [],
+    "2EYQ66NNH": [
+      "md",
+      "neo4j_algo",
+      "neo4j_gds"
+    ],
     "2EWCD4Q9X": [
       "spark",
       "md",

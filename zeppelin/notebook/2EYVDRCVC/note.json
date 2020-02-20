@@ -43,7 +43,7 @@
     {
       "text": "%md\nThe syntax for creating named graphs is `CALL gds.graph.create(in-memory graph name, node label, relationship type)`.\n\nNode labels can be defined as:\n\n* Loading a single label using a string: `\u0027Label\u0027`\n* Loading more labels using an pipe operator: `\u0027Label1 | Label2\u0027`\n* Loading more labels with their properties using a configuration map: `{LabelAlias:{label: \u0027Label1 | Label2\u0027, properties:[\u0027property1,property2\u0027]}}`\n\nRelationship type can be defined as:\n\n* Loading a single relationship type using a string: `\u0027TYPE\u0027`\n* Loading more relationship types using an array: `[\u0027TYPE1\u0027,\u0027TYPE2\u0027]`\n* Loading more relationship types with their properties using a configuration map: `{ALIAS_OF_TYPE: {type:\u0027RELATIONSHIP_TYPE\u0027, projection: \u0027NATURAL\u0027, properties:[property1,property2]}`",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 21:15:00.562",
+      "dateUpdated": "2020-02-20 07:03:54.850",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -55,8 +55,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
+        "editorHide": false,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -1102,7 +1102,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Other/GDS named graphs",
+  "name": "~Trash/Other/GDS named graphs",
   "id": "2EYVDRCVC",
   "noteParams": {},
   "noteForms": {},
