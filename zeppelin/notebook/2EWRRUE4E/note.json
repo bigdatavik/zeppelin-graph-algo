@@ -414,9 +414,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027astar_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Undirected\u0027, properties: [\u0027distance\u0027,\u0027latitude\u0027,\u0027longitude\u0027]}});\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027astar_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, orientation:\u0027Undirected\u0027, properties: [\u0027distance\u0027,\u0027latitude\u0027,\u0027longitude\u0027]}});\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:13:29.141",
+      "dateUpdated": "2020-02-21 17:03:45.184",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -434,8 +434,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -484,7 +484,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\trelationshipProjection.EROAD.properties.latitude.property\trelationshipProjection.EROAD.properties.latitude.defaultValue\trelationshipProjection.EROAD.properties.latitude.aggregation\trelationshipProjection.EROAD.properties.longitude.property\trelationshipProjection.EROAD.properties.longitude.defaultValue\trelationshipProjection.EROAD.properties.longitude.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"astar_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\tlatitude\tNaN\tDEFAULT\tlongitude\tNaN\tDEFAULT\t12\t30\t121\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\trelationshipProjection.EROAD.properties.latitude.property\trelationshipProjection.EROAD.properties.latitude.defaultValue\trelationshipProjection.EROAD.properties.latitude.aggregation\trelationshipProjection.EROAD.properties.longitude.property\trelationshipProjection.EROAD.properties.longitude.defaultValue\trelationshipProjection.EROAD.properties.longitude.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"astar_example\"\tPlace\tUNDIRECTED\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\tlatitude\tNaN\tDEFAULT\tlongitude\tNaN\tDEFAULT\t12\t30\t35\n"
           }
         ]
       },
@@ -492,8 +492,8 @@
       "jobName": "paragraph_1581022755790_745938378",
       "id": "20200206-205915_1009496716",
       "dateCreated": "2020-02-06 20:59:15.790",
-      "dateStarted": "2020-02-20 07:13:29.210",
-      "dateFinished": "2020-02-20 07:13:29.391",
+      "dateStarted": "2020-02-21 17:03:44.940",
+      "dateFinished": "2020-02-21 17:03:45.007",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -540,7 +540,7 @@
     {
       "text": "%neo4j_gds\nMATCH (source:Place {id: \"Den Haag\"}),\n      (destination:Place {id: \"London\"})\nCALL gds.alpha.shortestPath.astar.stream(\u0027astar_example\u0027, {startNode: source, endNode: destination, relationshipWeightProperty:\u0027distance\u0027, propertyKeyLat: \u0027latitude\u0027, propertyKeyLon: \u0027longitude\u0027}) YIELD nodeId, cost\nRETURN gds.util.asNode(nodeId).id as name, cost",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:13:32.329",
+      "dateUpdated": "2020-02-21 17:03:48.066",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -599,8 +599,8 @@
       "jobName": "paragraph_1581022540979_-2110705805",
       "id": "20200206-205540_1956158614",
       "dateCreated": "2020-02-06 20:55:40.979",
-      "dateStarted": "2020-02-20 07:13:32.397",
-      "dateFinished": "2020-02-20 07:13:32.634",
+      "dateStarted": "2020-02-21 17:03:48.126",
+      "dateFinished": "2020-02-21 17:03:48.245",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -647,7 +647,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027astar_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:13:37.287",
+      "dateUpdated": "2020-02-21 17:03:51.396",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -665,8 +665,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -725,7 +725,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\trelationshipProjection.EROAD.properties.latitude.property\trelationshipProjection.EROAD.properties.latitude.defaultValue\trelationshipProjection.EROAD.properties.latitude.aggregation\trelationshipProjection.EROAD.properties.longitude.property\trelationshipProjection.EROAD.properties.longitude.defaultValue\trelationshipProjection.EROAD.properties.longitude.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"astar_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\tlatitude\tNaN\tDEFAULT\tlongitude\tNaN\tDEFAULT\tNULL\tNULL\t12\t90\t12\t6\t12\t7.5\t9\t6\t12\t9\t9\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\trelationshipProjection.EROAD.properties.latitude.property\trelationshipProjection.EROAD.properties.latitude.defaultValue\trelationshipProjection.EROAD.properties.latitude.aggregation\trelationshipProjection.EROAD.properties.longitude.property\trelationshipProjection.EROAD.properties.longitude.defaultValue\trelationshipProjection.EROAD.properties.longitude.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"astar_example\"\tPlace\tUNDIRECTED\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\tlatitude\tNaN\tDEFAULT\tlongitude\tNaN\tDEFAULT\tNULL\tNULL\t12\t90\t12\t6\t12\t7.5\t9\t6\t12\t9\t9\n"
           }
         ]
       },
@@ -733,8 +733,8 @@
       "jobName": "paragraph_1581022845803_-206864358",
       "id": "20200206-210045_321260207",
       "dateCreated": "2020-02-06 21:00:45.803",
-      "dateStarted": "2020-02-20 07:13:37.376",
-      "dateFinished": "2020-02-20 07:13:37.450",
+      "dateStarted": "2020-02-21 17:03:51.062",
+      "dateFinished": "2020-02-21 17:03:51.091",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

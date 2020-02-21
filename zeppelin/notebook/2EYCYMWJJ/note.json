@@ -437,9 +437,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027yens_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027, projection: \u0027Undirected\u0027, properties: \u0027distance\u0027}});",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027yens_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027, orientation: \u0027Undirected\u0027, properties: \u0027distance\u0027}});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:16:09.146",
+      "dateUpdated": "2020-02-21 17:05:48.114",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -457,8 +457,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -501,7 +501,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"yens_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\t12\t30\t59\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"yens_example\"\tPlace\tUNDIRECTED\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\t12\t30\t42\n"
           }
         ]
       },
@@ -509,8 +509,8 @@
       "jobName": "paragraph_1581026520207_683612666",
       "id": "20200206-220200_992808995",
       "dateCreated": "2020-02-06 22:02:00.207",
-      "dateStarted": "2020-02-20 07:16:09.174",
-      "dateFinished": "2020-02-20 07:16:09.261",
+      "dateStarted": "2020-02-21 17:05:47.806",
+      "dateFinished": "2020-02-21 17:05:47.902",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -557,7 +557,7 @@
     {
       "text": "%neo4j_gds\nMATCH (start:Place {id:\"Gouda\"}),\n      (end:Place {id:\"Felixstowe\"})\nCALL gds.alpha.kShortestPaths.stream(\u0027yens_example\u0027,{startNode:start, endNode:end, k:5, relationshipWeightProperty:\"distance\"})\nYIELD index, nodeIds, path, costs\nRETURN index,\n       [node in (nodeIds[1..-1]) | gds.util.asNode(node).id] AS via,\n       reduce(acc\u003d0.0, cost in costs | acc + cost) AS totalCost",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:16:11.712",
+      "dateUpdated": "2020-02-21 17:05:51.114",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -617,15 +617,15 @@
       "jobName": "paragraph_1581026613434_-866299681",
       "id": "20200206-220333_94230052",
       "dateCreated": "2020-02-06 22:03:33.434",
-      "dateStarted": "2020-02-20 07:16:11.769",
-      "dateFinished": "2020-02-20 07:16:12.062",
+      "dateStarted": "2020-02-21 17:05:51.154",
+      "dateFinished": "2020-02-21 17:05:51.336",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027yens_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:16:15.045",
+      "dateUpdated": "2020-02-21 17:05:53.827",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -643,8 +643,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -695,7 +695,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"yens_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t30\t4\t2\t4\t2.5\t3\t2\t4\t3\t3\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"yens_example\"\tPlace\tUNDIRECTED\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t30\t4\t2\t4\t2.5\t3\t2\t4\t3\t3\n"
           }
         ]
       },
@@ -703,8 +703,8 @@
       "jobName": "paragraph_1581026934300_-441742463",
       "id": "20200206-220854_580448650",
       "dateCreated": "2020-02-06 22:08:54.300",
-      "dateStarted": "2020-02-20 07:16:15.079",
-      "dateFinished": "2020-02-20 07:16:15.093",
+      "dateStarted": "2020-02-21 17:05:53.558",
+      "dateFinished": "2020-02-21 17:05:53.580",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

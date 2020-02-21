@@ -556,9 +556,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027spanningtree_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027,projection:\u0027Natural\u0027,properties:\u0027distance\u0027}});",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027spanningtree_example\u0027, \u0027Place\u0027, {EROAD:{type:\u0027EROAD\u0027,orientation:\u0027Natural\u0027,properties:\u0027distance\u0027}});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:28:57.401",
+      "dateUpdated": "2020-02-21 17:05:24.922",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -576,8 +576,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -618,7 +618,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t39\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"spanningtree_example\"\tPlace\tNATURAL\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\t12\t15\t40\n"
           }
         ]
       },
@@ -626,8 +626,8 @@
       "jobName": "paragraph_1581025655253_1738926662",
       "id": "20200206-214735_466643794",
       "dateCreated": "2020-02-06 21:47:35.253",
-      "dateStarted": "2020-02-20 07:28:57.439",
-      "dateFinished": "2020-02-20 07:28:57.499",
+      "dateStarted": "2020-02-21 17:05:24.659",
+      "dateFinished": "2020-02-21 17:05:24.725",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -674,7 +674,7 @@
     {
       "text": "%neo4j_gds\nMATCH (n:Place {id:\"Amsterdam\"})\nCALL gds.alpha.spanningTree.minimum.write(\u0027spanningtree_example\u0027, {weightWriteProperty:\u0027distance\u0027, startNodeId: id(n), writeProperty:\u0027MNIST\u0027,relationshipWeightProperty:\u0027distance\u0027})\nYIELD createMillis, computeMillis, writeMillis, effectiveNodeCount\nRETURN createMillis, computeMillis, writeMillis, effectiveNodeCount",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:29:00.855",
+      "dateUpdated": "2020-02-21 17:05:28.106",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -735,8 +735,8 @@
       "jobName": "paragraph_1581025688853_798874747",
       "id": "20200206-214808_284803239",
       "dateCreated": "2020-02-06 21:48:08.853",
-      "dateStarted": "2020-02-20 07:29:00.876",
-      "dateFinished": "2020-02-20 07:29:00.886",
+      "dateStarted": "2020-02-21 17:05:28.161",
+      "dateFinished": "2020-02-21 17:05:28.245",
       "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
@@ -783,7 +783,7 @@
     {
       "text": "%neo4j_gds\nMATCH path \u003d (n:Place {id:\"Amsterdam\"})-[:MINST*]-()\nWITH relationships(path) AS rels\nUNWIND rels AS rel\nWITH DISTINCT rel AS rel\nRETURN startNode(rel).id AS source, endNode(rel).id AS destination, rel.distance AS cost",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:29:08.490",
+      "dateUpdated": "2020-02-21 17:05:30.425",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -808,8 +808,8 @@
       "jobName": "paragraph_1581025778151_-742356042",
       "id": "20200206-214938_1721484523",
       "dateCreated": "2020-02-06 21:49:38.151",
-      "dateStarted": "2020-02-20 07:29:08.510",
-      "dateFinished": "2020-02-20 07:29:08.525",
+      "dateStarted": "2020-02-21 17:05:30.485",
+      "dateFinished": "2020-02-21 17:05:30.691",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -856,7 +856,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027spanningtree_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:29:11.175",
+      "dateUpdated": "2020-02-21 17:05:33.317",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -874,8 +874,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -926,7 +926,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"spanningtree_example\"\tPlace\tDEFAULT\tNATURAL\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"spanningtree_example\"\tPlace\tNATURAL\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t15\t3\t0\t3\t1.25\t2\t1\t3\t2\t2\n"
           }
         ]
       },
@@ -934,8 +934,8 @@
       "jobName": "paragraph_1581026289441_933162842",
       "id": "20200206-215809_726587180",
       "dateCreated": "2020-02-06 21:58:09.441",
-      "dateStarted": "2020-02-20 07:29:11.206",
-      "dateFinished": "2020-02-20 07:29:11.234",
+      "dateStarted": "2020-02-21 17:05:33.045",
+      "dateFinished": "2020-02-21 17:05:33.073",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

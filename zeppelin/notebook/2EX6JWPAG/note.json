@@ -3,7 +3,7 @@
     {
       "text": "%md\n\n###  Example taken from \"Graph Algorithms: Practical Examples in Apache Spark and Neo4j\" (https://neo4j.com/graph-algorithms-book/)\n\n### Please make sure that you have previously executed [this notebook](/#/notebook/2EZ4GSKAZ)",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:58:00.073",
+      "dateUpdated": "2020-02-21 17:01:54.238",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -15,8 +15,8 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": false,
-        "tableHide": true
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -35,8 +35,8 @@
       "jobName": "paragraph_1577983763119_1711566129",
       "id": "20200102-164923_1369683845",
       "dateCreated": "2020-01-02 16:49:23.120",
-      "dateStarted": "2020-02-08 21:56:24.436",
-      "dateFinished": "2020-02-08 21:56:24.447",
+      "dateStarted": "2020-02-21 17:01:54.273",
+      "dateFinished": "2020-02-21 17:01:55.971",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -633,9 +633,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027allpair_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, projection:\u0027Undirected\u0027, properties: \u0027distance\u0027}});\n\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027allpair_example\u0027, \u0027Place\u0027, {EROAD: {type:\u0027EROAD\u0027, orientation:\u0027Undirected\u0027, properties: \u0027distance\u0027}});\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:12:56.648",
+      "dateUpdated": "2020-02-21 17:03:09.557",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -653,8 +653,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -695,7 +695,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"allpair_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\t12\t30\t294\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeCount\trelationshipCount\tcreateMillis\n\"allpair_example\"\tPlace\tUNDIRECTED\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\t12\t30\t70\n"
           }
         ]
       },
@@ -703,8 +703,8 @@
       "jobName": "paragraph_1581021304851_-1327454323",
       "id": "20200206-203504_1299689562",
       "dateCreated": "2020-02-06 20:35:04.851",
-      "dateStarted": "2020-02-20 07:12:56.955",
-      "dateFinished": "2020-02-20 07:12:59.261",
+      "dateStarted": "2020-02-21 17:03:09.640",
+      "dateFinished": "2020-02-21 17:03:09.739",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -751,7 +751,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.allShortestPaths.stream(\u0027allpair_example\u0027, {relationshipWeightProperty:null})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN gds.util.asNode(sourceNodeId).id AS source,\n       gds.util.asNode(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:13:04.493",
+      "dateUpdated": "2020-02-21 17:03:23.755",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -803,7 +803,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "source\ttarget\tdistance\n\"London\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Ipswich\"\t5.0\n\"London\"\t\"Rotterdam\"\t5.0\n\"Colchester\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Colchester\"\t5.0\n\"Den Haag\"\t\"Colchester\"\t4.0\n\"Amsterdam\"\t\"Ipswich\"\t4.0\n\"Amsterdam\"\t\"Colchester\"\t4.0\n\"Utrecht\"\t\"Felixstowe\"\t4.0\n\"Immingham\"\t\"Felixstowe\"\t4.0\n"
+            "data": "source\ttarget\tdistance\n\"London\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Ipswich\"\t5.0\n\"London\"\t\"Rotterdam\"\t5.0\n\"Colchester\"\t\"Gouda\"\t5.0\n\"Utrecht\"\t\"Colchester\"\t5.0\n\"Amsterdam\"\t\"Colchester\"\t4.0\n\"Immingham\"\t\"Ipswich\"\t4.0\n\"Den Haag\"\t\"Colchester\"\t4.0\n\"Doncaster\"\t\"Felixstowe\"\t4.0\n\"Utrecht\"\t\"Felixstowe\"\t4.0\n"
           }
         ]
       },
@@ -811,8 +811,8 @@
       "jobName": "paragraph_1581021278861_-852709497",
       "id": "20200206-203438_771657057",
       "dateCreated": "2020-02-06 20:34:38.861",
-      "dateStarted": "2020-02-20 07:13:04.634",
-      "dateFinished": "2020-02-20 07:13:05.335",
+      "dateStarted": "2020-02-21 17:03:23.824",
+      "dateFinished": "2020-02-21 17:03:24.106",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -859,7 +859,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.allShortestPaths.stream(\u0027allpair_example\u0027, {relationshipWeightProperty:\u0027distance\u0027})\nYIELD sourceNodeId, targetNodeId, distance\nWHERE sourceNodeId \u003c targetNodeId\nRETURN gds.util.asNode(sourceNodeId).id AS source,\n       gds.util.asNode(targetNodeId).id AS target,\n       distance\nORDER BY distance DESC\nLIMIT 10;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:13:09.330",
+      "dateUpdated": "2020-02-21 17:03:26.916",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -911,7 +911,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "source\ttarget\tdistance\n\"Doncaster\"\t\"Hoek van Holland\"\t529.0\n\"Doncaster\"\t\"Rotterdam\"\t528.0\n\"Doncaster\"\t\"Gouda\"\t524.0\n\"Immingham\"\t\"Felixstowe\"\t511.0\n\"Den Haag\"\t\"Doncaster\"\t502.0\n\"Immingham\"\t\"Ipswich\"\t489.0\n\"Utrecht\"\t\"Doncaster\"\t489.0\n\"Utrecht\"\t\"London\"\t460.0\n\"Immingham\"\t\"Colchester\"\t457.0\n\"Immingham\"\t\"Hoek van Holland\"\t455.0\n"
+            "data": "source\ttarget\tdistance\n\"Doncaster\"\t\"Hoek van Holland\"\t529.0\n\"Doncaster\"\t\"Rotterdam\"\t528.0\n\"Doncaster\"\t\"Gouda\"\t524.0\n\"Immingham\"\t\"Felixstowe\"\t511.0\n\"Den Haag\"\t\"Doncaster\"\t502.0\n\"Utrecht\"\t\"Doncaster\"\t489.0\n\"Immingham\"\t\"Ipswich\"\t489.0\n\"Utrecht\"\t\"London\"\t460.0\n\"Immingham\"\t\"Colchester\"\t457.0\n\"Immingham\"\t\"Hoek van Holland\"\t455.0\n"
           }
         ]
       },
@@ -919,8 +919,8 @@
       "jobName": "paragraph_1581021519523_1658418537",
       "id": "20200206-203839_252538629",
       "dateCreated": "2020-02-06 20:38:39.523",
-      "dateStarted": "2020-02-20 07:13:09.442",
-      "dateFinished": "2020-02-20 07:13:09.654",
+      "dateStarted": "2020-02-21 17:03:26.981",
+      "dateFinished": "2020-02-21 17:03:27.130",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -967,7 +967,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027allpair_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-20 07:13:13.467",
+      "dateUpdated": "2020-02-21 17:03:30.633",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -985,8 +985,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Place.label": "string",
+                      "relationshipProjection.EROAD.orientation": "string",
                       "relationshipProjection.EROAD.aggregation": "string",
-                      "relationshipProjection.EROAD.projection": "string",
                       "relationshipProjection.EROAD.type": "string",
                       "relationshipProjection.EROAD.properties.distance.property": "string",
                       "relationshipProjection.EROAD.properties.distance.defaultValue": "string",
@@ -1037,7 +1037,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.projection\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"allpair_example\"\tPlace\tDEFAULT\tUNDIRECTED\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t30\t4\t2\t4\t2.5\t3\t2\t4\t3\t3\n"
+            "data": "graphName\tnodeProjection.Place.label\trelationshipProjection.EROAD.orientation\trelationshipProjection.EROAD.aggregation\trelationshipProjection.EROAD.type\trelationshipProjection.EROAD.properties.distance.property\trelationshipProjection.EROAD.properties.distance.defaultValue\trelationshipProjection.EROAD.properties.distance.aggregation\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"allpair_example\"\tPlace\tUNDIRECTED\tDEFAULT\tEROAD\tdistance\tNaN\tDEFAULT\tNULL\tNULL\t12\t30\t4\t2\t4\t2.5\t3\t2\t4\t3\t3\n"
           }
         ]
       },
@@ -1045,8 +1045,8 @@
       "jobName": "paragraph_1581021694217_1233019215",
       "id": "20200206-204134_1643659125",
       "dateCreated": "2020-02-06 20:41:34.217",
-      "dateStarted": "2020-02-20 07:13:13.571",
-      "dateFinished": "2020-02-20 07:13:13.663",
+      "dateStarted": "2020-02-21 17:03:30.708",
+      "dateFinished": "2020-02-21 17:03:30.731",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

@@ -547,7 +547,7 @@
     {
       "text": "%neo4j_gds\n\nMATCH (article:Article)\nRETURN article.year AS year, count(*) AS count\nORDER BY year\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-16 18:50:13.506",
+      "dateUpdated": "2020-02-21 17:08:31.899",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -3268,9 +3268,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\n\nCALL gds.alpha.triangleCount.write({nodeProjection:\u0027Author\u0027, relationshipProjection: {CO_AUTHOR_EARLY: {projection:\u0027UNDIRECTED\u0027} }, \n   writeProperty:\u0027trianglesTrain\u0027, clusteringCoefficientProperty: \u0027coefficientTrain\u0027});\n\n",
+      "text": "%neo4j_gds\n\nCALL gds.alpha.triangleCount.write({nodeProjection:\u0027Author\u0027, relationshipProjection: {CO_AUTHOR_EARLY: {orientation:\u0027UNDIRECTED\u0027} }, \n   writeProperty:\u0027trianglesTrain\u0027, clusteringCoefficientProperty: \u0027coefficientTrain\u0027});\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 20:41:20.642",
+      "dateUpdated": "2020-02-21 17:09:42.397",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -3353,9 +3353,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\n\nCALL gds.alpha.triangleCount.write({nodeProjection:\u0027Author\u0027, relationshipProjection: {CO_AUTHOR: {projection:\u0027UNDIRECTED\u0027}},\n   writeProperty:\u0027trianglesTest\u0027, clusteringCoefficientProperty: \u0027coefficientTest\u0027});",
+      "text": "%neo4j_gds\n\nCALL gds.alpha.triangleCount.write({nodeProjection:\u0027Author\u0027, relationshipProjection: {CO_AUTHOR: {orientation:\u0027UNDIRECTED\u0027}},\n   writeProperty:\u0027trianglesTest\u0027, clusteringCoefficientProperty: \u0027coefficientTest\u0027});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 20:43:15.599",
+      "dateUpdated": "2020-02-21 17:09:55.665",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -4017,9 +4017,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.labelPropagation.write({nodeProjection: \"Author\", relationshipProjection: {CO_AUTHOR_EARLY: {projection: \u0027UNDIRECTED\u0027}}, writeProperty: \"partitionTrain\"});\n\n",
+      "text": "%neo4j_gds\nCALL gds.labelPropagation.write({nodeProjection: \"Author\", relationshipProjection: {CO_AUTHOR_EARLY: {orientation: \u0027UNDIRECTED\u0027}}, writeProperty: \"partitionTrain\"});\n\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 20:54:43.102",
+      "dateUpdated": "2020-02-21 17:10:01.466",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -4108,9 +4108,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\n\nCALL gds.labelPropagation.write({nodeProjection: \"Author\", relationshipProjection:{CO_AUTHOR:{projection:\u0027UNDIRECTED\u0027}}, writeProperty: \"partitionTest\"});",
+      "text": "%neo4j_gds\n\nCALL gds.labelPropagation.write({nodeProjection: \"Author\", relationshipProjection:{CO_AUTHOR:{orientation:\u0027UNDIRECTED\u0027}}, writeProperty: \"partitionTest\"});",
       "user": "anonymous",
-      "dateUpdated": "2020-02-09 20:56:16.844",
+      "dateUpdated": "2020-02-21 17:10:13.871",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,

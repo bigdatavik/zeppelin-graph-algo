@@ -621,9 +621,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027triangles_example\u0027, \u0027Library\u0027, \n  {DEPENDS_ON: {type: \u0027DEPENDS_ON\u0027, projection: \u0027UNDIRECTED\u0027}});\n",
+      "text": "%neo4j_gds\nCALL gds.graph.create(\u0027triangles_example\u0027, \u0027Library\u0027, \n  {DEPENDS_ON: {type: \u0027DEPENDS_ON\u0027, orientation: \u0027UNDIRECTED\u0027}});\n",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:46:55.474",
+      "dateUpdated": "2020-02-21 17:08:33.413",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -641,8 +641,8 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Library.label": "string",
+                      "relationshipProjection.DEPENDS_ON.orientation": "string",
                       "relationshipProjection.DEPENDS_ON.aggregation": "string",
-                      "relationshipProjection.DEPENDS_ON.projection": "string",
                       "relationshipProjection.DEPENDS_ON.type": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
@@ -682,7 +682,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeCount\trelationshipCount\tcreateMillis\n\"triangles_example\"\tLibrary\tDEFAULT\tUNDIRECTED\tDEPENDS_ON\t15\t36\t9\n"
+            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.orientation\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.type\tnodeCount\trelationshipCount\tcreateMillis\n\"triangles_example\"\tLibrary\tUNDIRECTED\tDEFAULT\tDEPENDS_ON\t15\t36\t45\n"
           }
         ]
       },
@@ -690,8 +690,8 @@
       "jobName": "paragraph_1581020241808_-2125972906",
       "id": "20200206-201721_957232939",
       "dateCreated": "2020-02-06 20:17:21.808",
-      "dateStarted": "2020-02-08 21:46:55.499",
-      "dateFinished": "2020-02-08 21:46:55.533",
+      "dateStarted": "2020-02-21 17:08:33.104",
+      "dateFinished": "2020-02-21 17:08:33.174",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -738,7 +738,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.triangleCount.stream(\u0027triangles_example\u0027)\nYIELD nodeId, triangles, coefficient\nWHERE coefficient \u003e 0\nRETURN gds.util.asNode(nodeId).id AS library, coefficient\nORDER BY coefficient DESC;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:49:51.865",
+      "dateUpdated": "2020-02-21 17:08:36.052",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -797,8 +797,8 @@
       "jobName": "paragraph_1581020471477_-608227820",
       "id": "20200206-202111_2074686534",
       "dateCreated": "2020-02-06 20:21:11.477",
-      "dateStarted": "2020-02-08 21:48:28.600",
-      "dateFinished": "2020-02-08 21:48:28.715",
+      "dateStarted": "2020-02-21 17:08:36.080",
+      "dateFinished": "2020-02-21 17:08:36.174",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -845,7 +845,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.alpha.triangle.stream(\u0027triangles_example\u0027)\nYIELD nodeA, nodeB, nodeC\nRETURN gds.util.asNode(nodeA).id AS nodeA,\n       gds.util.asNode(nodeB).id AS nodeB,\n       gds.util.asNode(nodeC).id AS nodeC;",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:49:46.126",
+      "dateUpdated": "2020-02-21 17:08:39.140",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -905,8 +905,8 @@
       "jobName": "paragraph_1581020315993_-1614280191",
       "id": "20200206-201835_844765800",
       "dateCreated": "2020-02-06 20:18:35.993",
-      "dateStarted": "2020-02-08 21:49:32.625",
-      "dateFinished": "2020-02-08 21:49:32.714",
+      "dateStarted": "2020-02-21 17:08:39.164",
+      "dateFinished": "2020-02-21 17:08:39.217",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -953,7 +953,7 @@
     {
       "text": "%neo4j_gds\nCALL gds.graph.drop(\u0027triangles_example\u0027);",
       "user": "anonymous",
-      "dateUpdated": "2020-02-08 21:49:42.082",
+      "dateUpdated": "2020-02-21 17:08:42.078",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -971,22 +971,22 @@
                     "names": {
                       "graphName": "string",
                       "nodeProjection.Library.label": "string",
+                      "relationshipProjection.DEPENDS_ON.orientation": "string",
                       "relationshipProjection.DEPENDS_ON.aggregation": "string",
-                      "relationshipProjection.DEPENDS_ON.projection": "string",
                       "relationshipProjection.DEPENDS_ON.type": "string",
                       "nodeQuery": "string",
                       "relationshipQuery": "string",
                       "nodeCount": "string",
                       "relationshipCount": "string",
-                      "histogram.p99": "string",
-                      "histogram.min": "string",
-                      "histogram.max": "string",
-                      "histogram.mean": "string",
-                      "histogram.p90": "string",
-                      "histogram.p50": "string",
-                      "histogram.p999": "string",
-                      "histogram.p95": "string",
-                      "histogram.p75": "string"
+                      "degreeDistribution.p99": "string",
+                      "degreeDistribution.min": "string",
+                      "degreeDistribution.max": "string",
+                      "degreeDistribution.mean": "string",
+                      "degreeDistribution.p90": "string",
+                      "degreeDistribution.p50": "string",
+                      "degreeDistribution.p999": "string",
+                      "degreeDistribution.p95": "string",
+                      "degreeDistribution.p75": "string"
                     },
                     "updated": false
                   },
@@ -1020,7 +1020,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.projection\trelationshipProjection.DEPENDS_ON.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\thistogram.p99\thistogram.min\thistogram.max\thistogram.mean\thistogram.p90\thistogram.p50\thistogram.p999\thistogram.p95\thistogram.p75\n\"triangles_example\"\tLibrary\tDEFAULT\tUNDIRECTED\tDEPENDS_ON\tNULL\tNULL\t15\t36\t4\t1\t4\t2.4\t3\t2\t4\t3\t3\n"
+            "data": "graphName\tnodeProjection.Library.label\trelationshipProjection.DEPENDS_ON.orientation\trelationshipProjection.DEPENDS_ON.aggregation\trelationshipProjection.DEPENDS_ON.type\tnodeQuery\trelationshipQuery\tnodeCount\trelationshipCount\tdegreeDistribution.p99\tdegreeDistribution.min\tdegreeDistribution.max\tdegreeDistribution.mean\tdegreeDistribution.p90\tdegreeDistribution.p50\tdegreeDistribution.p999\tdegreeDistribution.p95\tdegreeDistribution.p75\n\"triangles_example\"\tLibrary\tUNDIRECTED\tDEFAULT\tDEPENDS_ON\tNULL\tNULL\t15\t36\t4\t1\t4\t2.4\t3\t2\t4\t3\t3\n"
           }
         ]
       },
@@ -1028,8 +1028,8 @@
       "jobName": "paragraph_1581020682312_285705812",
       "id": "20200206-202442_2064942637",
       "dateCreated": "2020-02-06 20:24:42.312",
-      "dateStarted": "2020-02-06 20:25:53.158",
-      "dateFinished": "2020-02-06 20:25:53.168",
+      "dateStarted": "2020-02-21 17:08:41.724",
+      "dateFinished": "2020-02-21 17:08:41.751",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
